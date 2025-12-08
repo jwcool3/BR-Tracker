@@ -9,6 +9,9 @@ export default function AddAccountButton({ onAdd }) {
   const [name, setName] = useState('')
   const [notes, setNotes] = useState('')
   const [rebirthLevel, setRebirthLevel] = useState(0)
+  const [tags, setTags] = useState('')
+  const [favorite, setFavorite] = useState(false)
+  const [color, setColor] = useState('#3b82f6')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -17,13 +20,19 @@ export default function AddAccountButton({ onAdd }) {
     onAdd({
       name: name.trim(),
       notes: notes.trim(),
-      rebirthLevel: parseInt(rebirthLevel) || 0
+      rebirthLevel: parseInt(rebirthLevel) || 0,
+      tags: tags.trim() ? tags.split(',').map(t => t.trim()) : [],
+      favorite,
+      color
     })
     
     // Reset form
     setName('')
     setNotes('')
     setRebirthLevel(0)
+    setTags('')
+    setFavorite(false)
+    setColor('#3b82f6')
     setShowModal(false)
   }
 
@@ -65,27 +74,64 @@ export default function AddAccountButton({ onAdd }) {
             />
           </div>
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-2">Rebirth Level</label>
-            <input
-              type="number"
-              value={rebirthLevel}
-              onChange={(e) => setRebirthLevel(e.target.value)}
-              className="input-primary"
-              min="0"
-              max="17"
-            />
+          <div className="mb-4 grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium mb-2">Rebirth Level</label>
+              <input
+                type="number"
+                value={rebirthLevel}
+                onChange={(e) => setRebirthLevel(e.target.value)}
+                className="input-primary"
+                min="0"
+                max="17"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">Color</label>
+              <input
+                type="color"
+                value={color}
+                onChange={(e) => setColor(e.target.value)}
+                className="w-full h-10 bg-slate-800 border border-slate-700 rounded-lg cursor-pointer"
+              />
+            </div>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2">Tags (comma-separated)</label>
+            <input
+              type="text"
+              value={tags}
+              onChange={(e) => setTags(e.target.value)}
+              className="input-primary"
+              placeholder="e.g., storage, grinding, trading"
+            />
+            <div className="text-xs text-gray-400 mt-1">
+              Use tags to organize accounts (e.g., "main", "storage", "grind")
+            </div>
+          </div>
+
+          <div className="mb-4">
             <label className="block text-sm font-medium mb-2">Notes (optional)</label>
             <textarea
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               className="input-primary"
-              rows="3"
+              rows="2"
               placeholder="e.g., Alt Storage, Grind Account"
             />
+          </div>
+
+          <div className="mb-6">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={favorite}
+                onChange={(e) => setFavorite(e.target.checked)}
+                className="w-4 h-4"
+              />
+              <span className="text-sm">⭐ Mark as favorite</span>
+            </label>
           </div>
 
           <div className="flex gap-3">

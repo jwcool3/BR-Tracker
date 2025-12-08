@@ -37,6 +37,10 @@ function App() {
       name: 'Main Account',
       rebirthLevel: 0,
       notes: '',
+      tags: [],
+      color: '#3b82f6',
+      favorite: false,
+      hidden: false,
       createdAt: new Date().toISOString()
     }
   ])
@@ -54,6 +58,10 @@ function App() {
     const newAccount = {
       ...account,
       id: `acc-${Date.now()}`,
+      tags: account.tags || [],
+      color: account.color || '#3b82f6',
+      favorite: account.favorite || false,
+      hidden: account.hidden || false,
       createdAt: new Date().toISOString()
     }
     setAccounts([...accounts, newAccount])
