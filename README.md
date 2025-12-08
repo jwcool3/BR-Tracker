@@ -4,12 +4,25 @@ A web app to track your Brainrot collection across multiple Roblox accounts in S
 
 ## Features
 
-- ✅ Track brainrots across multiple accounts
-- 📊 Calculate income per second with mutations and traits
-- 🔍 Search and filter by rarity, name, income
-- 📈 Stats dashboard (total value, completion %, income/s)
-- 🎨 Visual indicators for mutations and traits
-- 💾 Local storage for your collection data
+### Core Features
+- ✅ Track 439+ brainrots with images
+- 📊 Calculate income/second with mutations & traits
+- 🔄 Track rebirth levels & slot management (18 levels)
+- 🏢 Floor assignment for theft protection (3 floors)
+- 📈 Multi-account support with dashboard overview
+
+### Three-View System ✨
+- 🏠 **Dashboard View** - See all accounts at a glance
+- 📋 **Account Detail** - Manage one account's brainrots
+- 📊 **Total Collection** - See all brainrots across all accounts
+
+### Advanced Features
+- 🔍 Search and filter by rarity, ownership, floor
+- 🎯 Duplicate detection across accounts
+- 📉 Gap analysis (missing brainrots)
+- 💰 Cross-account income analysis
+- ⚡ Free space monitoring with color-coded alerts
+- 💾 Local storage (no login required)
 
 ## Income Calculation System
 
