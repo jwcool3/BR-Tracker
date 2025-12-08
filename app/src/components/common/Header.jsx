@@ -1,8 +1,18 @@
+import DataManager from './DataManager'
+
 /**
  * Header Component - Top navigation bar
- * Shows current view and provides navigation
+ * Shows current view and provides navigation + data management
  */
-export default function Header({ currentView, selectedAccount, onNavigate }) {
+export default function Header({ 
+  currentView, 
+  selectedAccount, 
+  onNavigate,
+  accounts,
+  collections,
+  onImportData,
+  onClearAllData
+}) {
   return (
     <header className="bg-slate-800 border-b border-slate-700">
       <div className="container mx-auto px-4 py-4">
@@ -40,6 +50,14 @@ export default function Header({ currentView, selectedAccount, onNavigate }) {
               </span>
             )}
           </div>
+
+          {/* Data Management Button */}
+          <DataManager
+            accounts={accounts}
+            collections={collections}
+            onImport={onImportData}
+            onClearAll={onClearAllData}
+          />
         </div>
       </div>
     </header>

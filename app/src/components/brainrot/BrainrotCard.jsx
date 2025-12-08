@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { Check, X } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Check, X, ChevronDown, ChevronUp } from 'lucide-react'
+import { MUTATIONS, TRAITS, quickCalculateIncome } from '../../utils/incomeCalculator'
 
 /**
  * Brainrot Card - Individual brainrot card in detail view
@@ -14,6 +15,21 @@ export default function BrainrotCard({
   onUpdate
 }) {
   const [showDetails, setShowDetails] = useState(false)
+  const [showTraits, setShowTraits] = useState(false)
+
+  // Calculate income when mutation or traits change
+  useEffect(() => {
+    if (isOwned && collectionEntry && brainrot.income_per_second) {
+      const calculatedIncome = quickCalculateIncome(
+        brainrot.income_per_second,
+        collectionEntry.mutation || 'none',
+        collectionEntry.traits || []
+      )
+      if (calculatedIncome !== collectionEntry.calculatedIncome) {
+        onUpdate({ calculatedIncome })
+      }
+    }
+  }, [isOwned, collectionEntry?.mutation, collectionEntry?.traits, brainrot.income_per_second])
 
   // Rarity colors
   const rarityColors = {
@@ -70,17 +86,17 @@ export default function BrainrotCard({
 
       {/* Owned Details */}
       {isOwned && collectionEntry && showDetails && (
-        <div className="mt-3 pt-3 border-t border-slate-700 space-y-2" onClick={(e) => e.stopPropagation()}>
+        <div className="mt-3 pt-3 border-t border-slate-700 space-y-3" onClick={(e) => e.stopPropagation()}>
           {/* Floor Selection */}
           <div>
-            <label className="block text-xs text-gray-400 mb-1">Floor</label>
+            <label className="block text-xs text-gray-400 mb-1">Floor (Security)</label>
             <select
               value={collectionEntry.floor || 1}
               onChange={(e) => onUpdate({ floor: parseInt(e.target.value) })}
-              className="w-full px-2 py-1 bg-slate-700 rounded text-xs"
+              className="w-full px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs transition-colors"
             >
               {[1, 2, 3, 4, 5].map(f => (
-                <option key={f} value={f}>Floor {f}</option>
+                <option key={f} value={f}>Floor {f} {f >= 3 ? '🔒' : ''}</option>
               ))}
             </select>
           </div>
@@ -91,19 +107,76 @@ export default function BrainrotCard({
             <select
               value={collectionEntry.mutation || 'none'}
               onChange={(e) => onUpdate({ mutation: e.target.value })}
-              className="w-full px-2 py-1 bg-slate-700 rounded text-xs"
+              className="w-full px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs transition-colors"
             >
-              <option value="none">None</option>
-              <option value="gold">Gold (1.25x)</option>
-              <option value="diamond">Diamond (1.5x)</option>
-              <option value="rainbow">Rainbow (10x)</option>
+              {Object.entries(MUTATIONS).map(([key, mut]) => (
+                <option key={key} value={key}>
+                  {mut.name} {mut.multiplier > 1 ? `(${mut.multiplier}x)` : ''}
+                </option>
+              ))}
             </select>
           </div>
 
+          {/* Traits Selection */}
+          <div>
+            <button
+              onClick={() => setShowTraits(!showTraits)}
+              className="flex items-center justify-between w-full text-xs text-gray-400 hover:text-white transition-colors"
+            >
+              <span>Traits ({(collectionEntry.traits || []).length}/3)</span>
+              {showTraits ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+            </button>
+            
+            {showTraits && (
+              <div className="mt-2 max-h-40 overflow-y-auto space-y-1 p-2 bg-slate-900 rounded">
+                {Object.entries(TRAITS).map(([key, trait]) => {
+                  const isSelected = (collectionEntry.traits || []).includes(key)
+                  const currentTraits = collectionEntry.traits || []
+                  const canSelect = currentTraits.length < 3 || isSelected
+
+                  return (
+                    <label
+                      key={key}
+                      className={`flex items-center gap-2 text-xs p-1 rounded cursor-pointer transition-colors ${
+                        canSelect ? 'hover:bg-slate-700' : 'opacity-40 cursor-not-allowed'
+                      }`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isSelected}
+                        disabled={!canSelect}
+                        onChange={(e) => {
+                          const newTraits = e.target.checked
+                            ? [...currentTraits, key]
+                            : currentTraits.filter(t => t !== key)
+                          onUpdate({ traits: newTraits })
+                        }}
+                        className="w-3 h-3"
+                      />
+                      <span>{trait.icon}</span>
+                      <span className="flex-1">{trait.name}</span>
+                      <span className={`text-xs ${trait.multiplier > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {trait.multiplier > 0 ? '+' : ''}{trait.multiplier}x
+                      </span>
+                    </label>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+
           {/* Calculated Income */}
-          {collectionEntry.calculatedIncome > 0 && (
-            <div className="text-xs text-green-400 font-bold">
-              Income: ${collectionEntry.calculatedIncome.toLocaleString()}/s
+          {brainrot.income_per_second && (
+            <div className="pt-2 border-t border-slate-700">
+              <div className="text-xs text-gray-400 mb-1">Calculated Income</div>
+              <div className="text-sm font-bold text-green-400">
+                ${(collectionEntry.calculatedIncome || brainrot.income_per_second).toLocaleString()}/s
+              </div>
+              {(collectionEntry.mutation && collectionEntry.mutation !== 'none') || (collectionEntry.traits && collectionEntry.traits.length > 0) ? (
+                <div className="text-xs text-gray-500 mt-1">
+                  Base: ${brainrot.income_per_second.toLocaleString()}/s
+                </div>
+              ) : null}
             </div>
           )}
         </div>

@@ -92,6 +92,17 @@ function App() {
     })
   }
 
+  // Data management operations
+  const handleImportData = (data) => {
+    setAccounts(data.accounts)
+    setCollections(data.collections)
+  }
+
+  const handleClearAllData = () => {
+    setAccounts([])
+    setCollections({})
+  }
+
   // Loading state
   if (loading) {
     return (
@@ -130,6 +141,10 @@ function App() {
         currentView={currentView}
         selectedAccount={accounts.find(a => a.id === selectedAccount)}
         onNavigate={{ viewTotalCollection, backToDashboard }}
+        accounts={accounts}
+        collections={collections}
+        onImportData={handleImportData}
+        onClearAllData={handleClearAllData}
       />
 
       <main>
