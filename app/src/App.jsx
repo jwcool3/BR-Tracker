@@ -14,13 +14,18 @@ function App() {
 
   // Load brainrots.json on mount
   useEffect(() => {
+    console.log('Loading brainrots.json...')
     fetch('/brainrots.json')
       .then(response => {
-        if (!response.ok) throw new Error('Failed to load brainrots data')
+        console.log('Brainrots response:', response.status, response.statusText)
+        if (!response.ok) throw new Error(`Failed to load brainrots data: ${response.status}`)
         return response.json()
       })
       .then(data => {
-        setBrainrots(data)
+        // Handle both array format and { brainrots: [...] } format
+        const brainrotArray = Array.isArray(data) ? data : (data.brainrots || [])
+        console.log('Brainrots loaded:', brainrotArray.length, 'items')
+        setBrainrots(brainrotArray)
         setLoading(false)
       })
       .catch(err => {

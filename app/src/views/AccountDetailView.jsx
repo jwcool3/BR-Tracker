@@ -10,7 +10,7 @@ import BrainrotGrid from '../components/detail/BrainrotGrid'
  */
 export default function AccountDetailView({
   account,
-  brainrots,
+  brainrots = [],
   collection,
   onBack,
   onUpdateCollection,
@@ -21,6 +21,25 @@ export default function AccountDetailView({
   const [ownershipFilter, setOwnershipFilter] = useState('all')
   const [floorFilter, setFloorFilter] = useState('all')
   const [sortBy, setSortBy] = useState('name')
+  
+  // Show loading state if brainrots aren't loaded yet
+  if (!brainrots || brainrots.length === 0) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <button
+          onClick={onBack}
+          className="flex items-center gap-2 text-gray-400 hover:text-white mb-4"
+        >
+          ← Back to Dashboard
+        </button>
+        <div className="text-center py-12">
+          <div className="text-4xl mb-4">🎮</div>
+          <div className="text-xl font-bold mb-2">Loading Brainrots...</div>
+          <div className="text-gray-400">Please wait while we load the brainrot data</div>
+        </div>
+      </div>
+    )
+  }
 
   // Create set of owned brainrot IDs for quick lookup
   const ownedIds = new Set(collection.map(c => c.brainrotId))

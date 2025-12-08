@@ -10,7 +10,7 @@ import TotalBrainrotCard from '../components/collection/TotalBrainrotCard'
 export default function TotalCollectionView({
   accounts,
   collections,
-  brainrots,
+  brainrots = [],
   onBack,
   onViewAccount
 }) {
@@ -18,6 +18,25 @@ export default function TotalCollectionView({
   const [ownershipFilter, setOwnershipFilter] = useState('all')
   const [rarityFilter, setRarityFilter] = useState('all')
   const [sortBy, setSortBy] = useState('name')
+  
+  // Show loading state if brainrots aren't loaded yet
+  if (!brainrots || brainrots.length === 0) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <button
+          onClick={onBack}
+          className="flex items-center gap-2 text-gray-400 hover:text-white mb-4"
+        >
+          ← Back to Dashboard
+        </button>
+        <div className="text-center py-12">
+          <div className="text-4xl mb-4">📊</div>
+          <div className="text-xl font-bold mb-2">Loading Collection...</div>
+          <div className="text-gray-400">Please wait while we load the brainrot data</div>
+        </div>
+      </div>
+    )
+  }
 
   // Calculate ownership for each brainrot
   const brainrotsWithOwnership = brainrots.map(br => {
