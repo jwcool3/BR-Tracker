@@ -1,0 +1,396 @@
+{
+  "rebirths": [
+    {
+      "level": 0,
+      "name": "No Rebirth",
+      "cash_required": 0,
+      "brainrots_required": [],
+      "rewards": {
+        "multiplier": 1.0,
+        "starting_cash": 100,
+        "base_slots": 10,
+        "total_floors": 1,
+        "lock_time_seconds": 60,
+        "unlocked_items": ["Tung Bat"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 0,
+        "floor_3": 0
+      }
+    },
+    {
+      "level": 1,
+      "name": "Rebirth 1",
+      "cash_required": 1000000,
+      "brainrots_required": ["Gangster Footera"],
+      "rewards": {
+        "multiplier": 1.5,
+        "starting_cash": 100,
+        "base_slots": 10,
+        "total_floors": 1,
+        "lock_time_seconds": 70,
+        "unlocked_items": ["Slap", "Speed Coil", "Trap"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 0,
+        "floor_3": 0
+      },
+      "notes": "Only rebirth that doesn't give +1 slot"
+    },
+    {
+      "level": 2,
+      "name": "Rebirth 2",
+      "cash_required": 10000000,
+      "brainrots_required": ["Cappuccino Assassino"],
+      "rewards": {
+        "multiplier": 2.0,
+        "starting_cash": 1000,
+        "base_slots": 18,
+        "total_floors": 2,
+        "lock_time_seconds": 80,
+        "unlocked_items": ["Jump Coil"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 8,
+        "floor_3": 0
+      },
+      "notes": "Unlocks second floor!"
+    },
+    {
+      "level": 3,
+      "name": "Rebirth 3",
+      "cash_required": 100000000,
+      "brainrots_required": ["Brr Brr Patapim"],
+      "rewards": {
+        "multiplier": 3.0,
+        "starting_cash": 10000,
+        "base_slots": 19,
+        "total_floors": 2,
+        "lock_time_seconds": 90,
+        "unlocked_items": ["Paint Slap"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 9,
+        "floor_3": 0
+      }
+    },
+    {
+      "level": 4,
+      "name": "Rebirth 4",
+      "cash_required": 500000000,
+      "brainrots_required": ["Avocadini Antilopini"],
+      "rewards": {
+        "multiplier": 4.0,
+        "starting_cash": 100000,
+        "base_slots": 20,
+        "total_floors": 2,
+        "lock_time_seconds": 100,
+        "unlocked_items": ["Grapple Hook"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 10,
+        "floor_3": 0
+      }
+    },
+    {
+      "level": 5,
+      "name": "Rebirth 5",
+      "cash_required": 1000000000,
+      "brainrots_required": ["Bambini Crostini"],
+      "rewards": {
+        "multiplier": 5.0,
+        "starting_cash": 1000000,
+        "base_slots": 21,
+        "total_floors": 2,
+        "lock_time_seconds": 110,
+        "unlocked_items": ["Rocket Launcher"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 11,
+        "floor_3": 0
+      }
+    },
+    {
+      "level": 6,
+      "name": "Rebirth 6",
+      "cash_required": 5000000000,
+      "brainrots_required": ["Perochello Lemonchello"],
+      "rewards": {
+        "multiplier": 6.0,
+        "starting_cash": 10000000,
+        "base_slots": 22,
+        "total_floors": 2,
+        "lock_time_seconds": 120,
+        "unlocked_items": ["Freeze Ray"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 0
+      }
+    },
+    {
+      "level": 7,
+      "name": "Rebirth 7",
+      "cash_required": 25000000000,
+      "brainrots_required": ["Wombo Rollo"],
+      "rewards": {
+        "multiplier": 7.0,
+        "starting_cash": 100000000,
+        "base_slots": 23,
+        "total_floors": 2,
+        "lock_time_seconds": 130,
+        "unlocked_items": ["Invisibility Cloak"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 13,
+        "floor_3": 0
+      }
+    },
+    {
+      "level": 8,
+      "name": "Rebirth 8",
+      "cash_required": 100000000000,
+      "brainrots_required": ["Frigo Camelo"],
+      "rewards": {
+        "multiplier": 8.0,
+        "starting_cash": 1000000000,
+        "base_slots": 24,
+        "total_floors": 2,
+        "lock_time_seconds": 140,
+        "unlocked_items": ["Body Swap Potion"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 14,
+        "floor_3": 0
+      },
+      "notes": "Final rebirth to require Mythic"
+    },
+    {
+      "level": 9,
+      "name": "Rebirth 9",
+      "cash_required": 500000000000,
+      "brainrots_required": ["Cocofanto Elefanto"],
+      "rewards": {
+        "multiplier": 9.0,
+        "starting_cash": 10000000000,
+        "base_slots": 25,
+        "total_floors": 2,
+        "lock_time_seconds": 150,
+        "unlocked_items": ["Subspace Mine"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 15,
+        "floor_3": 0
+      }
+    },
+    {
+      "level": 10,
+      "name": "Rebirth 10",
+      "cash_required": 1000000000000,
+      "brainrots_required": ["Girafa Celestre"],
+      "rewards": {
+        "multiplier": 10.0,
+        "starting_cash": 100000000000,
+        "base_slots": 26,
+        "total_floors": 3,
+        "lock_time_seconds": 160,
+        "unlocked_items": ["All Seeing Turret"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 4
+      },
+      "notes": "Unlocks third floor! Best for protecting valuable brainrots"
+    },
+    {
+      "level": 11,
+      "name": "Rebirth 11",
+      "cash_required": 5000000000000,
+      "brainrots_required": ["Matteo"],
+      "rewards": {
+        "multiplier": 11.0,
+        "starting_cash": 1000000000000,
+        "base_slots": 27,
+        "total_floors": 3,
+        "lock_time_seconds": 170,
+        "unlocked_items": ["Quantum Clone"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 5
+      },
+      "notes": "Final rebirth to unlock a slap"
+    },
+    {
+      "level": 12,
+      "name": "Rebirth 12",
+      "cash_required": 25000000000000,
+      "brainrots_required": ["Odin Din Din Dun"],
+      "rewards": {
+        "multiplier": 12.0,
+        "starting_cash": 10000000000000,
+        "base_slots": 28,
+        "total_floors": 3,
+        "lock_time_seconds": 180,
+        "unlocked_items": ["Medusa Gaze"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 6
+      }
+    },
+    {
+      "level": 13,
+      "name": "Rebirth 13",
+      "cash_required": 50000000000000,
+      "brainrots_required": ["Tralalero Tralala"],
+      "rewards": {
+        "multiplier": 13.0,
+        "starting_cash": 100000000000000,
+        "base_slots": 29,
+        "total_floors": 3,
+        "lock_time_seconds": 190,
+        "unlocked_items": ["Web Sling"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 7
+      }
+    },
+    {
+      "level": 14,
+      "name": "Rebirth 14",
+      "cash_required": 100000000000000,
+      "brainrots_required": ["Piccione Macchina"],
+      "rewards": {
+        "multiplier": 14.0,
+        "starting_cash": 1000000000000000,
+        "base_slots": 30,
+        "total_floors": 3,
+        "lock_time_seconds": 200,
+        "unlocked_items": ["Coil Combo"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 8
+      }
+    },
+    {
+      "level": 15,
+      "name": "Rebirth 15",
+      "cash_required": 500000000000000,
+      "brainrots_required": ["Trippi Troppi Troppa Trippa"],
+      "rewards": {
+        "multiplier": 15.0,
+        "starting_cash": 10000000000000000,
+        "base_slots": 31,
+        "total_floors": 3,
+        "lock_time_seconds": 210,
+        "unlocked_items": ["Turbo Slap"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 9
+      },
+      "notes": "Final rebirth to require Brainrot God"
+    },
+    {
+      "level": 16,
+      "name": "Rebirth 16",
+      "cash_required": 1000000000000000,
+      "brainrots_required": ["Los Tralaleritos"],
+      "rewards": {
+        "multiplier": 16.0,
+        "starting_cash": 100000000000000000,
+        "base_slots": 32,
+        "total_floors": 3,
+        "lock_time_seconds": 220,
+        "unlocked_items": ["Shadow Step"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 10
+      },
+      "notes": "First rebirth to require Secret rarity! First Los brainrot requirement"
+    },
+    {
+      "level": 17,
+      "name": "Rebirth 17",
+      "cash_required": 2500000000000000,
+      "brainrots_required": ["Job Job Job Sahur", "Chicleteira Bicicleteira"],
+      "rewards": {
+        "multiplier": 17.0,
+        "starting_cash": 50000000000000,
+        "base_slots": 33,
+        "total_floors": 3,
+        "lock_time_seconds": 230,
+        "unlocked_items": ["Gamma Potion"]
+      },
+      "slot_breakdown": {
+        "floor_1": 10,
+        "floor_2": 12,
+        "floor_3": 11
+      },
+      "notes": "First rebirth to require TWO Secrets! Current maximum rebirth"
+    }
+  ],
+  "slot_calculation_rules": {
+    "starting_slots": 10,
+    "slot_per_rebirth": 1,
+    "exception": "Rebirth 1 does NOT give +1 slot",
+    "floor_distribution": {
+      "floor_1": "Always 10 slots",
+      "floor_2": "Unlocked at Rebirth 2, starts with 8, grows to 12 max",
+      "floor_3": "Unlocked at Rebirth 10, starts with 4, grows to 11 max"
+    },
+    "max_slots_at_17": 33,
+    "formula": "total_slots = 10 + (rebirth_level - 1) for rebirth >= 2, otherwise 10"
+  },
+  "base_mechanics": {
+    "initial_lock_time": 30,
+    "rebirth_lock_time": 60,
+    "lock_time_increase_per_rebirth": 10,
+    "lock_duration_formula": "60 + (rebirth_level * 10) seconds",
+    "floors": {
+      "1": {
+        "unlocked_at": "Start",
+        "max_capacity": 10,
+        "notes": "Always available"
+      },
+      "2": {
+        "unlocked_at": "Rebirth 2",
+        "max_capacity": 12,
+        "notes": "Accessed via outside staircase on right side"
+      },
+      "3": {
+        "unlocked_at": "Rebirth 10",
+        "max_capacity": 11,
+        "notes": "Accessed via ladder inside floor 2. Hardest to steal from!"
+      }
+    }
+  },
+  "planning_tips": {
+    "save_brainrots_before_rebirth": "Use alt account or trusted friend to hold valuable brainrots",
+    "timing": "Rebirth as soon as you meet requirements for faster progression",
+    "slot_priority": "Place most valuable brainrots on floor 3 (safest from theft)",
+    "theft_protection": "Higher floors = harder to steal. Third floor is most secure",
+    "rebirth_speed": "Multipliers compound - each rebirth makes the next faster"
+  }
+}

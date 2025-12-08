@@ -1,0 +1,3254 @@
+{
+  "_instructions": [
+    "Review each thumbnail and fix the 'corrected_name' field if needed.",
+    "Check the thumbnail image file to see what it actually shows.",
+    "Common issues:",
+    "  - Working filenames (like 'playboi-carti' should be 'La Grand Combination')",
+    "  - Version numbers (like 'EsokSekolah2' should be 'Esok Sekolah')",
+    "  - Transparent/NEW/etc suffixes",
+    "Set 'corrected_name' to the ACTUAL brainrot name shown in the image.",
+    "Set 'is_duplicate' to true if this is a duplicate of another entry.",
+    "Set 'is_junk' to true if this is not a real brainrot (icon, button, etc)."
+  ],
+  "thumbnails": [
+    {
+      "original_name": "Los Tralaleritos",
+      "cleaned_name": "Los Tralaleritos",
+      "corrected_name": "Los Tralaleritos",
+      "image_path": "thumbnails/Los_Tralaleritos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "EsokSekolah2",
+      "cleaned_name": "EsokSekolah2",
+      "corrected_name": "EsokSekolah2",
+      "image_path": "thumbnails/EsokSekolah2.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Matteofr",
+      "cleaned_name": "Matteofr",
+      "corrected_name": "Matteofr",
+      "image_path": "thumbnails/Matteofr.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Noobini Pizzanini NEW",
+      "cleaned_name": "Noobini Pizzanini",
+      "corrected_name": "Noobini Pizzanini",
+      "image_path": "thumbnails/Noobini_Pizzanini_NEW.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "NOOB!!!",
+      "cleaned_name": "NOOB!!!",
+      "corrected_name": "NOOB!!!",
+      "image_path": "thumbnails/NOOB.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Liliri Lalira",
+      "cleaned_name": "Liliri Lalira",
+      "corrected_name": "Liliri Lalira",
+      "image_path": "thumbnails/Liliri_Lalira.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tim Cheese",
+      "cleaned_name": "Tim Cheese",
+      "corrected_name": "Tim Cheese",
+      "image_path": "thumbnails/Tim_Cheese.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Fluriflura",
+      "cleaned_name": "Fluriflura",
+      "corrected_name": "Fluriflura",
+      "image_path": "thumbnails/Fluriflura.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Talpa Di Fero",
+      "cleaned_name": "Talpa Di Fero",
+      "corrected_name": "Talpa Di Fero",
+      "image_path": "thumbnails/Talpa_Di_Fero.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Homicidio doloso",
+      "cleaned_name": "Homicidio doloso",
+      "corrected_name": "Homicidio doloso",
+      "image_path": "thumbnails/Homicidio_doloso.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pipi Kiwi",
+      "cleaned_name": "Pipi Kiwi",
+      "corrected_name": "Pipi Kiwi",
+      "image_path": "thumbnails/Pipi_Kiwi.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Trippi Troppi",
+      "cleaned_name": "Trippi Troppi",
+      "corrected_name": "Trippi Troppi",
+      "image_path": "thumbnails/Trippi_Troppi.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "King von",
+      "cleaned_name": "King von",
+      "corrected_name": "King von",
+      "image_path": "thumbnails/King_von.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Messi",
+      "cleaned_name": "Messi",
+      "corrected_name": "Messi",
+      "image_path": "thumbnails/Messi.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Boneca Ambalabu",
+      "cleaned_name": "Boneca Ambalabu",
+      "corrected_name": "Boneca Ambalabu",
+      "image_path": "thumbnails/Boneca_Ambalabu.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cacto Hipopotamo1",
+      "cleaned_name": "Cacto Hipopotamo1",
+      "corrected_name": "Cacto Hipopotamo1",
+      "image_path": "thumbnails/Cacto_Hipopotamo1.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TaTas",
+      "cleaned_name": "TaTas",
+      "corrected_name": "TaTas",
+      "image_path": "thumbnails/TaTas.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tric-Trac-Baraboom-5",
+      "cleaned_name": "Tric-Trac-Baraboom-5",
+      "corrected_name": "Tric-Trac-Baraboom-5",
+      "image_path": "thumbnails/Tric-Trac-Baraboom-5.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cappuccino Assassino",
+      "cleaned_name": "Cappuccino Assassino",
+      "corrected_name": "Cappuccino Assassino",
+      "image_path": "thumbnails/Cappuccino_Assassino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Lil wayne",
+      "cleaned_name": "Lil wayne",
+      "corrected_name": "Lil wayne",
+      "image_path": "thumbnails/Lil_wayne.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Avocadini Antilopini",
+      "cleaned_name": "Avocadini Antilopini",
+      "corrected_name": "Avocadini Antilopini",
+      "image_path": "thumbnails/Avocadini_Antilopini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Untitled211 20250809125319",
+      "cleaned_name": "Untitled211 20250809125319",
+      "corrected_name": "Untitled211 20250809125319",
+      "image_path": "thumbnails/Untitled211_20250809125319.png",
+      "flags": [
+        "version_number",
+        "temp_filename"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Untitled208 20250808152208",
+      "cleaned_name": "Untitled208 20250808152208",
+      "corrected_name": "Untitled208 20250808152208",
+      "image_path": "thumbnails/Untitled208_20250808152208.png",
+      "flags": [
+        "version_number",
+        "temp_filename"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Dolphin But Banana",
+      "cleaned_name": "Dolphin But Banana",
+      "corrected_name": "Dolphin But Banana",
+      "image_path": "thumbnails/Dolphin_But_Banana.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "PeroLemonfulldetial",
+      "cleaned_name": "PeroLemonfulldetial",
+      "corrected_name": "PeroLemonfulldetial",
+      "image_path": "thumbnails/PeroLemonfulldetial.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Berry berry bicus dickus",
+      "cleaned_name": "Berry berry bicus dickus",
+      "corrected_name": "Berry berry bicus dickus",
+      "image_path": "thumbnails/Berry_berry_bicus_dickus.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "AvocadiniGuffo",
+      "cleaned_name": "AvocadiniGuffo",
+      "corrected_name": "AvocadiniGuffo",
+      "image_path": "thumbnails/AvocadiniGuffo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Salamino-Penguino",
+      "cleaned_name": "Salamino-Penguino",
+      "corrected_name": "Salamino-Penguino",
+      "image_path": "thumbnails/Salamino-Penguino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Wombo",
+      "cleaned_name": "Wombo",
+      "corrected_name": "Wombo",
+      "image_path": "thumbnails/Wombo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Untitled209 20250808173522",
+      "cleaned_name": "Untitled209 20250808173522",
+      "corrected_name": "Untitled209 20250808173522",
+      "image_path": "thumbnails/Untitled209_20250808173522.png",
+      "flags": [
+        "version_number",
+        "temp_filename"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "ChimpanziniBananini",
+      "cleaned_name": "ChimpanziniBananini",
+      "corrected_name": "ChimpanziniBananini",
+      "image_path": "thumbnails/ChimpanziniBananini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ballerina cappucinaaaa!!!",
+      "cleaned_name": "Ballerina cappucinaaaa!!!",
+      "corrected_name": "Ballerina cappucinaaaa!!!",
+      "image_path": "thumbnails/Ballerina_cappucinaaaa.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Travis scott",
+      "cleaned_name": "Travis scott",
+      "corrected_name": "Travis scott",
+      "image_path": "thumbnails/Travis_scott.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Lionel-Cactuseli",
+      "cleaned_name": "Lionel-Cactuseli",
+      "corrected_name": "Lionel-Cactuseli",
+      "image_path": "thumbnails/Lionel-Cactuseli.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "GlorboFruttodrillo",
+      "cleaned_name": "GlorboFruttodrillo",
+      "corrected_name": "GlorboFruttodrillo",
+      "image_path": "thumbnails/GlorboFruttodrillo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Quivioli Ameleonni",
+      "cleaned_name": "Quivioli Ameleonni",
+      "corrected_name": "Quivioli Ameleonni",
+      "image_path": "thumbnails/Quivioli_Ameleonni.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "NewBlueberrinni",
+      "cleaned_name": "NewBlueberrinni",
+      "corrected_name": "NewBlueberrinni",
+      "image_path": "thumbnails/NewBlueberrinni.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "POTATO",
+      "cleaned_name": "POTATO",
+      "corrected_name": "POTATO",
+      "image_path": "thumbnails/POTATO.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Strawberrelli Flamingelli",
+      "cleaned_name": "Strawberrelli Flamingelli",
+      "corrected_name": "Strawberrelli Flamingelli",
+      "image_path": "thumbnails/Strawberrelli_Flamingelli.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pandaccini Bananini",
+      "cleaned_name": "Pandaccini Bananini",
+      "corrected_name": "Pandaccini Bananini",
+      "image_path": "thumbnails/Pandaccini_Bananini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Sig ma Boy",
+      "cleaned_name": "Sig ma Boy",
+      "corrected_name": "Sig ma Boy",
+      "image_path": "thumbnails/Sig_ma_Boy.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Lol Fridge",
+      "cleaned_name": "Lol Fridge",
+      "corrected_name": "Lol Fridge",
+      "image_path": "thumbnails/Lol_Fridge.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Banana",
+      "cleaned_name": "Banana",
+      "corrected_name": "Banana",
+      "image_path": "thumbnails/Banana.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Untitled210 20250808180116",
+      "cleaned_name": "Untitled210 20250808180116",
+      "corrected_name": "Untitled210 20250808180116",
+      "image_path": "thumbnails/Untitled210_20250808180116.png",
+      "flags": [
+        "version_number",
+        "temp_filename"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Centrucci Nuclucci",
+      "cleaned_name": "Centrucci Nuclucci",
+      "corrected_name": "Centrucci Nuclucci",
+      "image_path": "thumbnails/Centrucci_Nuclucci.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Bombs!!",
+      "cleaned_name": "Bombs!!",
+      "corrected_name": "Bombs!!",
+      "image_path": "thumbnails/Bombs.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cant come up with a funny joke for this one",
+      "cleaned_name": "Cant come up with a funny joke for this one",
+      "corrected_name": "Cant come up with a funny joke for this one",
+      "image_path": "thumbnails/Cant_come_up_with_a_funny_joke_for_this_one.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cavallo Virtuoso",
+      "cleaned_name": "Cavallo Virtuoso",
+      "corrected_name": "Cavallo Virtuoso",
+      "image_path": "thumbnails/Cavallo_Virtuoso.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Gorillo-Watermelondrillo",
+      "cleaned_name": "Gorillo-Watermelondrillo",
+      "corrected_name": "Gorillo-Watermelondrillo",
+      "image_path": "thumbnails/Gorillo-Watermelondrillo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Watermelon Doggy",
+      "cleaned_name": "Watermelon Doggy",
+      "corrected_name": "Watermelon Doggy",
+      "image_path": "thumbnails/Watermelon_Doggy.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Image-removebg-preview (7)",
+      "cleaned_name": "Image-removebg-preview (7)",
+      "corrected_name": "Image-removebg-preview (7)",
+      "image_path": "thumbnails/Image-removebg-preview_7.png",
+      "flags": [
+        "version_number",
+        "temp_filename",
+        "special_chars"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Te te te te te te Sahur",
+      "cleaned_name": "Te te te te te te Sahur",
+      "corrected_name": "Te te te te te te Sahur",
+      "image_path": "thumbnails/Te_te_te_te_te_te_Sahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tracoducotulu Delapeladustuz",
+      "cleaned_name": "Tracoducotulu Delapeladustuz",
+      "corrected_name": "Tracoducotulu Delapeladustuz",
+      "image_path": "thumbnails/Tracoducotulu_Delapeladustuz.webp",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Toiletto",
+      "cleaned_name": "Toiletto",
+      "corrected_name": "Toiletto",
+      "image_path": "thumbnails/Toiletto.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "THE FOG IS COMING",
+      "cleaned_name": "THE FOG IS COMING",
+      "corrected_name": "THE FOG IS COMING",
+      "image_path": "thumbnails/THE_FOG_IS_COMING.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cocofanto Elefanto",
+      "cleaned_name": "Cocofanto Elefanto",
+      "corrected_name": "Cocofanto Elefanto",
+      "image_path": "thumbnails/Cocofanto_Elefanto.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "...---...",
+      "cleaned_name": "...---...",
+      "corrected_name": "...---...",
+      "image_path": "thumbnails/---.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TralaleroTralala",
+      "cleaned_name": "TralaleroTralala",
+      "corrected_name": "TralaleroTralala",
+      "image_path": "thumbnails/TralaleroTralala.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tigroligre-Frutonni",
+      "cleaned_name": "Tigroligre-Frutonni",
+      "corrected_name": "Tigroligre-Frutonni",
+      "image_path": "thumbnails/Tigroligre-Frutonni.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Me irl",
+      "cleaned_name": "Me irl",
+      "corrected_name": "Me irl",
+      "image_path": "thumbnails/Me_irl.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Orcalero Orcala",
+      "cleaned_name": "Orcalero Orcala",
+      "corrected_name": "Orcalero Orcala",
+      "image_path": "thumbnails/Orcalero_Orcala.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tralalita",
+      "cleaned_name": "Tralalita",
+      "corrected_name": "Tralalita",
+      "image_path": "thumbnails/Tralalita.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Trenostruzzo Turbo 3000",
+      "cleaned_name": "Trenostruzzo Turbo 3000",
+      "corrected_name": "Trenostruzzo Turbo 3000",
+      "image_path": "thumbnails/Trenostruzzo_Turbo_3000.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Trippi Troppi Trooppi TrooaaapppaaHELP IM ABOUT TO GET INTO A CAR CRASH",
+      "cleaned_name": "Trippi Troppi Trooppi TrooaaapppaaHELP IM ABOUT TO GET INTO A CAR CRASH",
+      "corrected_name": "Trippi Troppi Trooppi TrooaaapppaaHELP IM ABOUT TO GET INTO A CAR CRASH",
+      "image_path": "thumbnails/Trippi_Troppi_Trooppi_TrooaaapppaaHELP_IM_ABOUT_TO_GET_INTO_A_CAR_CRASH.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ballerinolololo",
+      "cleaned_name": "Ballerinolololo",
+      "corrected_name": "Ballerinolololo",
+      "image_path": "thumbnails/Ballerinolololo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Five hotdogs for dinner tonight",
+      "cleaned_name": "Five hotdogs for dinner tonight",
+      "corrected_name": "Five hotdogs for dinner tonight",
+      "image_path": "thumbnails/Five_hotdogs_for_dinner_tonight.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pakrah",
+      "cleaned_name": "Pakrah",
+      "corrected_name": "Pakrah",
+      "image_path": "thumbnails/Pakrah.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "PIGEONS ARE SPIES MADE BY THE GOVERNMENT",
+      "cleaned_name": "PIGEONS ARE SPIES MADE BY THE GOVERNMENT",
+      "corrected_name": "PIGEONS ARE SPIES MADE BY THE GOVERNMENT",
+      "image_path": "thumbnails/PIGEONS_ARE_SPIES_MADE_BY_THE_GOVERNMENT.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TractoroDino",
+      "cleaned_name": "TractoroDino",
+      "corrected_name": "TractoroDino",
+      "image_path": "thumbnails/TractoroDino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Orcalitos",
+      "cleaned_name": "Los Orcalitos",
+      "corrected_name": "Los Orcalitos",
+      "image_path": "thumbnails/Los_Orcalitos.webp",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Lebron james",
+      "cleaned_name": "Lebron james",
+      "corrected_name": "Lebron james",
+      "image_path": "thumbnails/Lebron_james.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tartaruga Cisternaaaa",
+      "cleaned_name": "Tartaruga Cisternaaaa",
+      "corrected_name": "Tartaruga Cisternaaaa",
+      "image_path": "thumbnails/Tartaruga_Cisternaaaa.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Clanker",
+      "cleaned_name": "Clanker",
+      "corrected_name": "Clanker",
+      "image_path": "thumbnails/Clanker.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "PopPopSahur",
+      "cleaned_name": "PopPopSahur",
+      "corrected_name": "PopPopSahur",
+      "image_path": "thumbnails/PopPopSahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Childhood gambling",
+      "cleaned_name": "Childhood gambling",
+      "corrected_name": "Childhood gambling",
+      "image_path": "thumbnails/Childhood_gambling.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LosMatteos",
+      "cleaned_name": "LosMatteos",
+      "corrected_name": "LosMatteos",
+      "image_path": "thumbnails/LosMatteos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "La Vaccca Saturno Saturnita",
+      "cleaned_name": "La Vaccca Saturno Saturnita",
+      "corrected_name": "La Vaccca Saturno Saturnita",
+      "image_path": "thumbnails/La_Vaccca_Saturno_Saturnita.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "1x1x1x1Render",
+      "cleaned_name": "1x1x1x1Render",
+      "corrected_name": "1x1x1x1Render",
+      "image_path": "thumbnails/1x1x1x1Render.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Guest666t",
+      "cleaned_name": "Guest666t",
+      "corrected_name": "Guest666t",
+      "image_path": "thumbnails/Guest666t.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Crack",
+      "cleaned_name": "Crack",
+      "corrected_name": "Crack",
+      "image_path": "thumbnails/Crack.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Spyderinis",
+      "cleaned_name": "Los Spyderinis",
+      "corrected_name": "Los Spyderinis",
+      "image_path": "thumbnails/Los_Spyderinis.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LasTralaleritas",
+      "cleaned_name": "LasTralaleritas",
+      "corrected_name": "LasTralaleritas",
+      "image_path": "thumbnails/LasTralaleritas.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Job",
+      "cleaned_name": "Job",
+      "corrected_name": "Job",
+      "image_path": "thumbnails/Job.webp",
+      "flags": [
+        "suspicious_short"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TungTungSahur",
+      "cleaned_name": "TungTungSahur",
+      "corrected_name": "TungTungSahur",
+      "image_path": "thumbnails/TungTungSahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Noo My Examen",
+      "cleaned_name": "Noo My Examen",
+      "corrected_name": "Noo My Examen",
+      "image_path": "thumbnails/Noo_My_Examen.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Chick fil a",
+      "cleaned_name": "Chick fil a",
+      "corrected_name": "Chick fil a",
+      "image_path": "thumbnails/Chick_fil_a.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Graipuss",
+      "cleaned_name": "Graipuss",
+      "corrected_name": "Graipuss",
+      "image_path": "thumbnails/Graipuss.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Africa by toto (to sahur)",
+      "cleaned_name": "Africa by toto (to sahur)",
+      "corrected_name": "Africa by toto (to sahur)",
+      "image_path": "thumbnails/Africa_by_toto_to_sahur.png",
+      "flags": [
+        "special_chars"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pot Hotspot",
+      "cleaned_name": "Pot Hotspot",
+      "corrected_name": "Pot Hotspot",
+      "image_path": "thumbnails/Pot_Hotspot.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Chicleteira",
+      "cleaned_name": "Chicleteira",
+      "corrected_name": "Chicleteira",
+      "image_path": "thumbnails/Chicleteira.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Chicleteirina Bicicleteirina",
+      "cleaned_name": "Chicleteirina Bicicleteirina",
+      "corrected_name": "Chicleteirina Bicicleteirina",
+      "image_path": "thumbnails/Chicleteirina_Bicicleteirina.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los ditos",
+      "cleaned_name": "Los ditos",
+      "corrected_name": "Los ditos",
+      "image_path": "thumbnails/Los_ditos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Playboi carti",
+      "cleaned_name": "Playboi carti",
+      "corrected_name": "Playboi carti",
+      "image_path": "thumbnails/Playboi_carti.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TangTangVfx",
+      "cleaned_name": "TangTangVfx",
+      "corrected_name": "TangTangVfx",
+      "image_path": "thumbnails/TangTangVfx.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Swag Soda",
+      "cleaned_name": "Swag Soda",
+      "corrected_name": "Swag Soda",
+      "image_path": "thumbnails/Swag_Soda.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "THERE ARE BUGS UNDER YOUR SKIN",
+      "cleaned_name": "THERE ARE BUGS UNDER YOUR SKIN",
+      "corrected_name": "THERE ARE BUGS UNDER YOUR SKIN",
+      "image_path": "thumbnails/THERE_ARE_BUGS_UNDER_YOUR_SKIN.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Money money puggy",
+      "cleaned_name": "Money money puggy",
+      "corrected_name": "Money money puggy",
+      "image_path": "thumbnails/Money_money_puggy.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "KetupatKepat",
+      "cleaned_name": "KetupatKepat",
+      "corrected_name": "KetupatKepat",
+      "image_path": "thumbnails/KetupatKepat.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Time moving slow",
+      "cleaned_name": "Time moving slow",
+      "corrected_name": "Time moving slow",
+      "image_path": "thumbnails/Time_moving_slow.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ketchuru",
+      "cleaned_name": "Ketchuru",
+      "corrected_name": "Ketchuru",
+      "image_path": "thumbnails/Ketchuru.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Garamadundung",
+      "cleaned_name": "Garamadundung",
+      "corrected_name": "Garamadundung",
+      "image_path": "thumbnails/Garamadundung.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Spaghettitualetti",
+      "cleaned_name": "Spaghettitualetti",
+      "corrected_name": "Spaghettitualetti",
+      "image_path": "thumbnails/Spaghettitualetti.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Moby",
+      "cleaned_name": "Moby",
+      "corrected_name": "Moby",
+      "image_path": "thumbnails/Moby.png",
+      "flags": [
+        "suspicious_short"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Lasecretcombinasion",
+      "cleaned_name": "Lasecretcombinasion",
+      "corrected_name": "Lasecretcombinasion",
+      "image_path": "thumbnails/Lasecretcombinasion.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Burguro-And-Fryuro",
+      "cleaned_name": "Burguro-And-Fryuro",
+      "corrected_name": "Burguro-And-Fryuro",
+      "image_path": "thumbnails/Burguro-And-Fryuro.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Dragon Cannelloni",
+      "cleaned_name": "Dragon Cannelloni",
+      "corrected_name": "Dragon Cannelloni",
+      "image_path": "thumbnails/Dragon_Cannelloni.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "SecretLuckyBlock",
+      "cleaned_name": "SecretLuckyBlock",
+      "corrected_name": "SecretLuckyBlock",
+      "image_path": "thumbnails/SecretLuckyBlock.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Clear background clear meowl image",
+      "cleaned_name": "Clear background clear meowl",
+      "corrected_name": "Clear background clear meowl",
+      "image_path": "thumbnails/Clear_background_clear_meowl_image.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Strawberryelephant",
+      "cleaned_name": "Strawberryelephant",
+      "corrected_name": "Strawberryelephant",
+      "image_path": "thumbnails/Strawberryelephant.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Carlooooo",
+      "cleaned_name": "Carlooooo",
+      "corrected_name": "Carlooooo",
+      "image_path": "thumbnails/Carlooooo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Testicular torsion",
+      "cleaned_name": "Testicular torsion",
+      "corrected_name": "Testicular torsion",
+      "image_path": "thumbnails/Testicular_torsion.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Alvin and the chipmunks",
+      "cleaned_name": "Alvin and the chipmunks",
+      "corrected_name": "Alvin and the chipmunks",
+      "image_path": "thumbnails/Alvin_and_the_chipmunks.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Mr krabs",
+      "cleaned_name": "Mr krabs",
+      "corrected_name": "Mr krabs",
+      "image_path": "thumbnails/Mr_krabs.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Blackhole Goat",
+      "cleaned_name": "Blackhole Goat",
+      "corrected_name": "Blackhole Goat",
+      "image_path": "thumbnails/Blackhole_Goat.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Guerriro Digitale",
+      "cleaned_name": "Guerriro Digitale",
+      "corrected_name": "Guerriro Digitale",
+      "image_path": "thumbnails/Guerriro_Digitale.webp",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Yess",
+      "cleaned_name": "Yess",
+      "corrected_name": "Yess",
+      "image_path": "thumbnails/Yess.webp",
+      "flags": [
+        "suspicious_short"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "AdminLuckyBlock",
+      "cleaned_name": "AdminLuckyBlock",
+      "corrected_name": "AdminLuckyBlock",
+      "image_path": "thumbnails/AdminLuckyBlock.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Yo quiero taco bell",
+      "cleaned_name": "Yo quiero taco bell",
+      "corrected_name": "Yo quiero taco bell",
+      "image_path": "thumbnails/Yo_quiero_taco_bell.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Gattatino Nyaninno",
+      "cleaned_name": "Gattatino Nyaninno",
+      "corrected_name": "Gattatino Nyaninno",
+      "image_path": "thumbnails/Gattatino_Nyaninno.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los tipi tacos",
+      "cleaned_name": "Los tipi tacos",
+      "corrected_name": "Los tipi tacos",
+      "image_path": "thumbnails/Los_tipi_tacos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Quesadillacroco",
+      "cleaned_name": "Quesadillacroco",
+      "corrected_name": "Quesadillacroco",
+      "image_path": "thumbnails/Quesadillacroco.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LosNooMyHotspotsitos",
+      "cleaned_name": "LosNooMyHotspotsitos",
+      "corrected_name": "LosNooMyHotspotsitos",
+      "image_path": "thumbnails/LosNooMyHotspotsitos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "PoTaTo",
+      "cleaned_name": "PoTaTo",
+      "corrected_name": "PoTaTo",
+      "image_path": "thumbnails/PoTaTo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TacoLuckyBlock2",
+      "cleaned_name": "TacoLuckyBlock2",
+      "corrected_name": "TacoLuckyBlock2",
+      "image_path": "thumbnails/TacoLuckyBlock2.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Mummy Ambalabu",
+      "cleaned_name": "Mummy Ambalabu",
+      "corrected_name": "Mummy Ambalabu",
+      "image_path": "thumbnails/Mummy_Ambalabu.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cappuccinoclown",
+      "cleaned_name": "Cappuccinoclown",
+      "corrected_name": "Cappuccinoclown",
+      "image_path": "thumbnails/Cappuccinoclown.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Jackorilla",
+      "cleaned_name": "Jackorilla",
+      "corrected_name": "Jackorilla",
+      "image_path": "thumbnails/Jackorilla.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Sammypumpkin",
+      "cleaned_name": "Sammypumpkin",
+      "corrected_name": "Sammypumpkin",
+      "image_path": "thumbnails/Sammypumpkin.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Trickortreat",
+      "cleaned_name": "Trickortreat",
+      "corrected_name": "Trickortreat",
+      "image_path": "thumbnails/Trickortreat.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Telemorte",
+      "cleaned_name": "Telemorte",
+      "corrected_name": "Telemorte",
+      "image_path": "thumbnails/Telemorte.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Lospookycombi",
+      "cleaned_name": "Lospookycombi",
+      "corrected_name": "Lospookycombi",
+      "image_path": "thumbnails/Lospookycombi.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Casa Booo",
+      "cleaned_name": "Casa Booo",
+      "corrected_name": "Casa Booo",
+      "image_path": "thumbnails/Casa_Booo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Spooky block",
+      "cleaned_name": "Spooky block",
+      "corrected_name": "Spooky block",
+      "image_path": "thumbnails/Spooky_block.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Redblockgif.gif",
+      "cleaned_name": "Redblockgif",
+      "corrected_name": "Redblockgif",
+      "image_path": "thumbnails/Redblockgifgif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Blueblockgif.gif",
+      "cleaned_name": "Blueblockgif",
+      "corrected_name": "Blueblockgif",
+      "image_path": "thumbnails/Blueblockgifgif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Secretbllblbb.gif",
+      "cleaned_name": "Secretbllblbb",
+      "corrected_name": "Secretbllblbb",
+      "image_path": "thumbnails/Secretbllblbbgif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Spoookyluckyblckgif.gif",
+      "cleaned_name": "Spoookyluckyblckgif",
+      "corrected_name": "Spoookyluckyblckgif",
+      "image_path": "thumbnails/Spoookyluckyblckgifgif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Newblockgiffestive.gif",
+      "cleaned_name": "Newblockgiffestive",
+      "corrected_name": "Newblockgiffestive",
+      "image_path": "thumbnails/Newblockgiffestivegif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Admingifblocknimationcheatscript.gif",
+      "cleaned_name": "Admingifblocknimationcheatscript",
+      "corrected_name": "Admingifblocknimationcheatscript",
+      "image_path": "thumbnails/Admingifblocknimationcheatscriptgif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Losadminblocksgifasdasdsad.gif",
+      "cleaned_name": "Losadminblocksgifasdasdsad",
+      "corrected_name": "Losadminblocksgifasdasdsad",
+      "image_path": "thumbnails/Losadminblocksgifasdasdsadgif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tacolbuckgifanimation20202020.gif",
+      "cleaned_name": "Tacolbuckgifanimation20202020",
+      "corrected_name": "Tacolbuckgifanimation20202020",
+      "image_path": "thumbnails/Tacolbuckgifanimation20202020gif.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Walktacoblocksloskfoadsad.gif",
+      "cleaned_name": "Walktacoblocksloskfoadsad",
+      "corrected_name": "Walktacoblocksloskfoadsad",
+      "image_path": "thumbnails/Walktacoblocksloskfoadsadgif.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Raccooni",
+      "cleaned_name": "Raccooni",
+      "corrected_name": "Raccooni",
+      "image_path": "thumbnails/Raccooni.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Gattatin",
+      "cleaned_name": "Gattatin",
+      "corrected_name": "Gattatin",
+      "image_path": "thumbnails/Gattatin.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Espresso Signora",
+      "cleaned_name": "Espresso Signora",
+      "corrected_name": "Espresso Signora",
+      "image_path": "thumbnails/Espresso_Signora.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tipi Topi Taco",
+      "cleaned_name": "Tipi Topi Taco",
+      "corrected_name": "Tipi Topi Taco",
+      "image_path": "thumbnails/Tipi_Topi_Taco.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Elon musk",
+      "cleaned_name": "Elon musk",
+      "corrected_name": "Elon musk",
+      "image_path": "thumbnails/Elon_musk.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Dead art form",
+      "cleaned_name": "Dead art form",
+      "corrected_name": "Dead art form",
+      "image_path": "thumbnails/Dead_art_form.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "VampiraCappuccina",
+      "cleaned_name": "VampiraCappuccina",
+      "corrected_name": "VampiraCappuccina",
+      "image_path": "thumbnails/VampiraCappuccina.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Currently on fire",
+      "cleaned_name": "Currently on fire",
+      "corrected_name": "Currently on fire",
+      "image_path": "thumbnails/Currently_on_fire.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Capi Taco",
+      "cleaned_name": "Capi Taco",
+      "corrected_name": "Capi Taco",
+      "image_path": "thumbnails/Capi_Taco.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pakrematina",
+      "cleaned_name": "Pakrematina",
+      "corrected_name": "Pakrematina",
+      "image_path": "thumbnails/Pakrematina.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Brasilini Berimbini2",
+      "cleaned_name": "Brasilini Berimbini2",
+      "corrected_name": "Brasilini Berimbini2",
+      "image_path": "thumbnails/Brasilini_Berimbini2.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "CornSahur",
+      "cleaned_name": "CornSahur",
+      "corrected_name": "CornSahur",
+      "image_path": "thumbnails/CornSahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Aurafarmkid",
+      "cleaned_name": "Aurafarmkid",
+      "corrected_name": "Aurafarmkid",
+      "image_path": "thumbnails/Aurafarmkid.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cookie no bg",
+      "cleaned_name": "Cookie",
+      "corrected_name": "Cookie",
+      "image_path": "thumbnails/Cookie_no_bg.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Skully",
+      "cleaned_name": "Skully",
+      "corrected_name": "Skully",
+      "image_path": "thumbnails/Skully.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Bisonte Giuppitere normal",
+      "cleaned_name": "Bisonte Giuppitere normal",
+      "corrected_name": "Bisonte Giuppitere normal",
+      "image_path": "thumbnails/Bisonte_Giuppitere_normal.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Karkerkar kurkur",
+      "cleaned_name": "Karkerkar kurkur",
+      "corrected_name": "Karkerkar kurkur",
+      "image_path": "thumbnails/Karkerkar_kurkur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Sammy blud",
+      "cleaned_name": "Sammy blud",
+      "corrected_name": "Sammy blud",
+      "image_path": "thumbnails/Sammy_blud.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Dul Dul Dul",
+      "cleaned_name": "Dul Dul Dul",
+      "corrected_name": "Dul Dul Dul",
+      "image_path": "thumbnails/Dul_Dul_Dul.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Frankenmtteo",
+      "cleaned_name": "Frankenmtteo",
+      "corrected_name": "Frankenmtteo",
+      "image_path": "thumbnails/Frankenmtteo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "ChachechiTransparent",
+      "cleaned_name": "ChachechiTransparent",
+      "corrected_name": "ChachechiTransparent",
+      "image_path": "thumbnails/ChachechiTransparent.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Jaws",
+      "cleaned_name": "Jaws",
+      "corrected_name": "Jaws",
+      "image_path": "thumbnails/Jaws.png",
+      "flags": [
+        "suspicious_short"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "La Cucaracha",
+      "cleaned_name": "La Cucaracha",
+      "corrected_name": "La Cucaracha",
+      "image_path": "thumbnails/La_Cucaracha.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Giftspider",
+      "cleaned_name": "Giftspider",
+      "corrected_name": "Giftspider",
+      "image_path": "thumbnails/Giftspider.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Yummytacodog",
+      "cleaned_name": "Yummytacodog",
+      "corrected_name": "Yummytacodog",
+      "image_path": "thumbnails/Yummytacodog.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "NoMyHotspot",
+      "cleaned_name": "NoMyHotspot",
+      "corrected_name": "NoMyHotspot",
+      "image_path": "thumbnails/NoMyHotspot.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tung Tung Tung Sahur doesn't deserve to be added back",
+      "cleaned_name": "Tung Tung Tung Sahur doesn't deserve to be added back",
+      "corrected_name": "Tung Tung Tung Sahur doesn't deserve to be added back",
+      "image_path": "thumbnails/Tung_Tung_Tung_Sahur_doesnt_deserve_to_be_added_back.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tung Tung Tung Sahur",
+      "cleaned_name": "Tung Tung Tung Sahur",
+      "corrected_name": "Tung Tung Tung Sahur",
+      "image_path": "thumbnails/Tung_Tung_Tung_Sahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Hboom",
+      "cleaned_name": "Hboom",
+      "corrected_name": "Hboom",
+      "image_path": "thumbnails/Hboom.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "PotHotpumkin",
+      "cleaned_name": "PotHotpumkin",
+      "corrected_name": "PotHotpumkin",
+      "image_path": "thumbnails/PotHotpumkin.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Dildo",
+      "cleaned_name": "Dildo",
+      "corrected_name": "Dildo",
+      "image_path": "thumbnails/Dildo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Noo my candy transparent",
+      "cleaned_name": "Noo my candy",
+      "corrected_name": "Noo my candy",
+      "image_path": "thumbnails/Noo_my_candy_transparent.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "RingRangBus2",
+      "cleaned_name": "RingRangBus2",
+      "corrected_name": "RingRangBus2",
+      "image_path": "thumbnails/RingRangBus2.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Boatito Auratito",
+      "cleaned_name": "Boatito Auratito",
+      "corrected_name": "Boatito Auratito",
+      "image_path": "thumbnails/Boatito_Auratito.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "ZombieTralala",
+      "cleaned_name": "ZombieTralala",
+      "corrected_name": "ZombieTralala",
+      "image_path": "thumbnails/ZombieTralala.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Man im dead",
+      "cleaned_name": "Man im dead",
+      "corrected_name": "Man im dead",
+      "image_path": "thumbnails/Man_im_dead.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "MariachiCora",
+      "cleaned_name": "MariachiCora",
+      "corrected_name": "MariachiCora",
+      "image_path": "thumbnails/MariachiCora.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tacorita",
+      "cleaned_name": "Tacorita",
+      "corrected_name": "Tacorita",
+      "image_path": "thumbnails/Tacorita.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Boombig",
+      "cleaned_name": "Boombig",
+      "corrected_name": "Boombig",
+      "image_path": "thumbnails/Boombig.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Spooky Grande",
+      "cleaned_name": "Spooky Grande",
+      "corrected_name": "Spooky Grande",
+      "image_path": "thumbnails/Spooky_Grande.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Chilin",
+      "cleaned_name": "Chilin",
+      "corrected_name": "Chilin",
+      "image_path": "thumbnails/Chilin.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Gobblino Uniciclino",
+      "cleaned_name": "Gobblino Uniciclino",
+      "corrected_name": "Gobblino Uniciclino",
+      "image_path": "thumbnails/Gobblino_Uniciclino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "La Extinct Grande",
+      "cleaned_name": "La Extinct Grande",
+      "corrected_name": "La Extinct Grande",
+      "image_path": "thumbnails/La_Extinct_Grande.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Win Or Lose",
+      "cleaned_name": "Win Or Lose",
+      "corrected_name": "Win Or Lose",
+      "image_path": "thumbnails/Win_Or_Lose.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "La Chrismas Grande",
+      "cleaned_name": "La Chrismas Grande",
+      "corrected_name": "La Chrismas Grande",
+      "image_path": "thumbnails/La_Chrismas_Grande.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Taco TUESDAYYYYYYYY",
+      "cleaned_name": "Taco TUESDAYYYYYYYY",
+      "corrected_name": "Taco TUESDAYYYYYYYY",
+      "image_path": "thumbnails/Taco_TUESDAYYYYYYYY.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Bombardini Tortinii",
+      "cleaned_name": "Bombardini Tortinii",
+      "corrected_name": "Bombardini Tortinii",
+      "image_path": "thumbnails/Bombardini_Tortinii.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Taco Blocks Image (dont change my image)",
+      "cleaned_name": "Los Taco Blocks Image (dont change my image)",
+      "corrected_name": "Los Taco Blocks Image (dont change my image)",
+      "image_path": "thumbnails/Los_Taco_Blocks_Image_dont_change_my_image.png",
+      "flags": [
+        "temp_filename",
+        "special_chars"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Bandito Axolito1",
+      "cleaned_name": "Bandito Axolito1",
+      "corrected_name": "Bandito Axolito1",
+      "image_path": "thumbnails/Bandito_Axolito1.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "MalameAmarele",
+      "cleaned_name": "MalameAmarele",
+      "corrected_name": "MalameAmarele",
+      "image_path": "thumbnails/MalameAmarele.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Mangolini Parrocini",
+      "cleaned_name": "Mangolini Parrocini",
+      "corrected_name": "Mangolini Parrocini",
+      "image_path": "thumbnails/Mangolini_Parrocini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TirilikalikaTirilikalakoTransparent",
+      "cleaned_name": "TirilikalikaTirilikalakoTransparent",
+      "corrected_name": "TirilikalikaTirilikalakoTransparent",
+      "image_path": "thumbnails/TirilikalikaTirilikalakoTransparent.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cute daschaund",
+      "cleaned_name": "Cute daschaund",
+      "corrected_name": "Cute daschaund",
+      "image_path": "thumbnails/Cute_daschaund.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Teenage turtle",
+      "cleaned_name": "Teenage turtle",
+      "corrected_name": "Teenage turtle",
+      "image_path": "thumbnails/Teenage_turtle.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Sigma Girl2",
+      "cleaned_name": "Sigma Girl2",
+      "corrected_name": "Sigma Girl2",
+      "image_path": "thumbnails/Sigma_Girl2.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Bruto gialutto",
+      "cleaned_name": "Bruto gialutto",
+      "corrected_name": "Bruto gialutto",
+      "image_path": "thumbnails/Bruto_gialutto.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Dubstep boy",
+      "cleaned_name": "Dubstep boy",
+      "corrected_name": "Dubstep boy",
+      "image_path": "thumbnails/Dubstep_boy.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "UPokf8FmxyJj4JnktOIdNuJvgtV0vcQRYJLslXal",
+      "cleaned_name": "UPokf8FmxyJj4JnktOIdNuJvgtV0vcQRYJLslXal",
+      "corrected_name": "UPokf8FmxyJj4JnktOIdNuJvgtV0vcQRYJLslXal",
+      "image_path": "thumbnails/UPokf8FmxyJj4JnktOIdNuJvgtV0vcQRYJLslXal.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Noobinis",
+      "cleaned_name": "Noobinis",
+      "corrected_name": "Noobinis",
+      "image_path": "thumbnails/Noobinis.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Elefanto Frigo Transparent",
+      "cleaned_name": "Elefanto Frigo",
+      "corrected_name": "Elefanto Frigo",
+      "image_path": "thumbnails/Elefanto_Frigo_Transparent.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Antonio",
+      "cleaned_name": "Antonio",
+      "corrected_name": "Antonio",
+      "image_path": "thumbnails/Antonio.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Lascapuchinas",
+      "cleaned_name": "Lascapuchinas",
+      "corrected_name": "Lascapuchinas",
+      "image_path": "thumbnails/Lascapuchinas.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "IMG 2496",
+      "cleaned_name": "IMG 2496",
+      "corrected_name": "IMG 2496",
+      "image_path": "thumbnails/IMG_2496.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "DUG DUG DUG BRAINROT",
+      "cleaned_name": "DUG DUG DUG BRAINROT",
+      "corrected_name": "DUG DUG DUG BRAINROT",
+      "image_path": "thumbnails/DUG_DUG_DUG_BRAINROT.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "That one pink bird from angry birds",
+      "cleaned_name": "That one pink bird from angry birds",
+      "corrected_name": "That one pink bird from angry birds",
+      "image_path": "thumbnails/That_one_pink_bird_from_angry_birds.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "THE ROCK",
+      "cleaned_name": "THE ROCK",
+      "corrected_name": "THE ROCK",
+      "image_path": "thumbnails/THE_ROCK.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Temu whale",
+      "cleaned_name": "Temu whale",
+      "corrected_name": "Temu whale",
+      "image_path": "thumbnails/Temu_whale.webp",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Trenostruzzo4000",
+      "cleaned_name": "Trenostruzzo4000",
+      "corrected_name": "Trenostruzzo4000",
+      "image_path": "thumbnails/Trenostruzzo4000.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Sammy the strawberry",
+      "cleaned_name": "Sammy the strawberry",
+      "corrected_name": "Sammy the strawberry",
+      "image_path": "thumbnails/Sammy_the_strawberry.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Holy falloff",
+      "cleaned_name": "Holy falloff",
+      "corrected_name": "Holy falloff",
+      "image_path": "thumbnails/Holy_falloff.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Sahuria",
+      "cleaned_name": "Sahuria",
+      "corrected_name": "Sahuria",
+      "image_path": "thumbnails/Sahuria.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Las Sis",
+      "cleaned_name": "Las Sis",
+      "corrected_name": "Las Sis",
+      "image_path": "thumbnails/Las_Sis.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "DO NOT GRAB MY PHONE!!!",
+      "cleaned_name": "DO NOT GRAB MY PHONE!!!",
+      "corrected_name": "DO NOT GRAB MY PHONE!!!",
+      "image_path": "thumbnails/DO_NOT_GRAB_MY_PHONE.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "BROOOOOOOO",
+      "cleaned_name": "BROOOOOOOO",
+      "corrected_name": "BROOOOOOOO",
+      "image_path": "thumbnails/BROOOOOOOO.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Brr Brr Patapem",
+      "cleaned_name": "Brr Brr Patapem",
+      "corrected_name": "Brr Brr Patapem",
+      "image_path": "thumbnails/Brr_Brr_Patapem.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "My kids will also rob you",
+      "cleaned_name": "My kids will also rob you",
+      "corrected_name": "My kids will also rob you",
+      "image_path": "thumbnails/My_kids_will_also_rob_you.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Primos",
+      "cleaned_name": "Los Primos",
+      "corrected_name": "Los Primos",
+      "image_path": "thumbnails/Los_Primos.webp",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "JackoVacca",
+      "cleaned_name": "JackoVacca",
+      "corrected_name": "JackoVacca",
+      "image_path": "thumbnails/JackoVacca.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "PipiCorni",
+      "cleaned_name": "PipiCorni",
+      "corrected_name": "PipiCorni",
+      "image_path": "thumbnails/PipiCorni.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pipi Avocado",
+      "cleaned_name": "Pipi Avocado",
+      "corrected_name": "Pipi Avocado",
+      "image_path": "thumbnails/Pipi_Avocado.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tik sahur",
+      "cleaned_name": "Tik sahur",
+      "corrected_name": "Tik sahur",
+      "image_path": "thumbnails/Tik_sahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Penguino Cocosino",
+      "cleaned_name": "Penguino Cocosino",
+      "corrected_name": "Penguino Cocosino",
+      "image_path": "thumbnails/Penguino_Cocosino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cocosini Mama",
+      "cleaned_name": "Cocosini Mama",
+      "corrected_name": "Cocosini Mama",
+      "image_path": "thumbnails/Cocosini_Mama.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pi Pi Watermelon",
+      "cleaned_name": "Pi Pi Watermelon",
+      "corrected_name": "Pi Pi Watermelon",
+      "image_path": "thumbnails/Pi_Pi_Watermelon.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Avocadorilla",
+      "cleaned_name": "Avocadorilla",
+      "corrected_name": "Avocadorilla",
+      "image_path": "thumbnails/Avocadorilla.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tob Tobi Tobi",
+      "cleaned_name": "Tob Tobi Tobi",
+      "corrected_name": "Tob Tobi Tobi",
+      "image_path": "thumbnails/Tob_Tobi_Tobi.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ganganzelli Trulala",
+      "cleaned_name": "Ganganzelli Trulala",
+      "corrected_name": "Ganganzelli Trulala",
+      "image_path": "thumbnails/Ganganzelli_Trulala.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tukanno Bananno",
+      "cleaned_name": "Tukanno Bananno",
+      "corrected_name": "Tukanno Bananno",
+      "image_path": "thumbnails/Tukanno_Bananno.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "The middle one clawed out my eyes",
+      "cleaned_name": "The middle one clawed out my eyes",
+      "corrected_name": "The middle one clawed out my eyes",
+      "image_path": "thumbnails/The_middle_one_clawed_out_my_eyes.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Brr Es Teh Patipum",
+      "cleaned_name": "Brr Es Teh Patipum",
+      "corrected_name": "Brr Es Teh Patipum",
+      "image_path": "thumbnails/Brr_Es_Teh_Patipum.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Agarrini la Palini",
+      "cleaned_name": "Agarrini la Palini",
+      "corrected_name": "Agarrini la Palini",
+      "image_path": "thumbnails/Agarrini_la_Palini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Stop taking my chips im just a baybeh",
+      "cleaned_name": "Stop taking my chips im just a baybeh",
+      "corrected_name": "Stop taking my chips im just a baybeh",
+      "image_path": "thumbnails/Stop_taking_my_chips_im_just_a_baybeh.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Loshotspotsitos",
+      "cleaned_name": "Loshotspotsitos",
+      "corrected_name": "Loshotspotsitos",
+      "image_path": "thumbnails/Loshotspotsitos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "La Supreme Combinasion",
+      "cleaned_name": "La Supreme Combinasion",
+      "corrected_name": "La Supreme Combinasion",
+      "image_path": "thumbnails/La_Supreme_Combinasion.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Newestcoollolplz",
+      "cleaned_name": "Newestcoollolplz",
+      "corrected_name": "Newestcoollolplz",
+      "image_path": "thumbnails/Newestcoollolplz.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los orcalitos",
+      "cleaned_name": "Los orcalitos",
+      "corrected_name": "Los orcalitos",
+      "image_path": "thumbnails/Los_orcalitos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LosTortuss",
+      "cleaned_name": "LosTortuss",
+      "corrected_name": "LosTortuss",
+      "image_path": "thumbnails/LosTortuss.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Loskarkeritos",
+      "cleaned_name": "Loskarkeritos",
+      "corrected_name": "Loskarkeritos",
+      "image_path": "thumbnails/Loskarkeritos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los-67",
+      "cleaned_name": "Los-67",
+      "corrected_name": "Los-67",
+      "image_path": "thumbnails/Los-67.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LosJobcitos",
+      "cleaned_name": "LosJobcitos",
+      "corrected_name": "LosJobcitos",
+      "image_path": "thumbnails/LosJobcitos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Losmobil",
+      "cleaned_name": "Losmobil",
+      "corrected_name": "Losmobil",
+      "image_path": "thumbnails/Losmobil.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Losmoneypug",
+      "cleaned_name": "Losmoneypug",
+      "corrected_name": "Losmoneypug",
+      "image_path": "thumbnails/Losmoneypug.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Spaghettis",
+      "cleaned_name": "Los Spaghettis",
+      "corrected_name": "Los Spaghettis",
+      "image_path": "thumbnails/Los_Spaghettis.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Nooo my polizia",
+      "cleaned_name": "Nooo my polizia",
+      "corrected_name": "Nooo my polizia",
+      "image_path": "thumbnails/Nooo_my_polizia.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Chihuaninis",
+      "cleaned_name": "Los Chihuaninis",
+      "corrected_name": "Los Chihuaninis",
+      "image_path": "thumbnails/Los_Chihuaninis.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Gattitos",
+      "cleaned_name": "Los Gattitos",
+      "corrected_name": "Los Gattitos",
+      "image_path": "thumbnails/Los_Gattitos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cadwdwpturev2",
+      "cleaned_name": "Cadwdwpturev2",
+      "corrected_name": "Cadwdwpturev2",
+      "image_path": "thumbnails/Cadwdwpturev2.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LosQuesadillas",
+      "cleaned_name": "LosQuesadillas",
+      "corrected_name": "LosQuesadillas",
+      "image_path": "thumbnails/LosQuesadillas.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LosBurritos",
+      "cleaned_name": "LosBurritos",
+      "corrected_name": "LosBurritos",
+      "image_path": "thumbnails/LosBurritos.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los lucky blockss",
+      "cleaned_name": "Los lucky blockss",
+      "corrected_name": "Los lucky blockss",
+      "image_path": "thumbnails/Los_lucky_blockss.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Yessmyexamine",
+      "cleaned_name": "Yessmyexamine",
+      "corrected_name": "Yessmyexamine",
+      "image_path": "thumbnails/Yessmyexamine.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Guest 666",
+      "cleaned_name": "Guest 666",
+      "corrected_name": "Guest 666",
+      "image_path": "thumbnails/Guest_666.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "KingsColeslaw65",
+      "cleaned_name": "KingsColeslaw65",
+      "corrected_name": "KingsColeslaw65",
+      "image_path": "thumbnails/KingsColeslaw65.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Developini",
+      "cleaned_name": "Developini",
+      "corrected_name": "Developini",
+      "image_path": "thumbnails/Developini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Chimpanzini Spiderini",
+      "cleaned_name": "Chimpanzini Spiderini",
+      "corrected_name": "Chimpanzini Spiderini",
+      "image_path": "thumbnails/Chimpanzini_Spiderini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "StatutinoLibertino",
+      "cleaned_name": "StatutinoLibertino",
+      "corrected_name": "StatutinoLibertino",
+      "image_path": "thumbnails/StatutinoLibertino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Gattatinoneonino",
+      "cleaned_name": "Gattatinoneonino",
+      "corrected_name": "Gattatinoneonino",
+      "image_path": "thumbnails/Gattatinoneonino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cocosini",
+      "cleaned_name": "Cocosini",
+      "corrected_name": "Cocosini",
+      "image_path": "thumbnails/Cocosini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Hokka horlage scapped",
+      "cleaned_name": "Hokka horlage scapped",
+      "corrected_name": "Hokka horlage scapped",
+      "image_path": "thumbnails/Hokka_horlage_scapped.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tameluk",
+      "cleaned_name": "Tameluk",
+      "corrected_name": "Tameluk",
+      "image_path": "thumbnails/Tameluk.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cupcake Koala",
+      "cleaned_name": "Cupcake Koala",
+      "corrected_name": "Cupcake Koala",
+      "image_path": "thumbnails/Cupcake_Koala.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "DoiDoi",
+      "cleaned_name": "DoiDoi",
+      "corrected_name": "DoiDoi",
+      "image_path": "thumbnails/DoiDoi.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Clickerinocrabo",
+      "cleaned_name": "Clickerinocrabo",
+      "corrected_name": "Clickerinocrabo",
+      "image_path": "thumbnails/Clickerinocrabo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Stoppo Luminino",
+      "cleaned_name": "Stoppo Luminino",
+      "corrected_name": "Stoppo Luminino",
+      "image_path": "thumbnails/Stoppo_Luminino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Money Money Man",
+      "cleaned_name": "Money Money Man",
+      "corrected_name": "Money Money Man",
+      "image_path": "thumbnails/Money_Money_Man.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cuadramat And Pakrahmatmamat",
+      "cleaned_name": "Cuadramat And Pakrahmatmamat",
+      "corrected_name": "Cuadramat And Pakrahmatmamat",
+      "image_path": "thumbnails/Cuadramat_And_Pakrahmatmamat.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Piruleta",
+      "cleaned_name": "Piruleta",
+      "corrected_name": "Piruleta",
+      "image_path": "thumbnails/Piruleta.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Los Planets",
+      "cleaned_name": "Los Planets",
+      "corrected_name": "Los Planets",
+      "image_path": "thumbnails/Los_Planets.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "LosPuggies2",
+      "cleaned_name": "LosPuggies2",
+      "corrected_name": "LosPuggies2",
+      "image_path": "thumbnails/LosPuggies2.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Orcaledon",
+      "cleaned_name": "Orcaledon",
+      "corrected_name": "Orcaledon",
+      "image_path": "thumbnails/Orcaledon.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Fragrama",
+      "cleaned_name": "Fragrama",
+      "corrected_name": "Fragrama",
+      "image_path": "thumbnails/Fragrama.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Tartaragnoo",
+      "cleaned_name": "Tartaragnoo",
+      "corrected_name": "Tartaragnoo",
+      "image_path": "thumbnails/Tartaragnoo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Pinealotto fruttarino",
+      "cleaned_name": "Pinealotto fruttarino",
+      "corrected_name": "Pinealotto fruttarino",
+      "image_path": "thumbnails/Pinealotto_fruttarino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Bigfrog",
+      "cleaned_name": "Bigfrog",
+      "corrected_name": "Bigfrog",
+      "image_path": "thumbnails/Bigfrog.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Mummio Rappitto",
+      "cleaned_name": "Mummio Rappitto",
+      "corrected_name": "Mummio Rappitto",
+      "image_path": "thumbnails/Mummio_Rappitto.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Quackula",
+      "cleaned_name": "Quackula",
+      "corrected_name": "Quackula",
+      "image_path": "thumbnails/Quackula.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Buhodefuego",
+      "cleaned_name": "Buhodefuego",
+      "corrected_name": "Buhodefuego",
+      "image_path": "thumbnails/Buhodefuego.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "MagiRibbit",
+      "cleaned_name": "MagiRibbit",
+      "corrected_name": "MagiRibbit",
+      "image_path": "thumbnails/MagiRibbit.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "JKspaventosa",
+      "cleaned_name": "JKspaventosa",
+      "corrected_name": "JKspaventosa",
+      "image_path": "thumbnails/JKspaventosa.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Jacko Jack Jack",
+      "cleaned_name": "Jacko Jack Jack",
+      "corrected_name": "Jacko Jack Jack",
+      "image_path": "thumbnails/Jacko_Jack_Jack.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "FrioNinja",
+      "cleaned_name": "FrioNinja",
+      "corrected_name": "FrioNinja",
+      "image_path": "thumbnails/FrioNinja.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "SQUID GAME",
+      "cleaned_name": "SQUID GAME",
+      "corrected_name": "SQUID GAME",
+      "image_path": "thumbnails/SQUID_GAME.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Snailenzo",
+      "cleaned_name": "Snailenzo",
+      "corrected_name": "Snailenzo",
+      "image_path": "thumbnails/Snailenzo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Vulturino",
+      "cleaned_name": "Vulturino",
+      "corrected_name": "Vulturino",
+      "image_path": "thumbnails/Vulturino.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "24 sin título 20251023155436",
+      "cleaned_name": "24 sin título 20251023155436",
+      "corrected_name": "24 sin título 20251023155436",
+      "image_path": "thumbnails/24_sin_título_20251023155436.png",
+      "flags": [
+        "version_number"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Eviledonn",
+      "cleaned_name": "Eviledonn",
+      "corrected_name": "Eviledonn",
+      "image_path": "thumbnails/Eviledonn.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Spookypumpky",
+      "cleaned_name": "Spookypumpky",
+      "corrected_name": "Spookypumpky",
+      "image_path": "thumbnails/Spookypumpky.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Headless ",
+      "cleaned_name": "Headless",
+      "corrected_name": "Headless",
+      "image_path": "thumbnails/Headless.webp",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Smurf cat.svg",
+      "cleaned_name": "Smurf cat",
+      "corrected_name": "Smurf cat",
+      "image_path": "thumbnails/Smurf_catsvg.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Skibidi ñoilet",
+      "cleaned_name": "Skibidi ñoilet",
+      "corrected_name": "Skibidi ñoilet",
+      "image_path": "thumbnails/Skibidi_ñoilet.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "John pork fan",
+      "cleaned_name": "John pork fan",
+      "corrected_name": "John pork fan",
+      "image_path": "thumbnails/John_pork_fan.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Rework",
+      "cleaned_name": "Rework",
+      "corrected_name": "Rework",
+      "image_path": "thumbnails/Rework.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ginger",
+      "cleaned_name": "Ginger",
+      "corrected_name": "Ginger",
+      "image_path": "thumbnails/Ginger.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Christmas Chachechi",
+      "cleaned_name": "Christmas Chachechi",
+      "corrected_name": "Christmas Chachechi",
+      "image_path": "thumbnails/Christmas_Chachechi.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Festive67Plush",
+      "cleaned_name": "Festive67Plush",
+      "corrected_name": "Festive67Plush",
+      "image_path": "thumbnails/Festive67Plush.jpg",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "La ginger Sekolah",
+      "cleaned_name": "La ginger Sekolah",
+      "corrected_name": "La ginger Sekolah",
+      "image_path": "thumbnails/La_ginger_Sekolah.webp",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "FestiveLuckyBlockRealF4Leak",
+      "cleaned_name": "FestiveLuckyBlockRealF4Leak",
+      "corrected_name": "FestiveLuckyBlockRealF4Leak",
+      "image_path": "thumbnails/FestiveLuckyBlockRealF4Leak.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ballerina Peppermintina",
+      "cleaned_name": "Ballerina Peppermintina",
+      "corrected_name": "Ballerina Peppermintina",
+      "image_path": "thumbnails/Ballerina_Peppermintina.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Puffaball",
+      "cleaned_name": "Puffaball",
+      "corrected_name": "Puffaball",
+      "image_path": "thumbnails/Puffaball.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Squalanana",
+      "cleaned_name": "Squalanana",
+      "corrected_name": "Squalanana",
+      "image_path": "thumbnails/Squalanana.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Belulaa",
+      "cleaned_name": "Belulaa",
+      "corrected_name": "Belulaa",
+      "image_path": "thumbnails/Belulaa.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "NoobiniSantanini",
+      "cleaned_name": "NoobiniSantanini",
+      "corrected_name": "NoobiniSantanini",
+      "image_path": "thumbnails/NoobiniSantanini.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Frogo Elfo",
+      "cleaned_name": "Frogo Elfo",
+      "corrected_name": "Frogo Elfo",
+      "image_path": "thumbnails/Frogo_Elfo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "PenguinTree",
+      "cleaned_name": "PenguinTree",
+      "corrected_name": "PenguinTree",
+      "image_path": "thumbnails/PenguinTree.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Chocco Bunny",
+      "cleaned_name": "Chocco Bunny",
+      "corrected_name": "Chocco Bunny",
+      "image_path": "thumbnails/Chocco_Bunny.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Sealo Regalo",
+      "cleaned_name": "Sealo Regalo",
+      "corrected_name": "Sealo Regalo",
+      "image_path": "thumbnails/Sealo_Regalo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "JingleJingleSahur",
+      "cleaned_name": "JingleJingleSahur",
+      "corrected_name": "JingleJingleSahur",
+      "image_path": "thumbnails/JingleJingleSahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "TreeTreeTreeSahur",
+      "cleaned_name": "TreeTreeTreeSahur",
+      "corrected_name": "TreeTreeTreeSahur",
+      "image_path": "thumbnails/TreeTreeTreeSahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Yeti Claus",
+      "cleaned_name": "Yeti Claus",
+      "corrected_name": "Yeti Claus",
+      "image_path": "thumbnails/Yeti_Claus.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ginger Globo",
+      "cleaned_name": "Ginger Globo",
+      "corrected_name": "Ginger Globo",
+      "image_path": "thumbnails/Ginger_Globo.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Ginger Cisterna",
+      "cleaned_name": "Ginger Cisterna",
+      "corrected_name": "Ginger Cisterna",
+      "image_path": "thumbnails/Ginger_Cisterna.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "La Present Vacca",
+      "cleaned_name": "La Present Vacca",
+      "corrected_name": "La Present Vacca",
+      "image_path": "thumbnails/La_Present_Vacca.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "HoHoHoSahur",
+      "cleaned_name": "HoHoHoSahur",
+      "corrected_name": "HoHoHoSahur",
+      "image_path": "thumbnails/HoHoHoSahur.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Noel",
+      "cleaned_name": "Noel",
+      "corrected_name": "Noel",
+      "image_path": "thumbnails/Noel.png",
+      "flags": [
+        "suspicious_short"
+      ],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    },
+    {
+      "original_name": "Cooki and milki",
+      "cleaned_name": "Cooki and milki",
+      "corrected_name": "Cooki and milki",
+      "image_path": "thumbnails/Cooki_and_milki.png",
+      "flags": [],
+      "is_duplicate": false,
+      "is_junk": false,
+      "notes": ""
+    }
+  ]
+}

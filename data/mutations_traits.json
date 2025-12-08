@@ -1,0 +1,279 @@
+{
+  "mutations": {
+    "none": {
+      "name": "None",
+      "multiplier": 1.0,
+      "description": "No mutation",
+      "color": null
+    },
+    "gold": {
+      "name": "Gold",
+      "multiplier": 1.25,
+      "description": "Golden appearance",
+      "color": "#FFD700",
+      "obtainable": true
+    },
+    "diamond": {
+      "name": "Diamond",
+      "multiplier": 1.5,
+      "description": "Crystal blue appearance",
+      "color": "#B9F2FF",
+      "obtainable": true
+    },
+    "bloodmoon": {
+      "name": "Bloodmoon",
+      "multiplier": 2.0,
+      "description": "Red appearance during bloodmoon events",
+      "color": "#8B0000",
+      "obtainable": true,
+      "event": "Bloodmoon Event"
+    },
+    "celestial": {
+      "name": "Celestial",
+      "multiplier": 4.0,
+      "description": "Celestial appearance",
+      "color": "#4B0082",
+      "obtainable": true,
+      "event": "Celestial Event"
+    },
+    "candy": {
+      "name": "Candy",
+      "multiplier": 4.0,
+      "description": "Sweet candy appearance",
+      "color": "#FF69B4",
+      "obtainable": true,
+      "event": "Candy Event"
+    },
+    "lava": {
+      "name": "Lava",
+      "multiplier": 6.0,
+      "description": "Fire red molten appearance",
+      "color": "#FF4500",
+      "obtainable": true,
+      "event": "Molten Event (every 2 hours)"
+    },
+    "galaxy": {
+      "name": "Galaxy",
+      "multiplier": 6.0,
+      "description": "Cosmic galaxy appearance",
+      "color": "#9370DB",
+      "obtainable": true,
+      "event": "Galaxy Event (hourly on weekends, every 3 hours on weekdays)"
+    },
+    "yin_yang": {
+      "name": "Yin Yang",
+      "multiplier": 7.5,
+      "description": "Black and white alternating pattern",
+      "color": "#808080",
+      "obtainable": true,
+      "event": "Yin Yang Event"
+    },
+    "radioactive": {
+      "name": "Radioactive",
+      "multiplier": 8.5,
+      "description": "Fluorescent green radioactive glow",
+      "color": "#00FF00",
+      "obtainable": true,
+      "event": "Radioactive Event"
+    },
+    "rainbow": {
+      "name": "Rainbow",
+      "multiplier": 10.0,
+      "description": "Rainbow colors - ultimate mutation",
+      "color": "rainbow",
+      "obtainable": true
+    },
+    "bloodrot": {
+      "name": "Bloodrot",
+      "multiplier": null,
+      "description": "Admin-only mutation",
+      "color": "#800000",
+      "obtainable": false,
+      "admin_only": true
+    },
+    "halloween": {
+      "name": "Halloween",
+      "multiplier": null,
+      "description": "Halloween themed",
+      "color": "#FF6600",
+      "obtainable": true,
+      "event": "Halloween Event"
+    }
+  },
+  "traits": {
+    "none": {
+      "name": "None",
+      "multiplier": 0,
+      "description": "No trait",
+      "stackable": false
+    },
+    "sleepy": {
+      "name": "Sleepy",
+      "multiplier": -0.5,
+      "description": "Halves income - worst trait",
+      "stackable": true,
+      "icon": "💤"
+    },
+    "galactic": {
+      "name": "Galactic",
+      "multiplier": 4.0,
+      "description": "Asteroid symbol",
+      "stackable": true,
+      "icon": "☄️",
+      "ritual": "La Vacca Saturno Saturnita"
+    },
+    "bombardiro": {
+      "name": "Bombardiro",
+      "multiplier": 4.0,
+      "description": "Bombardiro symbol",
+      "stackable": true,
+      "icon": "💣",
+      "ritual": "Bombardiro Crocodilo"
+    },
+    "shark_fin": {
+      "name": "Shark Fin",
+      "multiplier": 4.0,
+      "description": "Orcalero symbol",
+      "stackable": true,
+      "icon": "🦈",
+      "ritual": "Orcalero Orcala"
+    },
+    "paint": {
+      "name": "Paint",
+      "multiplier": 6.0,
+      "description": "Chicleteira graffiti symbol",
+      "stackable": true,
+      "icon": "🎨",
+      "ritual": "Chicleteira Bicicleteira"
+    },
+    "nyan": {
+      "name": "Nyan",
+      "multiplier": 6.0,
+      "description": "Rainbow trail effect",
+      "stackable": true,
+      "icon": "🌈",
+      "event": "Nyan Event"
+    },
+    "fire": {
+      "name": "Fire",
+      "multiplier": 6.0,
+      "description": "Brainrot on fire",
+      "stackable": true,
+      "icon": "🔥",
+      "event": "Solar Flare"
+    },
+    "zombie": {
+      "name": "Zombie",
+      "multiplier": 5.0,
+      "description": "Zombie appearance",
+      "stackable": true,
+      "icon": "🧟"
+    },
+    "firework": {
+      "name": "Firework",
+      "multiplier": 6.0,
+      "description": "Firework effects",
+      "stackable": true,
+      "icon": "🎆"
+    },
+    "rain": {
+      "name": "Rain",
+      "multiplier": 2.5,
+      "description": "Rain aura",
+      "stackable": true,
+      "icon": "🌧️",
+      "event": "Rain Weather"
+    },
+    "snowy": {
+      "name": "Snowy",
+      "multiplier": 3.0,
+      "description": "Snowy aura",
+      "stackable": true,
+      "icon": "❄️",
+      "event": "Snow Weather"
+    },
+    "cometstruck": {
+      "name": "Cometstruck",
+      "multiplier": 3.5,
+      "description": "Hit by falling stars",
+      "stackable": true,
+      "icon": "⭐",
+      "event": "Meteor Shower"
+    },
+    "bloodmoon_trait": {
+      "name": "Bloodmoon",
+      "multiplier": 2.0,
+      "description": "Bloodmoon event trait",
+      "stackable": true,
+      "icon": "🌕",
+      "event": "Bloodmoon"
+    },
+    "taco": {
+      "name": "Taco",
+      "multiplier": 3.0,
+      "description": "Taco on head",
+      "stackable": true,
+      "icon": "🌮",
+      "event": "Raining Tacos",
+      "admin_only": true
+    },
+    "strawberry": {
+      "name": "Strawberry",
+      "multiplier": 10.0,
+      "description": "Strawberry reskin - highest multiplier",
+      "stackable": true,
+      "icon": "🍓",
+      "event": "Strawberry Elephant spawn"
+    },
+    "hat": {
+      "name": "Hat",
+      "multiplier": 1.0,
+      "description": "Hat on top of head",
+      "stackable": true,
+      "icon": "🎩"
+    },
+    "meowl": {
+      "name": "Meowl",
+      "multiplier": 5.0,
+      "description": "Meowl trait",
+      "stackable": true,
+      "icon": "🦉"
+    },
+    "pumpkin": {
+      "name": "Pumpkin",
+      "multiplier": 4.0,
+      "description": "Halloween pumpkin",
+      "stackable": true,
+      "icon": "🎃",
+      "event": "Halloween"
+    },
+    "rip": {
+      "name": "RIP",
+      "multiplier": 5.0,
+      "description": "Tombstone effect",
+      "stackable": true,
+      "icon": "🪦",
+      "event": "Halloween"
+    },
+    "crab": {
+      "name": "Crab",
+      "multiplier": 3.0,
+      "description": "Crab claws/pincers",
+      "stackable": true,
+      "icon": "🦀",
+      "event": "Crab Rave"
+    }
+  },
+  "calculation_rules": {
+    "mutation_limit": 1,
+    "traits_stackable": true,
+    "formula": "base_income * mutation_multiplier * (1 + sum_of_trait_multipliers)",
+    "notes": [
+      "Only ONE mutation can be active at a time",
+      "Multiple traits can be stacked",
+      "Trait multipliers are ADDED together, then multiplied with the base",
+      "Example: Base $100/s with Rainbow (10x) + Zombie (5x) + Firework (6x) = $100 * 10 * (1 + 5 + 6) = $100 * 10 * 12 = $12,000/s",
+      "Sleepy trait SUBTRACTS 0.5 from the total multiplier"
+    ]
+  }
+}
