@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Edit2, Trash2 } from 'lucide-react'
+import { useDroppable } from '@dnd-kit/core'
+import { Edit2, Trash2, Package } from 'lucide-react'
 
 /**
  * Account Card - Shows account summary on dashboard
@@ -7,6 +8,15 @@ import { Edit2, Trash2 } from 'lucide-react'
  */
 export default function AccountCard({ account, collectionSize, onView, onEdit, onDelete }) {
   const [showActions, setShowActions] = useState(false)
+
+  // Droppable setup
+  const { setNodeRef, isOver } = useDroppable({
+    id: `account-${account.id}`,
+    data: {
+      type: 'account',
+      accountId: account.id
+    }
+  })
 
   // TODO: Import calculateSlots and calculateFreeSpace from utils/rebirthCalculator.js
   // For now, mock values
@@ -36,10 +46,22 @@ export default function AccountCard({ account, collectionSize, onView, onEdit, o
 
   return (
     <div 
-      className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all relative"
+      ref={setNodeRef}
+      className={`bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all relative ${
+        isOver ? 'ring-4 ring-blue-500 ring-opacity-50 bg-blue-900/20' : ''
+      }`}
       onMouseEnter={() => setShowActions(true)}
       onMouseLeave={() => setShowActions(false)}
     >
+      {/* Drop Indicator */}
+      {isOver && (
+        <div className="absolute inset-0 bg-blue-500/10 rounded-lg border-2 border-blue-500 border-dashed flex items-center justify-center z-10 pointer-events-none">
+          <div className="bg-blue-600 px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
+            <Package size={20} />
+            <span className="font-bold">Drop to Copy Here</span>
+          </div>
+        </div>
+      )}
       {/* Quick Actions */}
       {showActions && (
         <div className="absolute top-4 right-4 flex gap-2">

@@ -15,7 +15,7 @@ export default function TotalCollectionView({
   onViewAccount
 }) {
   const [searchTerm, setSearchTerm] = useState('')
-  const [ownershipFilter, setOwnershipFilter] = useState('all')
+  const [ownershipFilter, setOwnershipFilter] = useState('owned') // Default to showing only owned
   const [rarityFilter, setRarityFilter] = useState('all')
   const [sortBy, setSortBy] = useState('name')
   

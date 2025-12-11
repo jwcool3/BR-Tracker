@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
+import { DndContext, DragOverlay, closestCenter } from '@dnd-kit/core'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useNavigation } from './hooks/useNavigation'
 import DashboardView from './views/DashboardView'
 import AccountDetailView from './views/AccountDetailView'
 import TotalCollectionView from './views/TotalCollectionView'
 import Header from './components/common/Header'
+import { BulkSelectionProvider } from './contexts/BulkSelectionContext'
 
 function App() {
   // Load brainrots data
@@ -58,6 +60,9 @@ function App() {
   // Navigation state
   const { currentView, selectedAccount, viewAccount, viewTotalCollection, backToDashboard } = useNavigation()
 
+  // Drag and drop state
+  const [activeDrag, setActiveDrag] = useState(null)
+
   // Account CRUD operations
   const addAccount = (account) => {
     const newAccount = {
@@ -108,6 +113,64 @@ function App() {
     setCollections({})
   }
 
+  // Drag and drop handlers
+  const handleDragStart = (event) => {
+    setActiveDrag(event.active)
+  }
+
+  const handleDragEnd = (event) => {
+    const { active, over } = event
+
+    if (!over) {
+      setActiveDrag(null)
+      return
+    }
+
+    // Parse drag data
+    const dragData = active.data.current
+    const dropData = over.data.current
+
+    if (!dragData || !dropData) {
+      setActiveDrag(null)
+      return
+    }
+
+    // Handle dropping brainrot(s) onto an account
+    if (dragData.type === 'brainrot' && dropData.type === 'account') {
+      const sourceAccountId = dragData.accountId
+      const targetAccountId = dropData.accountId
+      const brainrotIds = dragData.brainrotIds || [dragData.brainrotId]
+
+      // Don't drop on same account
+      if (sourceAccountId === targetAccountId) {
+        setActiveDrag(null)
+        return
+      }
+
+      // Copy brainrots from source to target
+      const sourceCollection = collections[sourceAccountId] || []
+      const targetCollection = collections[targetAccountId] || []
+
+      const brainrotsToCopy = sourceCollection.filter(entry => 
+        brainrotIds.includes(entry.brainrotId)
+      )
+
+      // Add to target (avoid duplicates)
+      const existingIds = new Set(targetCollection.map(e => e.brainrotId))
+      const newEntries = brainrotsToCopy.filter(entry => !existingIds.has(entry.brainrotId))
+
+      if (newEntries.length > 0) {
+        updateCollection(targetAccountId, [...targetCollection, ...newEntries])
+      }
+    }
+
+    setActiveDrag(null)
+  }
+
+  const handleDragCancel = () => {
+    setActiveDrag(null)
+  }
+
   // Loading state
   if (loading) {
     return (
@@ -141,51 +204,76 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900">
-      <Header 
-        currentView={currentView}
-        selectedAccount={accounts.find(a => a.id === selectedAccount)}
-        onNavigate={{ viewTotalCollection, backToDashboard }}
-        accounts={accounts}
-        collections={collections}
-        onImportData={handleImportData}
-        onClearAllData={handleClearAllData}
-      />
-
-      <main>
-        {currentView === 'dashboard' && (
-          <DashboardView
+    <BulkSelectionProvider>
+      <DndContext 
+        collisionDetection={closestCenter}
+        onDragStart={handleDragStart}
+        onDragEnd={handleDragEnd}
+        onDragCancel={handleDragCancel}
+      >
+        <div className="min-h-screen bg-slate-900">
+          <Header 
+            currentView={currentView}
+            selectedAccount={accounts.find(a => a.id === selectedAccount)}
+            onNavigate={{ viewTotalCollection, backToDashboard }}
             accounts={accounts}
             collections={collections}
-            onViewAccount={viewAccount}
-            onAddAccount={addAccount}
-            onUpdateAccount={updateAccount}
-            onDeleteAccount={deleteAccount}
+            onImportData={handleImportData}
+            onClearAllData={handleClearAllData}
           />
-        )}
 
-        {currentView === 'detail' && selectedAccount && (
-          <AccountDetailView
-            account={accounts.find(a => a.id === selectedAccount)}
-            brainrots={brainrots}
-            collection={collections[selectedAccount] || []}
-            onBack={backToDashboard}
-            onUpdateCollection={(newCollection) => updateCollection(selectedAccount, newCollection)}
-            onUpdateAccount={(updates) => updateAccount(selectedAccount, updates)}
-          />
-        )}
+          <main>
+            {currentView === 'dashboard' && (
+              <DashboardView
+                accounts={accounts}
+                collections={collections}
+                onViewAccount={viewAccount}
+                onAddAccount={addAccount}
+                onUpdateAccount={updateAccount}
+                onDeleteAccount={deleteAccount}
+              />
+            )}
 
-        {currentView === 'collection' && (
-          <TotalCollectionView
-            accounts={accounts}
-            collections={collections}
-            brainrots={brainrots}
-            onBack={backToDashboard}
-            onViewAccount={viewAccount}
-          />
-        )}
-      </main>
-    </div>
+            {currentView === 'detail' && selectedAccount && (
+              <AccountDetailView
+                account={accounts.find(a => a.id === selectedAccount)}
+                brainrots={brainrots}
+                collection={collections[selectedAccount] || []}
+                onBack={backToDashboard}
+                onUpdateCollection={(newCollection) => updateCollection(selectedAccount, newCollection)}
+                onUpdateAccount={(updates) => updateAccount(selectedAccount, updates)}
+              />
+            )}
+
+            {currentView === 'collection' && (
+              <TotalCollectionView
+                accounts={accounts}
+                collections={collections}
+                brainrots={brainrots}
+                onBack={backToDashboard}
+                onViewAccount={viewAccount}
+              />
+            )}
+          </main>
+        </div>
+
+        {/* Drag Overlay */}
+        <DragOverlay>
+          {activeDrag && activeDrag.data.current && (
+            <div className="bg-slate-800 border-2 border-blue-500 rounded-lg p-3 shadow-2xl opacity-90">
+              <div className="text-sm font-bold text-white">
+                {activeDrag.data.current.brainrotIds 
+                  ? `${activeDrag.data.current.brainrotIds.length} Brainrots` 
+                  : activeDrag.data.current.brainrotName || 'Dragging...'}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">
+                Drop on account to copy
+              </div>
+            </div>
+          )}
+        </DragOverlay>
+      </DndContext>
+    </BulkSelectionProvider>
   )
 }
 

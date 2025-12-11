@@ -32,8 +32,48 @@ const sampleBrainrotIds = [
   'sapphire-snake'
 ]
 
-const mutations = ['none', 'gold', 'diamond', 'rainbow', 'bloodmoon', 'lava', 'galaxy']
-const traits = ['zombie', 'firework', 'sleepy', 'galactic', 'paint', 'nyan', 'fire']
+// Mutations with weighted probability (better mutations are rarer)
+const mutations = [
+  { key: 'none', weight: 40 },       // 40% chance
+  { key: 'gold', weight: 20 },       // 20% chance
+  { key: 'diamond', weight: 15 },    // 15% chance
+  { key: 'bloodmoon', weight: 10 },  // 10% chance
+  { key: 'lava', weight: 5 },        // 5% chance
+  { key: 'galaxy', weight: 5 },      // 5% chance
+  { key: 'rainbow', weight: 3 },     // 3% chance (rare!)
+  { key: 'radioactive', weight: 1.5 },// 1.5% chance
+  { key: 'yin_yang', weight: 0.5 }   // 0.5% chance (very rare!)
+]
+
+// Traits with weighted probability (better traits are rarer)
+const traits = [
+  { key: 'zombie', weight: 15 },      // Common
+  { key: 'firework', weight: 10 },    // Common
+  { key: 'fire', weight: 10 },        // Common
+  { key: 'paint', weight: 8 },        // Uncommon
+  { key: 'nyan', weight: 8 },         // Uncommon
+  { key: 'galactic', weight: 8 },     // Uncommon
+  { key: 'meowl', weight: 6 },        // Rare
+  { key: 'pumpkin', weight: 6 },      // Rare
+  { key: 'rip', weight: 6 },          // Rare
+  { key: 'cometstruck', weight: 5 },  // Rare
+  { key: 'snowy', weight: 5 },        // Rare
+  { key: 'strawberry', weight: 2 },   // Very rare!
+  { key: 'sleepy', weight: 1 }        // Avoid this (negative)
+]
+
+// Helper function to pick weighted random item
+const pickWeighted = (items) => {
+  const totalWeight = items.reduce((sum, item) => sum + item.weight, 0)
+  let random = Math.random() * totalWeight
+  
+  for (const item of items) {
+    random -= item.weight
+    if (random <= 0) return item.key
+  }
+  
+  return items[0].key // Fallback
+}
 
 const accountNames = [
   { name: 'Main Account', tags: ['main', 'active'], favorite: true, color: '#3b82f6' },
@@ -122,19 +162,47 @@ export function generateDemoData() {
       
       usedBrainrots.add(brainrotId)
       
-      // Randomly assign mutation, traits, floor
-      const mutation = mutations[Math.floor(Math.random() * mutations.length)]
-      const numTraits = Math.floor(Math.random() * 3) // 0-2 traits
+      // Use weighted random selection for mutation
+      const mutation = pickWeighted(mutations)
+      
+      // Use weighted random selection for traits (0-3 traits)
+      const numTraits = Math.random() > 0.3 ? Math.floor(Math.random() * 4) : 0 // 70% chance to have traits
       const selectedTraits = []
-      for (let j = 0; j < numTraits; j++) {
-        const trait = traits[Math.floor(Math.random() * traits.length)]
-        if (!selectedTraits.includes(trait)) {
-          selectedTraits.push(trait)
-        }
+      const availableTraits = [...traits] // Copy array
+      
+      for (let j = 0; j < numTraits && availableTraits.length > 0; j++) {
+        const traitItem = pickWeighted(availableTraits)
+        selectedTraits.push(traitItem)
+        // Remove selected trait so we don't pick it again
+        const index = availableTraits.findIndex(t => t.key === traitItem)
+        if (index > -1) availableTraits.splice(index, 1)
       }
       
-      const floor = Math.min(5, Math.max(1, Math.floor(Math.random() * (rebirthLevel + 1))))
-      const calculatedIncome = Math.floor(Math.random() * 1000000000) // Random income
+      // Floor based on rebirth level (higher RB = higher floors)
+      const maxFloor = Math.min(5, Math.max(1, rebirthLevel))
+      const floor = Math.floor(Math.random() * maxFloor) + 1
+      
+      // Calculate income based on mutation and traits
+      // Use realistic base values
+      const baseIncome = Math.floor(Math.random() * 500000000) + 1000 // $1K to $500M
+      
+      // Manual calculation for demo data (can't use async import here)
+      const MUTATION_MULTIPLIERS = {
+        none: 1, gold: 1.25, diamond: 1.5, bloodmoon: 2,
+        celestial: 4, candy: 4, lava: 6, galaxy: 6,
+        yin_yang: 7.5, radioactive: 8.5, rainbow: 10
+      }
+      
+      const TRAIT_MULTIPLIERS = {
+        sleepy: -0.5, galactic: 4, bombardiro: 4, shark_fin: 4,
+        paint: 6, nyan: 6, fire: 6, zombie: 5, firework: 6,
+        rain: 2.5, snowy: 3, cometstruck: 3.5, bloodmoon_trait: 2,
+        taco: 3, strawberry: 10, hat: 1, meowl: 5, pumpkin: 4, rip: 5, crab: 3
+      }
+      
+      const mutationMult = MUTATION_MULTIPLIERS[mutation] || 1
+      const traitSum = selectedTraits.reduce((sum, t) => sum + (TRAIT_MULTIPLIERS[t] || 0), 0)
+      const calculatedIncome = Math.floor(baseIncome * mutationMult * (1 + traitSum))
       
       collection.push({
         brainrotId,

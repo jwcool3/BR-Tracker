@@ -1,181 +1,225 @@
-# Steal a Brainrot Tracker
+# 🎮 Steal a Brainrot Tracker
 
-A web app to track your Brainrot collection across multiple Roblox accounts in Steal a Brainrot.
+Complete tracker for managing your Steal a Brainrot collection across multiple accounts.
 
-## Features
+## ✨ Features
 
-### Core Features
-- ✅ Track 439+ brainrots with images
-- 📊 Calculate income/second with mutations & traits
-- 🔄 Track rebirth levels & slot management (18 levels)
-- 🏢 Floor assignment for theft protection (3 floors)
-- 📈 Multi-account support with dashboard overview
+### 🏦 Multi-Account Management
+- Create unlimited accounts
+- Track rebirth levels (0-17)
+- Organize with tags, colors, and favorites
+- 3 dashboard views (Grouped, Card, Table)
 
-### Three-View System ✨
-- 🏠 **Dashboard View** - See all accounts at a glance
-- 📋 **Account Detail** - Manage one account's brainrots
-- 📊 **Total Collection** - See all brainrots across all accounts
+### 🧠 Brainrot Collection
+- 439+ brainrots tracked
+- **Mutations** - 12 types (up to 10x multiplier)
+- **Modifiers** - 20 types (stacking multipliers)
+- **Floors** - 5 security levels
+- **Income Calculator** - Real-time calculations
 
-### Advanced Features
-- 🔍 Search and filter by rarity, ownership, floor
-- 🎯 Duplicate detection across accounts
-- 📉 Gap analysis (missing brainrots)
-- 💰 Cross-account income analysis
-- ⚡ Free space monitoring with color-coded alerts
-- 💾 Local storage (no login required)
+### 🖱️ Drag & Drop
+- Drag brainrots between accounts
+- **Bulk Mode** - Select & drag multiple
+- Copy full setup (mutation + modifiers)
+- Visual feedback & animations
 
-## Income Calculation System
+### 📊 Total Collection View
+- See all brainrots across accounts
+- Track ownership status
+- Advanced filtering & sorting
+- Income aggregation
 
-The app includes a sophisticated income calculator that handles:
-
-### Mutations (Only ONE per brainrot)
-- **Gold**: 1.25x multiplier
-- **Diamond**: 1.5x multiplier
-- **Bloodmoon**: 2x multiplier
-- **Celestial**: 4x multiplier
-- **Candy**: 4x multiplier
-- **Lava**: 6x multiplier
-- **Galaxy**: 6x multiplier
-- **Yin Yang**: 7.5x multiplier
-- **Radioactive**: 8.5x multiplier
-- **Rainbow**: 10x multiplier (best!)
-
-### Traits (Multiple can STACK)
-- **Sleepy**: -0.5x (only negative trait!)
-- **Galactic**: 4x
-- **Bombardiro**: 4x
-- **Shark Fin**: 4x
-- **Paint**: 6x
-- **Nyan**: 6x
-- **Fire**: 6x
-- **Zombie**: 5x
-- **Firework**: 6x
-- **Strawberry**: 10x (best trait!)
-- Many more...
-
-### Formula
-```
-Final Income = Base Income × Mutation Multiplier × (1 + Sum of Trait Multipliers)
-```
-
-### Example Calculations
-
-**Example 1: Basic Brainrot**
-- Noobini Pizzanini: $1/s (no modifiers)
-- Final: **$1/s**
-
-**Example 2: Rainbow Mutation**
-- Graipuss Medussi: $1,000,000/s
-- Rainbow mutation: 10x
-- Final: **$10,000,000/s**
-
-**Example 3: God Tier Combo**
-- Strawberry Elephant: $250,000,000/s
-- Rainbow mutation: 10x
-- Traits: Zombie (5x) + Firework (6x) + Strawberry (10x) = 21x
-- Calculation: $250M × 10 × (1 + 21) = $250M × 10 × 22
-- Final: **$55,000,000,000/s** ($55 BILLION per second!)
-
-## Project Structure
-
-```
-steal-a-brainrot-tracker/
-├── data/
-│   ├── brainrots.json          # Brainrot database
-│   ├── mutations_traits.json   # Mutations & traits data
-│   └── brainrot_thumbnails.json # Scraped thumbnail metadata
-├── thumbnails/                  # Downloaded brainrot images
-├── src/
-│   ├── incomeCalculator.js     # Income calculation utilities
-│   └── (React app files)
-├── scrape_thumbnails.py        # Thumbnail scraper script
-└── README.md
-```
-
-## Setup
-
-### Step 1: Install Python Dependencies
-
-```bash
-pip install requests beautifulsoup4 --break-system-packages
-```
-
-### Step 2: Run Thumbnail Scraper
-
-```bash
-python3 scrape_thumbnails.py
-```
-
-This will:
-- Scrape brainrot images from the wiki
-- Download thumbnails to `./thumbnails/`
-- Save metadata to `data/brainrot_thumbnails.json`
-
-### Step 3: Install Node Dependencies (for React app)
-
-```bash
-npm install
-# or
-yarn install
-```
-
-### Step 4: Start Development Server
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-## Usage
-
-### Adding Accounts
-1. Click "Add Account" 
-2. Enter account name
-3. Start tracking your brainrots!
-
-### Marking Brainrots
-1. Browse or search for brainrots
-2. Check the box for each account that has it
-3. Optionally add mutation and traits for income calculation
-
-### Viewing Stats
-- See total brainrots collected per account
-- View completion percentage
-- Calculate total income/s with modifiers
-- Compare accounts side-by-side
-
-## Data Sources
-
-- **Brainrot List**: [TechWiser Guide](https://techwiser.com/all-brainrots-and-secrets-in-steal-a-brainrot-roblox/)
-- **Wiki**: [Steal a Brainrot Wiki](https://stealabrainrot.fandom.com/wiki/Brainrots)
-- **Mutations**: [Mutations Guide](https://techwiser.com/all-mutations-in-steal-a-brainrot-roblox/)
-- **Traits**: [Traits Guide](https://www.sportskeeda.com/roblox-news/steal-brainrot-all-traits-multipliers)
-
-## Tech Stack
-
-- **Frontend**: React + Vite
-- **Styling**: Tailwind CSS
-- **Storage**: LocalStorage
-- **Scraper**: Python + BeautifulSoup
-
-## Future Features
-
-- [ ] Import/export collection data
-- [ ] Cloud sync between devices
-- [ ] Trade value calculator
-- [ ] Rarity completion badges
-- [ ] Index completion tracker (0.5x multipliers)
-- [ ] Mobile app version
-
-## Contributing
-
-Feel free to add more brainrots to `data/brainrots.json` as new ones are released!
-
-## License
-
-MIT
+### 💾 Data Management
+- Export to JSON
+- Import from JSON
+- Clear all data
+- Load demo data (20 accounts)
 
 ---
 
-Made with ❤️ for Steal a Brainrot collectors
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/brainrot-tracker
+
+# Navigate to app
+cd brainrot-tracker/app
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+Open **http://localhost:5173/** in your browser!
+
+### First Steps
+
+1. **Load Demo Data** - Click "Data" → "Load Demo Data"
+2. **Explore Dashboard** - See 20 sample accounts
+3. **View Account** - Click "View Account" on any card
+4. **Try Drag & Drop** - Drag brainrots between accounts
+5. **Bulk Mode** - Select multiple brainrots at once
+
+---
+
+## 📖 Documentation
+
+- **[User Guide](docs/USER_GUIDE.md)** - Complete how-to guide
+- **[Developer Guide](docs/DEVELOPER_GUIDE.md)** - Technical documentation
+- **[Changelog](docs/CHANGELOG.md)** - Version history
+- **[Scraping Guide](docs/SCRAPING_GUIDE.md)** - Update brainrot data
+
+---
+
+## 🏗️ Project Structure
+
+```
+brainrot-tracker/
+├── app/                    # React application
+│   ├── src/
+│   │   ├── components/     # React components
+│   │   ├── contexts/       # State contexts
+│   │   ├── hooks/          # Custom hooks
+│   │   ├── utils/          # Utilities
+│   │   ├── views/          # Main views
+│   │   └── App.jsx         # Root component
+│   ├── public/
+│   │   ├── brainrots.json  # Brainrot data
+│   │   └── thumbnails/     # Images
+│   └── package.json
+├── scripts/                # Data scraping
+├── data/                   # Raw data
+└── docs/                   # Documentation
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** 18 - UI framework
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **@dnd-kit** - Drag & drop
+- **LocalStorage** - Data persistence
+
+---
+
+## 🎯 Key Features
+
+### Income Calculation
+
+```
+Total Income = Base × Mutation × (1 + Sum of Modifiers)
+```
+
+**Example:**
+- Base: $50M/s
+- Mutation: Rainbow (10x)
+- Modifiers: Zombie (+5x), Firework (+6x), Strawberry (+10x)
+- **Result:** $50M × 10 × (1 + 21) = **$11B/s**
+
+### Mutations (Best to Worst)
+1. **Rainbow** - 10.0x
+2. **Radioactive** - 8.5x
+3. **Yin Yang** - 7.5x
+4. **Lava / Galaxy** - 6.0x each
+5. **Celestial / Candy** - 4.0x each
+
+### Top Modifiers
+1. **Strawberry** - +10.0x
+2. **Firework / Fire / Paint / Nyan** - +6.0x each
+3. **Zombie / Meowl / RIP** - +5.0x each
+
+---
+
+## 📱 Screenshots
+
+### Dashboard View
+Three view modes for managing 1-50+ accounts efficiently.
+
+### Account Detail
+Comprehensive brainrot management with income calculations.
+
+### Drag & Drop
+Intuitive drag-and-drop to copy brainrots between accounts.
+
+### Total Collection
+Cross-account view with ownership tracking and filtering.
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+---
+
+## 📝 License
+
+MIT License - See [LICENSE](LICENSE) for details
+
+---
+
+## 🆘 Support
+
+- **Issues:** [GitHub Issues](https://github.com/yourusername/brainrot-tracker/issues)
+- **Documentation:** [docs/USER_GUIDE.md](docs/USER_GUIDE.md)
+- **Wiki:** [GitHub Wiki](https://github.com/yourusername/brainrot-tracker/wiki)
+
+---
+
+## 🎉 Acknowledgments
+
+- **Steal a Brainrot** - Original game
+- **Fandom Wiki** - Brainrot data source
+- **React Community** - Amazing ecosystem
+
+---
+
+## 📊 Project Stats
+
+- **439+ Brainrots** tracked
+- **12 Mutations** available
+- **20 Modifiers** available
+- **5 Floors** for security
+- **∞ Accounts** supported
+
+---
+
+## 🔮 Roadmap
+
+- [ ] Rebirth calculator integration
+- [ ] Advanced analytics dashboard
+- [ ] Cloud sync (multi-device)
+- [ ] Mobile app (React Native)
+- [ ] Team collaboration features
+- [ ] Trading marketplace integration
+
+---
+
+## 💡 Tips
+
+- **Export regularly** - Backup your data
+- **Use tags** - Organize accounts efficiently
+- **Bulk mode** - Save time managing large collections
+- **Demo data** - Test features risk-free
+- **Drag & drop** - Fast cross-account management
+
+---
+
+**Enjoy your Brainrot Tracker!** 🎮✨
+
+Built with ❤️ by the community

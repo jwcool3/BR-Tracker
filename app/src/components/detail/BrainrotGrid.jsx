@@ -13,8 +13,11 @@ export default function BrainrotGrid({
   return (
     <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {brainrots.map(brainrot => {
-        const collectionEntry = collection.find(c => c.brainrotId === brainrot.id)
-        const isOwned = !!collectionEntry
+        // Get all entries for this brainrot (for quantity)
+        const allEntries = collection.filter(c => c.brainrotId === brainrot.id)
+        const collectionEntry = allEntries[0] // Use first for configuration
+        const isOwned = allEntries.length > 0
+        const quantity = allEntries.length
 
         return (
           <BrainrotCard
@@ -22,8 +25,9 @@ export default function BrainrotGrid({
             brainrot={brainrot}
             isOwned={isOwned}
             collectionEntry={collectionEntry}
+            quantity={quantity}
             account={account}
-            onToggleOwned={() => onToggleOwned(brainrot.id)}
+            onToggleOwned={(qty) => onToggleOwned(brainrot.id, qty)}
             onUpdate={(updates) => onUpdateBrainrot(brainrot.id, updates)}
           />
         )

@@ -1,0 +1,106 @@
+{
+  "instructions": "These brainrots have incomplete data. Please fill in missing values manually.",
+  "total": 10,
+  "brainrots": [
+    {
+      "name": "AdminLuckyBlock",
+      "id": "adminluckyblock",
+      "cost": 100000000,
+      "income_per_second": null,
+      "rarity": "admin",
+      "image": "thumbnails/AdminLuckyBlock.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Admin_Lucky_Block"
+    },
+    {
+      "name": "Clickerino Crabo",
+      "id": "clickerino-crabo",
+      "cost": 250000,
+      "income_per_second": 1000,
+      "rarity": "legendary",
+      "image": "thumbnails/Clickerinocrabo.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Clickerino_Crabo"
+    },
+    {
+      "name": "Cocofanto Elefanto",
+      "id": "cocofanto-elefanto",
+      "cost": 5000000,
+      "income_per_second": 10000,
+      "rarity": "brainrot_god",
+      "image": "thumbnails/Cocofanto_Elefanto.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Cocofanto_Elefanto"
+    },
+    {
+      "name": "Cupcake Koala",
+      "id": "cupcake-koala",
+      "cost": 8000,
+      "income_per_second": 60,
+      "rarity": "rare",
+      "image": "thumbnails/Cupcake_Koala.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Cupcake_Koala"
+    },
+    {
+      "name": "Doi Doi Do",
+      "id": "doi-doi-do",
+      "cost": 41000,
+      "income_per_second": 260,
+      "rarity": "epic",
+      "image": "thumbnails/DoiDoi.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Doi_Doi_Do"
+    },
+    {
+      "name": "FestiveLuckyBlockRealF4Leak",
+      "id": "festiveluckyblockrealf4leak",
+      "cost": 500000000,
+      "income_per_second": null,
+      "rarity": "festive",
+      "image": "thumbnails/FestiveLuckyBlockRealF4Leak.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Festive_Lucky_Block"
+    },
+    {
+      "name": "Karkerkar Kurkur",
+      "id": "karkerkar-kurkur",
+      "cost": 100000000,
+      "income_per_second": 275000,
+      "rarity": "secret",
+      "image": "thumbnails/Karkerkar_kurkur.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Karkerkar_Kurkur"
+    },
+    {
+      "name": "Noo La Polizia",
+      "id": "noo-la-polizia",
+      "cost": 67000000,
+      "income_per_second": 280000,
+      "rarity": "brainrot_god",
+      "image": "thumbnails/Nooo_my_polizia.png",
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Noo_La_Polizia"
+    },
+    {
+      "name": "Orangutini Ananassini",
+      "id": "orangutini-ananassini",
+      "cost": 400000,
+      "income_per_second": 1700,
+      "rarity": "mythic",
+      "image": null,
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Orangutini_Ananassini"
+    },
+    {
+      "name": "Tigrilini Watermelini(Lucky Block)",
+      "id": "tigrilini-watermelini-lucky-block",
+      "cost": 1700000,
+      "income_per_second": 7500,
+      "rarity": "mythic",
+      "image": null,
+      "reason": "Missing cost or income data",
+      "wiki_url": "https://stealabrainrot.fandom.com/wiki/Tigrilini_Watermelini"
+    }
+  ]
+}
