@@ -409,6 +409,160 @@ export function calculateCostEffectiveness(brainrot) {
 }
 
 /**
+ * Organize brainrots by rarity into storage accounts
+ * Optimizes to use fewest source accounts for transfers
+ * @param {Array} accounts - All accounts
+ * @param {Object} collections - Collections mapped by accountId
+ * @param {Array} brainrots - All brainrot data
+ * @param {Array} targetRarities - Rarities to organize (e.g., ['brainrot_god', 'secret'])
+ * @returns {Object} Organization plan with optimized transfers
+ */
+export function organizeStorageAccounts(accounts, collections, brainrots, targetRarities = ['brainrot_god', 'secret']) {
+  const brainrotsMap = new Map(brainrots.map(br => [br.id, br]));
+  
+  // Find all brainrots of target rarities across all accounts
+  const targetBrainrots = [];
+  
+  accounts.forEach(account => {
+    const collection = collections[account.id] || [];
+    
+    collection.forEach(entry => {
+      const brainrot = brainrotsMap.get(entry.brainrotId);
+      if (!brainrot) return;
+      
+      if (targetRarities.includes(brainrot.rarity)) {
+        targetBrainrots.push({
+          brainrotId: brainrot.id,
+          brainrotName: brainrot.name,
+          rarity: brainrot.rarity,
+          collectionEntryId: entry.id,
+          sourceAccountId: account.id,
+          sourceAccountName: account.name,
+          mutation: entry.mutation,
+          traits: entry.traits,
+          calculatedIncome: entry.calculatedIncome,
+          image: brainrot.image
+        });
+      }
+    });
+  });
+  
+  // Group by rarity
+  const byRarity = {};
+  targetRarities.forEach(rarity => {
+    byRarity[rarity] = targetBrainrots.filter(br => br.rarity === rarity);
+  });
+  
+  // For each rarity, find or suggest storage accounts
+  const storagePlans = targetRarities.map(rarity => {
+    const brainrotsForRarity = byRarity[rarity] || [];
+    
+    if (brainrotsForRarity.length === 0) {
+      return {
+        rarity,
+        displayName: rarity.replace('_', ' ').toUpperCase(),
+        status: 'none_found',
+        brainrotCount: 0,
+        recommendedStorageAccounts: [],
+        transfers: []
+      };
+    }
+    
+    // Find accounts that already have strong concentration of this rarity
+    const accountConcentration = {};
+    brainrotsForRarity.forEach(br => {
+      accountConcentration[br.sourceAccountId] = (accountConcentration[br.sourceAccountId] || 0) + 1;
+    });
+    
+    // Find best storage account (one with most of this rarity already)
+    const sortedAccounts = Object.entries(accountConcentration)
+      .sort(([, countA], [, countB]) => countB - countA)
+      .map(([accountId, count]) => {
+        const account = accounts.find(a => a.id === accountId);
+        return {
+          accountId,
+          accountName: account?.name || 'Unknown',
+          currentCount: count,
+          percentage: ((count / brainrotsForRarity.length) * 100).toFixed(1)
+        };
+      });
+    
+    const primaryStorage = sortedAccounts[0];
+    
+    // Optimize transfers to consolidate into primary storage
+    // Goal: Move all brainrots to primary storage from other accounts
+    const transfersFromOthers = brainrotsForRarity.filter(
+      br => br.sourceAccountId !== primaryStorage.accountId
+    );
+    
+    // Optimize: Group by source account and sort by count (prefer fewer sources)
+    const transfersBySource = optimizeTransferSources(transfersFromOthers);
+    
+    return {
+      rarity,
+      displayName: rarity.replace('_', ' ').toUpperCase(),
+      status: 'ready',
+      brainrotCount: brainrotsForRarity.length,
+      primaryStorage,
+      alternateStorage: sortedAccounts.slice(1, 3),
+      transfers: transfersBySource,
+      totalTransfers: transfersFromOthers.length,
+      sourceAccountCount: Object.keys(
+        transfersFromOthers.reduce((acc, t) => ({ ...acc, [t.sourceAccountId]: true }), {})
+      ).length
+    };
+  });
+  
+  return {
+    storagePlans,
+    summary: {
+      totalRarities: targetRarities.length,
+      totalBrainrots: targetBrainrots.length,
+      totalTransfersNeeded: storagePlans.reduce((sum, plan) => sum + (plan.totalTransfers || 0), 0)
+    }
+  };
+}
+
+/**
+ * Optimize transfer list to use fewest source accounts
+ * Groups transfers by source and sorts by quantity (most first)
+ * @param {Array} transfers - Array of transfer objects
+ * @returns {Array} Optimized transfer groups
+ */
+export function optimizeTransferSources(transfers) {
+  // Group by source account
+  const bySource = {};
+  
+  transfers.forEach(transfer => {
+    if (!bySource[transfer.sourceAccountId]) {
+      bySource[transfer.sourceAccountId] = {
+        sourceAccountId: transfer.sourceAccountId,
+        sourceAccountName: transfer.sourceAccountName,
+        brainrots: []
+      };
+    }
+    bySource[transfer.sourceAccountId].brainrots.push(transfer);
+  });
+  
+  // Convert to array and sort by quantity (most brainrots first)
+  const sourceGroups = Object.values(bySource);
+  sourceGroups.sort((a, b) => b.brainrots.length - a.brainrots.length);
+  
+  // Add helpful metadata
+  return sourceGroups.map(group => ({
+    ...group,
+    count: group.brainrots.length,
+    priority: group.brainrots.length >= 5 ? 'high' : 
+              group.brainrots.length >= 2 ? 'medium' : 'low',
+    recommendation: group.brainrots.length >= 5 
+      ? `Transfer ${group.brainrots.length} brainrots (high priority - consolidate many at once)`
+      : group.brainrots.length >= 2
+      ? `Transfer ${group.brainrots.length} brainrots`
+      : `Transfer 1 brainrot`
+  }));
+}
+
+/**
  * Recommend brainrots for rebirth storage
  * @param {Array} allBrainrots - All brainrot data
  * @param {number} minRebirth - Minimum rebirth level (0-17)

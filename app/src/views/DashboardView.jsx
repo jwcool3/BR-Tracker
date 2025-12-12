@@ -13,11 +13,12 @@ import { calculateSlots } from '../utils/rebirthCalculator'
  */
 export default function DashboardView({ 
   accounts, 
-  collections, 
+  collections,
+  brainrots = [],
   onViewAccount, 
   onAddAccount,
   onUpdateAccount,
-  onDeleteAccount 
+  onDeleteAccount
 }) {
   const [viewMode, setViewMode] = useState('grouped') // 'cards', 'grouped', 'table'
   const [searchTerm, setSearchTerm] = useState('')
@@ -181,38 +182,71 @@ export default function DashboardView({
 
       {/* Content based on view mode */}
       <div className="mt-6">
-        {viewMode === 'grouped' && (
-          <GroupedDashboard
-            accounts={filteredAccounts}
-            collections={collections}
-            onViewAccount={onViewAccount}
-            onUpdateAccount={onUpdateAccount}
-            sortBy={sortBy}
-          />
-        )}
+        {/* Empty State */}
+        {accounts.length === 0 && (
+          <div className="text-center py-20 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700">
+            <div className="text-7xl mb-6 animate-bounce">🎮</div>
+            <h2 className="text-3xl font-bold text-white mb-3">Welcome to Brainrot Tracker!</h2>
+            <p className="text-gray-400 text-lg mb-8 max-w-md mx-auto">
+              Get started by creating your first account or loading demo data to explore
+            </p>
+            
+            <div className="flex gap-4 justify-center flex-wrap">
+              <button
+                onClick={onAddAccount}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center gap-2"
+              >
+                <span className="text-2xl">+</span>
+                Create Account
+              </button>
+            </div>
 
-        {viewMode === 'cards' && (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {filteredAccounts.map(account => (
-              <AccountCard
-                key={account.id}
-                account={account}
-                collectionSize={collections[account.id]?.length || 0}
-                onView={() => onViewAccount(account.id)}
-                onEdit={(updates) => onUpdateAccount(account.id, updates)}
-                onDelete={() => onDeleteAccount(account.id)}
-              />
-            ))}
+            <div className="mt-12 text-sm text-gray-500">
+              <p>💡 Tip: Use the "Data" button above to load demo data or import existing data</p>
+            </div>
           </div>
         )}
 
-        {viewMode === 'table' && (
-          <TableView
-            accounts={filteredAccounts}
-            collections={collections}
-            onViewAccount={onViewAccount}
-            onUpdateAccount={onUpdateAccount}
-          />
+        {/* Normal Views */}
+        {accounts.length > 0 && (
+          <>
+            {viewMode === 'grouped' && (
+              <GroupedDashboard
+                accounts={filteredAccounts}
+                collections={collections}
+                brainrots={brainrots}
+                onViewAccount={onViewAccount}
+                onUpdateAccount={onUpdateAccount}
+                sortBy={sortBy}
+              />
+            )}
+
+            {viewMode === 'cards' && (
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {filteredAccounts.map(account => (
+                  <AccountCard
+                    key={account.id}
+                    account={account}
+                    collectionSize={collections[account.id]?.length || 0}
+                    collection={collections[account.id] || []}
+                    brainrots={brainrots}
+                    onView={() => onViewAccount(account.id)}
+                    onEdit={(updates) => onUpdateAccount(account.id, updates)}
+                    onDelete={() => onDeleteAccount(account.id)}
+                  />
+                ))}
+              </div>
+            )}
+
+            {viewMode === 'table' && (
+              <TableView
+                accounts={filteredAccounts}
+                collections={collections}
+                onViewAccount={onViewAccount}
+                onUpdateAccount={onUpdateAccount}
+              />
+            )}
+          </>
         )}
       </div>
     </div>

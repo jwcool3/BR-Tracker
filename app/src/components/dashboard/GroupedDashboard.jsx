@@ -9,7 +9,8 @@ import { calculateSlots } from '../../utils/rebirthCalculator'
  */
 export default function GroupedDashboard({ 
   accounts, 
-  collections, 
+  collections,
+  brainrots = [],
   onViewAccount,
   onUpdateAccount
 }) {
@@ -74,8 +75,11 @@ export default function GroupedDashboard({
                 key={account.id}
                 account={account}
                 collectionSize={collectionSize}
+                collection={collections[account.id] || []}
+                brainrots={brainrots}
                 onView={() => onViewAccount(account.id)}
                 onToggleFavorite={() => onUpdateAccount(account.id, { favorite: !account.favorite })}
+                onEdit={(updates) => onUpdateAccount(account.id, updates)}
               />
             ))}
           </div>

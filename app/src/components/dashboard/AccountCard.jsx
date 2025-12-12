@@ -1,13 +1,25 @@
 import { useState } from 'react'
 import { useDroppable } from '@dnd-kit/core'
 import { Edit2, Trash2, Package } from 'lucide-react'
+import { MUTATIONS, TRAITS } from '../../utils/incomeCalculator'
+import EditAccountModal from './EditAccountModal'
 
 /**
  * Account Card - Shows account summary on dashboard
- * Displays rebirth level, slot usage, and quick stats
+ * Displays rebirth level, slot usage, and quick stats with brainrot thumbnails
  */
-export default function AccountCard({ account, collectionSize, onView, onEdit, onDelete }) {
+export default function AccountCard({ account, collectionSize, collection, brainrots, onView, onEdit, onDelete }) {
   const [showActions, setShowActions] = useState(false)
+  const [showEditModal, setShowEditModal] = useState(false)
+
+  // Get brainrot details for thumbnails WITH collection entry data
+  const brainrotsMap = new Map(brainrots?.map(br => [br.id, br]) || [])
+  const collectionBrainrots = (collection || [])
+    .map(entry => ({
+      brainrot: brainrotsMap.get(entry.brainrotId),
+      entry: entry // Keep entry for mutation/traits
+    }))
+    .filter(item => item.brainrot) // Show ALL brainrots
 
   // Droppable setup
   const { setNodeRef, isOver } = useDroppable({
@@ -64,17 +76,25 @@ export default function AccountCard({ account, collectionSize, onView, onEdit, o
       )}
       {/* Quick Actions */}
       {showActions && (
-        <div className="absolute top-4 right-4 flex gap-2">
+        <div className="absolute top-4 right-4 flex gap-2 z-20">
           <button
-            onClick={(e) => { e.stopPropagation(); /* TODO: onEdit */ }}
-            className="p-2 bg-slate-700 hover:bg-slate-600 rounded-lg"
+            onClick={(e) => { 
+              e.stopPropagation(); 
+              setShowEditModal(true);
+            }}
+            className="p-2 bg-slate-700 hover:bg-slate-600 rounded-lg transition-colors"
             title="Edit account"
           >
             <Edit2 size={16} />
           </button>
           <button
-            onClick={(e) => { e.stopPropagation(); /* TODO: onDelete */ }}
-            className="p-2 bg-red-600 hover:bg-red-700 rounded-lg"
+            onClick={(e) => { 
+              e.stopPropagation();
+              if (confirm(`Delete "${account.name}"? This cannot be undone.`)) {
+                onDelete();
+              }
+            }}
+            className="p-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors"
             title="Delete account"
           >
             <Trash2 size={16} />
@@ -129,6 +149,68 @@ export default function AccountCard({ account, collectionSize, onView, onEdit, o
         </div>
       </div>
 
+      {/* Brainrot Thumbnails Preview - All Brainrots */}
+      {collectionBrainrots.length > 0 && (
+        <div className="mb-4">
+          <div className="text-xs text-gray-400 mb-2">Brainrots ({collectionBrainrots.length}):</div>
+          <div className="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto">
+            {collectionBrainrots.map((item, idx) => {
+              const { brainrot, entry } = item;
+              const mutation = entry.mutation || 'none';
+              const mutationData = MUTATIONS[mutation];
+              const borderColor = mutation !== 'none' ? mutationData?.color || '#666' : '#475569'; // slate-600
+              const traits = entry.traits || [];
+              
+              return (
+                <div 
+                  key={idx}
+                  className="relative w-11 h-11 bg-slate-900 rounded overflow-hidden group"
+                  style={{ 
+                    border: `2px solid ${borderColor}`,
+                    boxShadow: mutation !== 'none' ? `0 0 8px ${borderColor}40` : 'none'
+                  }}
+                  title={`${brainrot.name}${mutation !== 'none' ? ` (${mutationData?.name})` : ''}${traits.length > 0 ? ` +${traits.length} mods` : ''}`}
+                >
+                  {/* Image */}
+                  {brainrot.image ? (
+                    <img 
+                      src={`/${brainrot.image}`} 
+                      alt={brainrot.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                      onError={(e) => {
+                        e.target.style.display = 'none'
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">
+                      ?
+                    </div>
+                  )}
+                  
+                  {/* Modifier Icons (bottom) */}
+                  {traits.length > 0 && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm flex items-center justify-center gap-0.5 py-0.5 px-0.5">
+                      {traits.slice(0, 4).map((traitKey, tIdx) => (
+                        <span 
+                          key={tIdx}
+                          className="text-[8px]"
+                          title={TRAITS[traitKey]?.name}
+                        >
+                          {TRAITS[traitKey]?.icon}
+                        </span>
+                      ))}
+                      {traits.length > 4 && (
+                        <span className="text-[7px] text-white font-bold">+{traits.length - 4}</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* View Button */}
       <button
         onClick={onView}
@@ -136,6 +218,18 @@ export default function AccountCard({ account, collectionSize, onView, onEdit, o
       >
         View Account →
       </button>
+
+      {/* Edit Account Modal */}
+      {showEditModal && (
+        <EditAccountModal
+          account={account}
+          onSave={(updates) => {
+            onEdit(updates);
+            setShowEditModal(false);
+          }}
+          onClose={() => setShowEditModal(false)}
+        />
+      )}
     </div>
   )
 }

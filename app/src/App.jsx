@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react'
 import { DndContext, DragOverlay, closestCenter } from '@dnd-kit/core'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useNavigation } from './hooks/useNavigation'
+import { useToast } from './hooks/useToast'
 import DashboardView from './views/DashboardView'
 import AccountDetailView from './views/AccountDetailView'
 import TotalCollectionView from './views/TotalCollectionView'
 import OrganizationView from './views/OrganizationView'
 import DataVerificationView from './views/DataVerificationView'
 import Header from './components/common/Header'
+import ToastContainer from './components/common/ToastContainer'
 import { BulkSelectionProvider } from './contexts/BulkSelectionContext'
 
 function App() {
@@ -89,8 +91,12 @@ function App() {
   // Drag and drop state
   const [activeDrag, setActiveDrag] = useState(null)
   
+  // Toast notifications
+  const { toasts, showToast, removeToast } = useToast()
+  
   // Brainrot management (for verification view)
   const deleteBrainrot = (brainrotId) => {
+    const brainrot = brainrots.find(br => br.id === brainrotId)
     // Remove from brainrots list
     const updatedBrainrots = brainrots.filter(br => br.id !== brainrotId)
     setBrainrots(updatedBrainrots)
@@ -102,6 +108,11 @@ function App() {
     })
     setCollections(updatedCollections)
     
+    showToast({
+      type: 'success',
+      message: `🗑️ "${brainrot?.name || brainrotId}" deleted from database`,
+      duration: 3000
+    })
     console.log(`Deleted brainrot: ${brainrotId}`)
   }
   
@@ -132,6 +143,11 @@ function App() {
     }
     setAccounts([...accounts, newAccount])
     setCollections({ ...collections, [newAccount.id]: [] })
+    showToast({
+      type: 'success',
+      message: `✅ Account "${account.name}" created!`,
+      duration: 3000
+    })
   }
 
   const updateAccount = (accountId, updates) => {
@@ -141,6 +157,7 @@ function App() {
   }
 
   const deleteAccount = (accountId) => {
+    const account = accounts.find(acc => acc.id === accountId)
     setAccounts(accounts.filter(acc => acc.id !== accountId))
     const newCollections = { ...collections }
     delete newCollections[accountId]
@@ -148,6 +165,11 @@ function App() {
     if (selectedAccount === accountId) {
       backToDashboard()
     }
+    showToast({
+      type: 'success',
+      message: `🗑️ Account "${account?.name || 'Unknown'}" deleted`,
+      duration: 3000
+    })
   }
 
   // Collection operations
@@ -166,8 +188,17 @@ function App() {
     
     if (!entryToTransfer) {
       console.error('Entry not found in source collection')
+      showToast({
+        type: 'error',
+        message: '❌ Transfer failed - brainrot not found',
+        duration: 3000
+      })
       return
     }
+
+    const brainrot = brainrots.find(br => br.id === entryToTransfer.brainrotId)
+    const sourceAccount = accounts.find(a => a.id === sourceAccountId)
+    const targetAccount = accounts.find(a => a.id === targetAccountId)
 
     // Remove from source
     const newSourceCollection = sourceCollection.filter(entry => entry.id !== collectionEntryId)
@@ -187,6 +218,11 @@ function App() {
       [targetAccountId]: newTargetCollection
     })
 
+    showToast({
+      type: 'success',
+      message: `🔄 "${brainrot?.name || 'Brainrot'}" transferred to ${targetAccount?.name || 'account'}`,
+      duration: 3000
+    })
     console.log(`Transferred ${entryToTransfer.brainrotId} from ${sourceAccountId} to ${targetAccountId}`)
   }
 
@@ -194,11 +230,21 @@ function App() {
   const handleImportData = (data) => {
     setAccounts(data.accounts)
     setCollections(data.collections)
+    showToast({
+      type: 'success',
+      message: `📥 Data imported! ${data.accounts.length} accounts loaded`,
+      duration: 4000
+    })
   }
 
   const handleClearAllData = () => {
     setAccounts([])
     setCollections({})
+    showToast({
+      type: 'warning',
+      message: '🗑️ All data cleared',
+      duration: 3000
+    })
   }
 
   // Drag and drop handlers
@@ -249,6 +295,19 @@ function App() {
 
       if (newEntries.length > 0) {
         updateCollection(targetAccountId, [...targetCollection, ...newEntries])
+        const targetAccount = accounts.find(a => a.id === targetAccountId)
+        showToast({
+          type: 'success',
+          message: `🎉 ${newEntries.length} brainrot${newEntries.length > 1 ? 's' : ''} copied to ${targetAccount?.name || 'account'}`,
+          duration: 3000
+        })
+      } else {
+        const targetAccount = accounts.find(a => a.id === targetAccountId)
+        showToast({
+          type: 'info',
+          message: `ℹ️ ${targetAccount?.name || 'Account'} already has these brainrots`,
+          duration: 3000
+        })
       }
     }
 
@@ -316,6 +375,7 @@ function App() {
               <DashboardView
                 accounts={accounts}
                 collections={collections}
+                brainrots={brainrots}
                 onViewAccount={viewAccount}
                 onAddAccount={addAccount}
                 onUpdateAccount={updateAccount}
@@ -382,6 +442,9 @@ function App() {
             </div>
           )}
         </DragOverlay>
+
+        {/* Toast Notifications */}
+        <ToastContainer toasts={toasts} onRemove={removeToast} />
       </DndContext>
     </BulkSelectionProvider>
   )

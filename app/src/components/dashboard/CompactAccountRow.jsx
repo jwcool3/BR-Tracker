@@ -1,14 +1,30 @@
-import { Star, Eye, EyeOff } from 'lucide-react'
+import { useState } from 'react'
+import { Star, Eye, EyeOff, Edit2 } from 'lucide-react'
 import { calculateSlots } from '../../utils/rebirthCalculator'
+import { MUTATIONS, TRAITS } from '../../utils/incomeCalculator'
+import EditAccountModal from './EditAccountModal'
 
 /**
  * Compact Account Row - For grouped/table views
- * Shows account info in a single row
+ * Shows account info in a single row with brainrot thumbnails
  */
-export default function CompactAccountRow({ account, collectionSize, onView, onToggleFavorite, onToggleHidden }) {
+export default function CompactAccountRow({ account, collectionSize, collection, brainrots, onView, onToggleFavorite, onToggleHidden, onEdit }) {
+  const [showEditModal, setShowEditModal] = useState(false)
   const totalSlots = calculateSlots(account.rebirthLevel)
   const freeSlots = Math.max(0, totalSlots - collectionSize)
   const percentFull = totalSlots > 0 ? (collectionSize / totalSlots) * 100 : 0
+
+  // Get brainrot details for thumbnails WITH collection entry data
+  const brainrotsMap = new Map(brainrots?.map(br => [br.id, br]) || [])
+  const collectionBrainrots = (collection || [])
+    .map(entry => ({
+      brainrot: brainrotsMap.get(entry.brainrotId),
+      entry: entry // Keep entry for mutation/traits
+    }))
+    .filter(item => item.brainrot)
+    .slice(0, 12) // Show first 12 in compact view (space limitation)
+  
+  const remainingCount = Math.max(0, collectionSize - 12)
   
   // Determine status
   let status = 'LOW'
@@ -70,6 +86,58 @@ export default function CompactAccountRow({ account, collectionSize, onView, onT
         )}
       </div>
 
+      {/* Brainrot Thumbnails */}
+      {collectionBrainrots.length > 0 && (
+        <div className="hidden lg:flex items-center gap-1">
+          {collectionBrainrots.map((item, idx) => {
+            const { brainrot, entry } = item;
+            const mutation = entry.mutation || 'none';
+            const mutationData = MUTATIONS[mutation];
+            const borderColor = mutation !== 'none' ? mutationData?.color || '#666' : '#475569'; // slate-600
+            const traits = entry.traits || [];
+            
+            return (
+              <div 
+                key={idx}
+                className="relative w-8 h-8 bg-slate-900 rounded overflow-hidden flex-shrink-0"
+                style={{ 
+                  border: `2px solid ${borderColor}`,
+                  boxShadow: mutation !== 'none' ? `0 0 6px ${borderColor}40` : 'none'
+                }}
+                title={`${brainrot.name}${mutation !== 'none' ? ` (${mutationData?.name})` : ''}${traits.length > 0 ? ` +${traits.length}` : ''}`}
+              >
+                {brainrot.image ? (
+                  <img 
+                    src={`/${brainrot.image}`} 
+                    alt={brainrot.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                    }}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-[10px] text-gray-500">
+                    ?
+                  </div>
+                )}
+                
+                {/* Modifier Count Badge */}
+                {traits.length > 0 && (
+                  <div className="absolute bottom-0 right-0 bg-cyan-600 text-white text-[7px] font-bold px-0.5 rounded-tl">
+                    {traits.length}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+          {remainingCount > 0 && (
+            <div className="w-8 h-8 bg-slate-700 rounded border border-slate-600 flex items-center justify-center flex-shrink-0">
+              <span className="text-[9px] font-bold text-gray-300">+{remainingCount}</span>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Rebirth Level */}
       <div className="text-sm text-gray-400 hidden sm:block">
         RB {account.rebirthLevel}
@@ -100,13 +168,37 @@ export default function CompactAccountRow({ account, collectionSize, onView, onT
         </div>
       )}
 
-      {/* View Button */}
-      <button
-        onClick={onView}
-        className="px-4 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm font-medium transition-colors"
-      >
-        View →
-      </button>
+      {/* Action Buttons */}
+      <div className="flex items-center gap-2">
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowEditModal(true);
+          }}
+          className="p-2 bg-slate-700 hover:bg-slate-600 rounded transition-colors"
+          title="Edit account"
+        >
+          <Edit2 size={14} />
+        </button>
+        <button
+          onClick={onView}
+          className="px-4 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm font-medium transition-colors"
+        >
+          View →
+        </button>
+      </div>
+
+      {/* Edit Account Modal */}
+      {showEditModal && (
+        <EditAccountModal
+          account={account}
+          onSave={(updates) => {
+            onEdit?.(updates);
+            setShowEditModal(false);
+          }}
+          onClose={() => setShowEditModal(false)}
+        />
+      )}
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { ArrowLeft, TrendingUp, Package, Sparkles, ArrowRight, Check, X, Zap } from 'lucide-react';
-import { analyzeAllAccounts } from '../utils/accountAnalyzer';
+import { ArrowLeft, TrendingUp, Package, Sparkles, ArrowRight, Check, X, Zap, FolderOpen } from 'lucide-react';
+import { analyzeAllAccounts, organizeStorageAccounts } from '../utils/accountAnalyzer';
 import { MUTATIONS } from '../utils/incomeCalculator';
 import FuseReadinessPanel from '../components/fuse/FuseReadinessPanel';
 
@@ -12,13 +12,20 @@ export default function OrganizationView({
   onTransferBrainrot 
 }) {
   const [selectedRecommendation, setSelectedRecommendation] = useState(null);
-  const [activeTab, setActiveTab] = useState('organization'); // 'organization' or 'fuse'
+  const [activeTab, setActiveTab] = useState('storage'); // 'storage', 'organization', or 'fuse'
+  const [selectedRarities, setSelectedRarities] = useState(['brainrot_god', 'secret']);
 
   // Run analysis
   const analysis = useMemo(() => {
     if (!accounts.length || !brainrots.length) return null;
     return analyzeAllAccounts(accounts, collections, brainrots);
   }, [accounts, collections, brainrots]);
+
+  // Run storage analysis
+  const storageAnalysis = useMemo(() => {
+    if (!accounts.length || !brainrots.length) return null;
+    return organizeStorageAccounts(accounts, collections, brainrots, selectedRarities);
+  }, [accounts, collections, brainrots, selectedRarities]);
 
   if (!analysis) {
     return (
@@ -83,6 +90,18 @@ export default function OrganizationView({
       <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-2 border border-slate-700 mb-6">
         <div className="flex gap-2">
           <button
+            onClick={() => setActiveTab('storage')}
+            className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+              activeTab === 'storage'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'text-gray-400 hover:text-white hover:bg-slate-700'
+            }`}
+          >
+            <FolderOpen size={20} />
+            <span>Storage Organizer</span>
+          </button>
+
+          <button
             onClick={() => setActiveTab('organization')}
             className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
               activeTab === 'organization'
@@ -91,7 +110,7 @@ export default function OrganizationView({
             }`}
           >
             <Sparkles size={20} />
-            <span>Account Organization</span>
+            <span>Account Analysis</span>
           </button>
 
           <button
@@ -107,6 +126,187 @@ export default function OrganizationView({
           </button>
         </div>
       </div>
+
+      {/* Tab Content - Storage Organizer */}
+      {activeTab === 'storage' && storageAnalysis && (
+        <>
+          {/* Summary Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
+              <div className="text-gray-400 text-sm mb-1">Rarities Tracked</div>
+              <div className="text-2xl font-bold text-white">{storageAnalysis.summary.totalRarities}</div>
+            </div>
+
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
+              <div className="text-gray-400 text-sm mb-1">Total Brainrots</div>
+              <div className="text-2xl font-bold text-blue-400">{storageAnalysis.summary.totalBrainrots}</div>
+            </div>
+
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
+              <div className="text-gray-400 text-sm mb-1">Transfers Needed</div>
+              <div className="text-2xl font-bold text-yellow-400">{storageAnalysis.summary.totalTransfersNeeded}</div>
+            </div>
+          </div>
+
+          {/* Rarity Selection */}
+          <div className="bg-gradient-to-r from-blue-900/30 to-blue-800/30 rounded-xl p-6 border border-blue-700 mb-6">
+            <h3 className="text-lg font-bold text-white mb-3">Select Rarities to Organize</h3>
+            <div className="flex flex-wrap gap-3">
+              {['brainrot_god', 'secret', 'og', 'mythic', 'legendary'].map(rarity => (
+                <button
+                  key={rarity}
+                  onClick={() => {
+                    if (selectedRarities.includes(rarity)) {
+                      setSelectedRarities(selectedRarities.filter(r => r !== rarity));
+                    } else {
+                      setSelectedRarities([...selectedRarities, rarity]);
+                    }
+                  }}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                    selectedRarities.includes(rarity)
+                      ? 'bg-blue-600 text-white ring-2 ring-blue-400'
+                      : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                  }`}
+                >
+                  {rarity.replace('_', ' ').toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Storage Plans */}
+          <div className="space-y-6">
+            {storageAnalysis.storagePlans.map((plan, idx) => (
+              <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.displayName} Storage
+                    </h3>
+                    <p className="text-gray-400">
+                      {plan.brainrotCount} brainrots • {plan.totalTransfers || 0} need transfer
+                    </p>
+                  </div>
+                  {plan.status === 'ready' && (
+                    <div className="px-4 py-2 bg-green-600/20 text-green-400 rounded-lg font-medium">
+                      Ready to Organize
+                    </div>
+                  )}
+                </div>
+
+                {plan.status === 'ready' && (
+                  <>
+                    {/* Primary Storage Account */}
+                    <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-4 mb-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-sm text-gray-400 mb-1">Primary Storage Account</div>
+                          <div className="text-xl font-bold text-white">{plan.primaryStorage.accountName}</div>
+                          <div className="text-sm text-blue-400 mt-1">
+                            Already has {plan.primaryStorage.currentCount} ({plan.primaryStorage.percentage}%)
+                          </div>
+                        </div>
+                        <Package size={32} className="text-blue-400" />
+                      </div>
+                    </div>
+
+                    {/* Transfer Groups - Optimized by Source */}
+                    {plan.transfers && plan.transfers.length > 0 && (
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                          <ArrowRight className="text-yellow-400" />
+                          Transfer Plan (Optimized - {plan.sourceAccountCount} accounts)
+                        </h4>
+                        <p className="text-sm text-gray-400 mb-4">
+                          💡 Tip: Transfers are sorted by quantity. Start with accounts that have the most brainrots to minimize switching.
+                        </p>
+
+                        <div className="space-y-3">
+                          {plan.transfers.map((transferGroup, groupIdx) => (
+                            <div
+                              key={groupIdx}
+                              className={`rounded-lg p-4 border ${
+                                transferGroup.priority === 'high'
+                                  ? 'bg-yellow-900/20 border-yellow-700'
+                                  : transferGroup.priority === 'medium'
+                                  ? 'bg-blue-900/20 border-blue-700'
+                                  : 'bg-slate-700/20 border-slate-600'
+                              }`}
+                            >
+                              <div className="flex items-center justify-between mb-2">
+                                <div>
+                                  <div className="font-bold text-white flex items-center gap-2">
+                                    {transferGroup.sourceAccountName}
+                                    {transferGroup.priority === 'high' && (
+                                      <span className="px-2 py-0.5 bg-yellow-600 text-xs rounded">HIGH PRIORITY</span>
+                                    )}
+                                  </div>
+                                  <div className="text-sm text-gray-400">
+                                    {transferGroup.count} brainrot{transferGroup.count > 1 ? 's' : ''} to transfer
+                                  </div>
+                                </div>
+                                <button
+                                  onClick={() => {
+                                    // Transfer all brainrots in this group
+                                    transferGroup.brainrots.forEach(br => {
+                                      onTransferBrainrot(
+                                        br.collectionEntryId,
+                                        transferGroup.sourceAccountId,
+                                        plan.primaryStorage.accountId
+                                      );
+                                    });
+                                  }}
+                                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
+                                >
+                                  <ArrowRight size={16} />
+                                  Transfer All ({transferGroup.count})
+                                </button>
+                              </div>
+
+                              {/* Brainrot List */}
+                              <div className="mt-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                                {transferGroup.brainrots.map((br, brIdx) => (
+                                  <div
+                                    key={brIdx}
+                                    className="bg-slate-900/50 rounded p-2 text-xs"
+                                  >
+                                    <div className="font-medium text-white truncate">
+                                      {br.brainrotName}
+                                    </div>
+                                    {br.mutation && br.mutation !== 'none' && (
+                                      <div className="text-purple-400">
+                                        {MUTATIONS[br.mutation]?.name || br.mutation}
+                                      </div>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {plan.transfers.length === 0 && (
+                      <div className="text-center py-8 text-gray-400">
+                        <Check size={48} className="mx-auto mb-2 text-green-400" />
+                        <p>All {plan.displayName} brainrots are already in the primary storage account!</p>
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {plan.status === 'none_found' && (
+                  <div className="text-center py-8 text-gray-400">
+                    <X size={48} className="mx-auto mb-2" />
+                    <p>No {plan.displayName} brainrots found in any account</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       {/* Tab Content - Organization */}
       {activeTab === 'organization' && (
