@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import { Search, LayoutGrid, List, Table } from 'lucide-react'
+import { useState, useMemo } from 'react'
+import { Search, LayoutGrid, List, Table, ArrowUpDown } from 'lucide-react'
 import AccountCard from '../components/dashboard/AccountCard'
 import GroupedDashboard from '../components/dashboard/GroupedDashboard'
 import TableView from '../components/dashboard/TableView'
 import GlobalStats from '../components/dashboard/GlobalStats'
 import AddAccountButton from '../components/dashboard/AddAccountButton'
+import { calculateSlots } from '../utils/rebirthCalculator'
 
 /**
  * Dashboard View - Overview of all accounts
@@ -21,22 +22,50 @@ export default function DashboardView({
   const [viewMode, setViewMode] = useState('grouped') // 'cards', 'grouped', 'table'
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
+  const [sortBy, setSortBy] = useState('name') // 'name', 'storage', 'rebirth', 'brainrots'
 
-  // Filter accounts
-  const filteredAccounts = accounts.filter(account => {
-    // Search filter
-    if (searchTerm && !account.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-      return false
-    }
-    
-    // Status filter
-    if (statusFilter !== 'all') {
-      if (statusFilter === 'favorites' && !account.favorite) return false
-      if (statusFilter === 'hidden' && !account.hidden) return false
-    }
-    
-    return true
-  })
+  // Filter and sort accounts
+  const filteredAccounts = useMemo(() => {
+    let filtered = accounts.filter(account => {
+      // Search filter
+      if (searchTerm && !account.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+        return false
+      }
+      
+      // Status filter
+      if (statusFilter !== 'all') {
+        if (statusFilter === 'favorites' && !account.favorite) return false
+        if (statusFilter === 'hidden' && !account.hidden) return false
+      }
+      
+      return true
+    })
+
+    // Sort accounts
+    return filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'storage': {
+          const aSlots = calculateSlots(a.rebirthLevel)
+          const bSlots = calculateSlots(b.rebirthLevel)
+          const aSize = collections[a.id]?.length || 0
+          const bSize = collections[b.id]?.length || 0
+          const aPercent = aSlots > 0 ? (aSize / aSlots) * 100 : 0
+          const bPercent = bSlots > 0 ? (bSize / bSlots) * 100 : 0
+          return bPercent - aPercent // Highest first
+        }
+        case 'rebirth':
+          return b.rebirthLevel - a.rebirthLevel // Highest first
+        case 'brainrots': {
+          const aSize = collections[a.id]?.length || 0
+          const bSize = collections[b.id]?.length || 0
+          return bSize - aSize // Most first
+        }
+        case 'name':
+        default:
+          return a.name.localeCompare(b.name)
+      }
+    })
+  }, [accounts, searchTerm, statusFilter, sortBy, collections])
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -91,41 +120,58 @@ export default function DashboardView({
             </button>
           </div>
 
-          {/* View Mode Switcher */}
-          <div className="flex gap-2 bg-slate-700 rounded-lg p-1">
-            <button
-              onClick={() => setViewMode('grouped')}
-              className={`p-2 rounded transition-colors ${
-                viewMode === 'grouped'
-                  ? 'bg-blue-600'
-                  : 'hover:bg-slate-600'
-              }`}
-              title="Grouped View"
-            >
-              <List size={20} />
-            </button>
-            <button
-              onClick={() => setViewMode('cards')}
-              className={`p-2 rounded transition-colors ${
-                viewMode === 'cards'
-                  ? 'bg-blue-600'
-                  : 'hover:bg-slate-600'
-              }`}
-              title="Card View"
-            >
-              <LayoutGrid size={20} />
-            </button>
-            <button
-              onClick={() => setViewMode('table')}
-              className={`p-2 rounded transition-colors ${
-                viewMode === 'table'
-                  ? 'bg-blue-600'
-                  : 'hover:bg-slate-600'
-              }`}
-              title="Table View"
-            >
-              <Table size={20} />
-            </button>
+          <div className="flex items-center gap-4">
+            {/* Sort Dropdown */}
+            <div className="flex items-center gap-2">
+              <ArrowUpDown size={16} className="text-gray-400" />
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="bg-slate-700 text-white rounded px-3 py-1 text-sm border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="name">Sort: Name</option>
+                <option value="storage">Sort: Storage %</option>
+                <option value="rebirth">Sort: Rebirth Level</option>
+                <option value="brainrots">Sort: # Brainrots</option>
+              </select>
+            </div>
+
+            {/* View Mode Switcher */}
+            <div className="flex gap-2 bg-slate-700 rounded-lg p-1">
+              <button
+                onClick={() => setViewMode('grouped')}
+                className={`p-2 rounded transition-colors ${
+                  viewMode === 'grouped'
+                    ? 'bg-blue-600'
+                    : 'hover:bg-slate-600'
+                }`}
+                title="Grouped View"
+              >
+                <List size={20} />
+              </button>
+              <button
+                onClick={() => setViewMode('cards')}
+                className={`p-2 rounded transition-colors ${
+                  viewMode === 'cards'
+                    ? 'bg-blue-600'
+                    : 'hover:bg-slate-600'
+                }`}
+                title="Card View"
+              >
+                <LayoutGrid size={20} />
+              </button>
+              <button
+                onClick={() => setViewMode('table')}
+                className={`p-2 rounded transition-colors ${
+                  viewMode === 'table'
+                    ? 'bg-blue-600'
+                    : 'hover:bg-slate-600'
+                }`}
+                title="Table View"
+              >
+                <Table size={20} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -141,6 +187,7 @@ export default function DashboardView({
             collections={collections}
             onViewAccount={onViewAccount}
             onUpdateAccount={onUpdateAccount}
+            sortBy={sortBy}
           />
         )}
 

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { ArrowLeft, AlertTriangle, Check, X, Trash2, Edit, GitMerge, Info } from 'lucide-react';
 
 export default function DataVerificationView({ 
@@ -11,7 +11,25 @@ export default function DataVerificationView({
 }) {
   const [activeTab, setActiveTab] = useState('similar'); // 'similar' or 'subsets'
   const [expandedIssue, setExpandedIssue] = useState(null);
-  const [resolvedIssues, setResolvedIssues] = useState(new Set());
+  
+  // Load resolved issues from localStorage
+  const [resolvedIssues, setResolvedIssues] = useState(() => {
+    try {
+      const saved = localStorage.getItem('br-resolved-issues');
+      return saved ? new Set(JSON.parse(saved)) : new Set();
+    } catch {
+      return new Set();
+    }
+  });
+
+  // Persist resolved issues to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('br-resolved-issues', JSON.stringify([...resolvedIssues]));
+    } catch (err) {
+      console.error('Failed to save resolved issues:', err);
+    }
+  }, [resolvedIssues]);
 
   if (!verificationReport) {
     return (
@@ -29,8 +47,32 @@ export default function DataVerificationView({
   const similarNames = details.similar_names || [];
   const suspicious = details.suspicious || [];
 
-  const unresolvedSimilar = similarNames.filter((_, idx) => !resolvedIssues.has(`similar-${idx}`));
-  const unresolvedSuspicious = suspicious.filter((_, idx) => !resolvedIssues.has(`suspicious-${idx}`));
+  // Create a set of existing brainrot IDs for fast lookup
+  const existingBrainrotIds = useMemo(() => {
+    return new Set(brainrots.map(br => br.id));
+  }, [brainrots]);
+
+  // Filter out resolved issues AND issues where brainrots have been deleted
+  // Keep track of original index
+  const unresolvedSimilar = useMemo(() => {
+    return similarNames.map((issue, originalIdx) => ({ issue, originalIdx }))
+      .filter(({ issue, originalIdx }) => {
+        const issueKey = `similar-${originalIdx}`;
+        const isResolved = resolvedIssues.has(issueKey);
+        const bothExist = existingBrainrotIds.has(issue.br1.id) && existingBrainrotIds.has(issue.br2.id);
+        return !isResolved && bothExist;
+      });
+  }, [similarNames, resolvedIssues, existingBrainrotIds]);
+
+  const unresolvedSuspicious = useMemo(() => {
+    return suspicious.map((issue, originalIdx) => ({ issue, originalIdx }))
+      .filter(({ issue, originalIdx }) => {
+        const issueKey = `suspicious-${originalIdx}`;
+        const isResolved = resolvedIssues.has(issueKey);
+        const bothExist = existingBrainrotIds.has(issue.short_br.id) && existingBrainrotIds.has(issue.long_br.id);
+        return !isResolved && bothExist;
+      });
+  }, [suspicious, resolvedIssues, existingBrainrotIds]);
 
   const handleResolve = (type, index, action, data) => {
     const issueKey = `${type}-${index}`;
@@ -48,6 +90,9 @@ export default function DataVerificationView({
 
     // Mark as resolved
     setResolvedIssues(prev => new Set([...prev, issueKey]));
+    
+    // Clear expanded state so next card can be interacted with
+    setExpandedIssue(null);
   };
 
   return (
@@ -78,22 +123,24 @@ export default function DataVerificationView({
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
             <div className="text-gray-400 text-sm mb-1">Total Brainrots</div>
-            <div className="text-2xl font-bold text-white">{verificationReport.total_brainrots}</div>
+            <div className="text-2xl font-bold text-white">{brainrots.length}</div>
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
-            <div className="text-gray-400 text-sm mb-1">Total Issues</div>
-            <div className="text-2xl font-bold text-yellow-400">{verificationReport.total_issues}</div>
+            <div className="text-gray-400 text-sm mb-1">Remaining Issues</div>
+            <div className="text-2xl font-bold text-yellow-400">
+              {unresolvedSimilar.length + unresolvedSuspicious.length}
+            </div>
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
             <div className="text-gray-400 text-sm mb-1">Similar Names</div>
-            <div className="text-2xl font-bold text-orange-400">{issues.similar_names}</div>
+            <div className="text-2xl font-bold text-orange-400">{unresolvedSimilar.length}</div>
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
             <div className="text-gray-400 text-sm mb-1">Name Subsets</div>
-            <div className="text-2xl font-bold text-red-400">{issues.suspicious}</div>
+            <div className="text-2xl font-bold text-red-400">{unresolvedSuspicious.length}</div>
           </div>
         </div>
 
@@ -101,14 +148,29 @@ export default function DataVerificationView({
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700 mb-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-300">Resolution Progress</span>
-            <span className="text-sm text-gray-400">
-              {resolvedIssues.size} / {verificationReport.total_issues} resolved
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-gray-400">
+                {verificationReport.total_issues - (unresolvedSimilar.length + unresolvedSuspicious.length)} / {verificationReport.total_issues} resolved
+              </span>
+              {resolvedIssues.size > 0 && (
+                <button
+                  onClick={() => {
+                    if (window.confirm('Reset all progress? This will not restore deleted brainrots.')) {
+                      setResolvedIssues(new Set());
+                      setExpandedIssue(null);
+                    }
+                  }}
+                  className="text-xs px-2 py-1 bg-red-600/20 hover:bg-red-600/30 text-red-400 rounded transition-colors"
+                >
+                  Reset Progress
+                </button>
+              )}
+            </div>
           </div>
           <div className="w-full bg-slate-900 rounded-full h-3 overflow-hidden">
             <div 
               className="h-full bg-gradient-to-r from-green-500 to-blue-500 transition-all duration-500"
-              style={{ width: `${(resolvedIssues.size / verificationReport.total_issues) * 100}%` }}
+              style={{ width: `${((verificationReport.total_issues - (unresolvedSimilar.length + unresolvedSuspicious.length)) / verificationReport.total_issues) * 100}%` }}
             />
           </div>
         </div>
@@ -152,14 +214,14 @@ export default function DataVerificationView({
                 <p className="text-gray-400">Great job cleaning up the data</p>
               </div>
             ) : (
-              unresolvedSimilar.map((issue, idx) => (
+              unresolvedSimilar.map(({ issue, originalIdx }) => (
                 <SimilarNameIssueCard
-                  key={idx}
+                  key={originalIdx}
                   issue={issue}
-                  index={idx}
-                  expanded={expandedIssue === `similar-${idx}`}
-                  onToggle={() => setExpandedIssue(expandedIssue === `similar-${idx}` ? null : `similar-${idx}`)}
-                  onResolve={(action, data) => handleResolve('similar', idx, action, data)}
+                  index={originalIdx}
+                  expanded={expandedIssue === `similar-${originalIdx}`}
+                  onToggle={() => setExpandedIssue(expandedIssue === `similar-${originalIdx}` ? null : `similar-${originalIdx}`)}
+                  onResolve={(action, data) => handleResolve('similar', originalIdx, action, data)}
                 />
               ))
             )}
@@ -176,14 +238,14 @@ export default function DataVerificationView({
                 <p className="text-gray-400">Database is clean</p>
               </div>
             ) : (
-              unresolvedSuspicious.map((issue, idx) => (
+              unresolvedSuspicious.map(({ issue, originalIdx }) => (
                 <NameSubsetIssueCard
-                  key={idx}
+                  key={originalIdx}
                   issue={issue}
-                  index={idx}
-                  expanded={expandedIssue === `suspicious-${idx}`}
-                  onToggle={() => setExpandedIssue(expandedIssue === `suspicious-${idx}` ? null : `suspicious-${idx}`)}
-                  onResolve={(action, data) => handleResolve('suspicious', idx, action, data)}
+                  index={originalIdx}
+                  expanded={expandedIssue === `suspicious-${originalIdx}`}
+                  onToggle={() => setExpandedIssue(expandedIssue === `suspicious-${originalIdx}` ? null : `suspicious-${originalIdx}`)}
+                  onResolve={(action, data) => handleResolve('suspicious', originalIdx, action, data)}
                 />
               ))
             )}
