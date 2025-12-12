@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useDraggable } from '@dnd-kit/core'
 import { useBulkSelection } from '../../contexts/BulkSelectionContext'
-import { Check, X, ChevronDown, ChevronUp, Search, Plus, Minus, GripVertical } from 'lucide-react'
+import { Check, X, ChevronDown, ChevronUp, Search, Plus, Minus, GripVertical, ArrowRight } from 'lucide-react'
 import { MUTATIONS, TRAITS, quickCalculateIncome } from '../../utils/incomeCalculator'
 
 /**
@@ -16,14 +16,18 @@ export default function BrainrotCard({
   copyNumber = 0, // Which copy (1, 2, 3, etc.)
   totalCopies = 0, // Total number of copies owned
   account,
+  accounts = [], // All accounts for transfer
   onToggleOwned,
-  onUpdate
+  onUpdate,
+  onTransfer // Transfer to another account
 }) {
   const [showDetails, setShowDetails] = useState(false)
   const [showModifiers, setShowModifiers] = useState(false)
   const [modifierSearch, setModifierSearch] = useState('')
   const [addQuantity, setAddQuantity] = useState(1) // How many to add
   const [showAllMutations, setShowAllMutations] = useState(false)
+  const [showTransferModal, setShowTransferModal] = useState(false)
+  const [transferSearch, setTransferSearch] = useState('')
   
   // Bulk selection
   const { bulkMode, selectedBrainrots, toggleSelection, isSelected } = useBulkSelection()
@@ -246,58 +250,79 @@ export default function BrainrotCard({
         </div>
       )}
 
-      {/* Add to Account / Remove Button */}
-      <div className="flex items-center gap-2">
-        {/* Quantity Selector (always shown) */}
-        <div className="flex items-center bg-slate-700 rounded-lg overflow-hidden">
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              setAddQuantity(Math.max(1, addQuantity - 1))
-            }}
-            className="px-2 py-2 hover:bg-slate-600 transition-colors"
-          >
-            <Minus size={14} />
-          </button>
-          <div className="px-3 py-2 font-bold text-sm border-x border-slate-600 min-w-[40px] text-center">
-            {addQuantity}
+      {/* Add/Remove/Transfer Buttons */}
+      <div className="space-y-2">
+        {/* Quantity Selector + Add/Remove */}
+        <div className="flex items-center gap-2">
+          {/* Quantity Selector */}
+          <div className="flex items-center bg-slate-700 rounded-lg overflow-hidden">
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                setAddQuantity(Math.max(1, addQuantity - 1))
+              }}
+              className="px-2 py-2 hover:bg-slate-600 transition-colors"
+            >
+              <Minus size={14} />
+            </button>
+            <div className="px-3 py-2 font-bold text-sm border-x border-slate-600 min-w-[40px] text-center">
+              {addQuantity}
+            </div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                setAddQuantity(addQuantity + 1)
+              }}
+              className="px-2 py-2 hover:bg-slate-600 transition-colors"
+            >
+              <Plus size={14} />
+            </button>
           </div>
+          
+          {/* Add Button (always shows - adds more even if owned) */}
           <button
             onClick={(e) => {
               e.stopPropagation()
-              setAddQuantity(addQuantity + 1)
-            }}
-            className="px-2 py-2 hover:bg-slate-600 transition-colors"
-          >
-            <Plus size={14} />
-          </button>
-        </div>
-        
-        {/* Add/Remove Button */}
-        {!isOwned ? (
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              onToggleOwned(addQuantity)
+              onToggleOwned(addQuantity) // Add quantity copies
               setAddQuantity(1) // Reset after adding
               setShowDetails(true)
             }}
             className="flex-1 py-2 rounded-lg font-medium transition-all text-sm bg-green-600/20 text-green-400 hover:bg-green-600 hover:text-white border border-green-600/50 flex items-center justify-center gap-2"
           >
             <Plus size={16} />
-            Add to Account
+            {isOwned ? `Add ${addQuantity} More` : `Add to Account`}
           </button>
-        ) : (
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              onToggleOwned(1) // Remove one copy
-            }}
-            className="flex-1 py-2 rounded-lg font-medium transition-all text-sm bg-red-600/20 text-red-400 hover:bg-red-600 hover:text-white border border-red-600/50 flex items-center justify-center gap-2"
-          >
-            <Minus size={16} />
-            {totalCopies > 1 ? `Remove Copy ${copyNumber}` : 'Remove from Account'}
-          </button>
+        </div>
+
+        {/* Remove/Transfer Row (only for owned) */}
+        {isOwned && (
+          <div className="flex items-center gap-2">
+            {/* Remove Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                onToggleOwned(-1) // Remove one copy (negative quantity)
+              }}
+              className="flex-1 py-2 rounded-lg font-medium transition-all text-sm bg-red-600/20 text-red-400 hover:bg-red-600 hover:text-white border border-red-600/50 flex items-center justify-center gap-2"
+            >
+              <Minus size={16} />
+              {totalCopies > 1 ? `Remove Copy ${copyNumber}` : 'Remove'}
+            </button>
+
+            {/* Transfer Button */}
+            {onTransfer && accounts.length > 1 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setShowTransferModal(true)
+                }}
+                className="flex-1 py-2 rounded-lg font-medium transition-all text-sm bg-blue-600/20 text-blue-400 hover:bg-blue-600 hover:text-white border border-blue-600/50 flex items-center justify-center gap-2"
+              >
+                <ArrowRight size={16} />
+                Transfer
+              </button>
+            )}
+          </div>
         )}
       </div>
 
@@ -536,6 +561,108 @@ export default function BrainrotCard({
                 )}
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Transfer Modal */}
+      {showTransferModal && (
+        <div 
+          className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50"
+          onClick={() => setShowTransferModal(false)}
+        >
+          <div 
+            className="bg-slate-800 rounded-xl p-6 max-w-md w-full border border-slate-700"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-bold text-white">Transfer Brainrot</h3>
+              <button
+                onClick={() => setShowTransferModal(false)}
+                className="text-gray-400 hover:text-white"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="mb-4">
+              <div className="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
+                {brainrot.image && (
+                  <img 
+                    src={`/${brainrot.image}`} 
+                    alt={brainrot.name}
+                    className="w-12 h-12 object-cover rounded"
+                    onError={(e) => { e.target.style.display = 'none' }}
+                  />
+                )}
+                <div>
+                  <div className="font-bold text-white">{brainrot.name}</div>
+                  <div className="text-xs text-gray-400">
+                    {collectionEntry?.mutation && collectionEntry.mutation !== 'none' && (
+                      <span>{MUTATIONS[collectionEntry.mutation]?.name} • </span>
+                    )}
+                    {collectionEntry?.traits?.length > 0 && (
+                      <span>+{collectionEntry.traits.length} modifiers</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-medium mb-2 text-gray-300">Transfer to account:</label>
+              <div className="relative mb-2">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+                <input
+                  type="text"
+                  value={transferSearch}
+                  onChange={(e) => setTransferSearch(e.target.value)}
+                  placeholder="Search accounts..."
+                  className="w-full pl-10 pr-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div className="max-h-60 overflow-y-auto space-y-2">
+                {accounts
+                  .filter(acc => acc.id !== account.id) // Exclude current account
+                  .filter(acc => !transferSearch || acc.name.toLowerCase().includes(transferSearch.toLowerCase()))
+                  .map(targetAccount => (
+                    <button
+                      key={targetAccount.id}
+                      onClick={() => {
+                        if (onTransfer && collectionEntry) {
+                          onTransfer(collectionEntry.id, account.id, targetAccount.id)
+                          setShowTransferModal(false)
+                        }
+                      }}
+                      className="w-full p-3 bg-slate-700 hover:bg-slate-600 rounded-lg transition-colors text-left flex items-center justify-between group"
+                    >
+                      <div>
+                        <div className="font-medium text-white">{targetAccount.name}</div>
+                        <div className="text-xs text-gray-400">
+                          Rebirth {targetAccount.rebirthLevel}
+                          {targetAccount.tags && targetAccount.tags.length > 0 && (
+                            <span> • {targetAccount.tags[0]}</span>
+                          )}
+                        </div>
+                      </div>
+                      <ArrowRight size={16} className="text-gray-400 group-hover:text-blue-400 transition-colors" />
+                    </button>
+                  ))}
+                {accounts.filter(acc => acc.id !== account.id && (!transferSearch || acc.name.toLowerCase().includes(transferSearch.toLowerCase()))).length === 0 && (
+                  <div className="text-center py-6 text-gray-500 text-sm">
+                    {transferSearch ? 'No accounts found' : 'No other accounts available'}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <button
+              onClick={() => setShowTransferModal(false)}
+              className="w-full py-2 bg-slate-700 hover:bg-slate-600 rounded-lg font-medium transition-colors"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       )}

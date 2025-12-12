@@ -16,6 +16,9 @@ export default function GlobalStats({ accounts, collections }) {
   })
   const uniqueCount = uniqueBrainrotIds.size
   
+  // Calculate fusing accounts
+  const fusingCount = accounts.filter(acc => acc.isFusing).length
+  
   // Calculate status breakdown
   const statusBreakdown = accounts.reduce((acc, account) => {
     const collectionSize = collections[account.id]?.length || 0
@@ -41,7 +44,7 @@ export default function GlobalStats({ accounts, collections }) {
       <h2 className="text-xl font-bold mb-4">📊 Global Stats</h2>
       
       {/* Main Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-6">
         <div>
           <div className="text-gray-400 text-sm mb-1">Total Accounts</div>
           <div className="text-3xl font-bold">{totalAccounts}</div>
@@ -57,6 +60,12 @@ export default function GlobalStats({ accounts, collections }) {
         <div>
           <div className="text-gray-400 text-sm mb-1">Avg Per Account</div>
           <div className="text-3xl font-bold">{avgPerAccount}</div>
+        </div>
+        <div>
+          <div className="text-gray-400 text-sm mb-1">🔥 Fusing</div>
+          <div className="text-3xl font-bold text-orange-400">
+            {fusingCount}<span className="text-sm text-gray-400">/{totalAccounts}</span>
+          </div>
         </div>
       </div>
 

@@ -1,101 +1,36 @@
 {
-  "total_brainrots": 320,
-  "total_issues": 29,
+  "total_brainrots": 328,
+  "total_issues": 40,
   "issues": {
     "duplicate_ids": 0,
     "duplicate_names": 0,
-    "similar_names": 13,
-    "missing_data": 0,
-    "suspicious": 16
+    "similar_names": 15,
+    "missing_data": 2,
+    "suspicious": 23
   },
   "details": {
     "duplicate_ids": [],
     "duplicate_names": [],
     "similar_names": [
       {
-        "name1": "Te Te Te Sahur",
-        "name2": "Tree Tree Tree Sahur",
-        "similarity": "82.4%",
+        "name1": "Chicleteira Bicicleteira",
+        "name2": "Chicleteirina Bicicleteirina",
+        "similarity": "92.3%",
         "br1": {
-          "id": "te-te-te-sahur",
-          "name": "Te Te Te Sahur",
-          "cost": 4000000,
-          "income_per_second": 9500,
-          "rarity": "mythic",
-          "image": "thumbnails/Te_te_te_te_te_te_Sahur.png"
+          "id": "chicleteira-bicicleteira",
+          "name": "Chicleteira Bicicleteira",
+          "cost": 750000000,
+          "income_per_second": 3500000,
+          "rarity": "secret",
+          "image": "thumbnails/Chicleteirina_Bicicleteirina.png"
         },
         "br2": {
-          "id": "tree-tree-tree-sahur",
-          "name": "Tree Tree Tree Sahur",
-          "cost": null,
-          "income_per_second": 17000,
-          "rarity": "mythic",
-          "image": "thumbnails/tree-tree-tree-sahur.png",
-          "event": "Christmas 2024",
-          "source": "Santa's Fuse"
-        }
-      },
-      {
-        "name1": "Gattatino Neonino",
-        "name2": "Gattatino Nyanino",
-        "similarity": "88.2%",
-        "br1": {
-          "id": "gattatino-neonino",
-          "name": "Gattatino Neonino",
-          "cost": 7500000,
-          "income_per_second": 35000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/Gattatinoneonino.png"
-        },
-        "br2": {
-          "id": "gattatino-nyanino",
-          "name": "Gattatino Nyanino",
-          "cost": 75000000,
-          "income_per_second": 35000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/Gattatino_Nyaninno.png"
-        }
-      },
-      {
-        "name1": "Pakrahmatmamat",
-        "name2": "Pakrahmatmatina",
-        "similarity": "82.8%",
-        "br1": {
-          "id": "pakrahmatmamat",
-          "name": "Pakrahmatmamat",
-          "cost": 37500000,
-          "income_per_second": 215000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/pakrahmatmamat.png"
-        },
-        "br2": {
-          "id": "pakrahmatmatina",
-          "name": "Pakrahmatmatina",
-          "cost": 40500000,
-          "income_per_second": 225000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/Pakrematina.png"
-        }
-      },
-      {
-        "name1": "Piccione Macchina",
-        "name2": "Piccionetta Macchina",
-        "similarity": "91.9%",
-        "br1": {
-          "id": "piccione-macchina",
-          "name": "Piccione Macchina",
-          "cost": 40000000,
-          "income_per_second": 225000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/piccione-macchina.png"
-        },
-        "br2": {
-          "id": "piccionetta-macchina",
-          "name": "Piccionetta Macchina",
-          "cost": 47000000,
-          "income_per_second": 270000,
-          "rarity": "brainrot_god",
-          "image": ""
+          "id": "chicleteirina-bicicleteirina",
+          "name": "Chicleteirina Bicicleteirina",
+          "cost": 850000000,
+          "income_per_second": 4000000,
+          "rarity": "unknown",
+          "image": "thumbnails/Chicleteirina_Bicicleteirina.png"
         }
       },
       {
@@ -120,24 +55,45 @@
         }
       },
       {
-        "name1": "Chicleteira Bicicleteira",
-        "name2": "Chicleteirina Bicicleteirina",
-        "similarity": "92.3%",
+        "name1": "Gattatino Neonino",
+        "name2": "Gattatino Nyanino",
+        "similarity": "88.2%",
         "br1": {
-          "id": "chicleteira-bicicleteira",
-          "name": "Chicleteira Bicicleteira",
-          "cost": 750000000,
-          "income_per_second": 3500000,
-          "rarity": "secret",
-          "image": "thumbnails/Chicleteirina_Bicicleteirina.png"
+          "id": "gattatino-neonino",
+          "name": "Gattatino Neonino",
+          "cost": 7500000,
+          "income_per_second": 35000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Gattatinoneonino.png"
         },
         "br2": {
-          "id": "chicleteirina-bicicleteirina",
-          "name": "Chicleteirina Bicicleteirina",
-          "cost": 850000000,
-          "income_per_second": 4000000,
-          "rarity": "unknown",
-          "image": "thumbnails/Chicleteirina_Bicicleteirina.png"
+          "id": "gattatino-nyanino",
+          "name": "Gattatino Nyanino",
+          "cost": 75000000,
+          "income_per_second": 35000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Gattatino_Nyaninno.png"
+        }
+      },
+      {
+        "name1": "Guest 666",
+        "name2": "Guest666t",
+        "similarity": "88.9%",
+        "br1": {
+          "id": "guest-666",
+          "name": "Guest 666",
+          "cost": 1100000000,
+          "income_per_second": 6600000,
+          "rarity": "secret",
+          "image": "thumbnails/Guest_666.png"
+        },
+        "br2": {
+          "id": "guest666t",
+          "name": "Guest666t",
+          "cost": 1100000000,
+          "income_per_second": 6600000,
+          "rarity": "secret",
+          "image": "thumbnails/Guest666t.png"
         }
       },
       {
@@ -286,31 +242,125 @@
           "rarity": "secret",
           "image": "thumbnails/Lospookycombi.png"
         }
-      }
-    ],
-    "missing_data": [],
-    "suspicious": [
+      },
       {
-        "type": "name_subset",
-        "short_name": "Trippi Troppi",
-        "long_name": "Trippi Troppi Troppa Trippa",
-        "short_br": {
-          "id": "trippi-troppi",
-          "name": "Trippi Troppi",
-          "cost": 2000,
-          "income_per_second": 15,
-          "rarity": "rare",
-          "image": "thumbnails/Trippi_Troppi.png"
-        },
-        "long_br": {
-          "id": "trippi-troppi-troppa-trippa",
-          "name": "Trippi Troppi Troppa Trippa",
-          "cost": 30000000,
-          "income_per_second": 175000,
+        "name1": "Pakrahmatmamat",
+        "name2": "Pakrahmatmatina",
+        "similarity": "82.8%",
+        "br1": {
+          "id": "pakrahmatmamat",
+          "name": "Pakrahmatmamat",
+          "cost": 37500000,
+          "income_per_second": 215000,
           "rarity": "brainrot_god",
-          "image": "thumbnails/trippi-troppi-troppa-trippa.png"
+          "image": ""
+        },
+        "br2": {
+          "id": "pakrahmatmatina",
+          "name": "Pakrahmatmatina",
+          "cost": 40500000,
+          "income_per_second": 225000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Pakrematina.png"
         }
       },
+      {
+        "name1": "Piccione Macchina",
+        "name2": "Piccionetta Macchina",
+        "similarity": "91.9%",
+        "br1": {
+          "id": "piccione-macchina",
+          "name": "Piccione Macchina",
+          "cost": 40000000,
+          "income_per_second": 225000,
+          "rarity": "brainrot_god",
+          "image": ""
+        },
+        "br2": {
+          "id": "piccionetta-macchina",
+          "name": "Piccionetta Macchina",
+          "cost": 47000000,
+          "income_per_second": 270000,
+          "rarity": "brainrot_god",
+          "image": ""
+        }
+      },
+      {
+        "name1": "Tralalalaledon",
+        "name2": "Tralaledon",
+        "similarity": "83.3%",
+        "br1": {
+          "id": "tralalalaledon",
+          "name": "Tralalalaledon",
+          "cost": 3000000000,
+          "income_per_second": 27500000,
+          "rarity": "secret",
+          "image": ""
+        },
+        "br2": {
+          "id": "tralaledon",
+          "name": "Tralaledon",
+          "cost": 3000000000,
+          "income_per_second": 27500000,
+          "rarity": "secret",
+          "image": "thumbnails/Orcaledon.png"
+        }
+      },
+      {
+        "name1": "Trenostruzzo Turbo 4000",
+        "name2": "Trenostruzzo4000",
+        "similarity": "82.1%",
+        "br1": {
+          "id": "trenostruzzo-turbo-4000",
+          "name": "Trenostruzzo Turbo 4000",
+          "cost": 100000000,
+          "income_per_second": 310000,
+          "rarity": "secret",
+          "image": "thumbnails/Trenostruzzo_Turbo_3000.png"
+        },
+        "br2": {
+          "id": "trenostruzzo4000",
+          "name": "Trenostruzzo4000",
+          "cost": 100000000,
+          "income_per_second": 310000,
+          "rarity": "secret",
+          "image": "thumbnails/Trenostruzzo4000.png"
+        }
+      }
+    ],
+    "missing_data": [
+      {
+        "name": "AdminLuckyBlock",
+        "id": "adminluckyblock",
+        "missing": [
+          "income_per_second"
+        ],
+        "br": {
+          "id": "adminluckyblock",
+          "name": "AdminLuckyBlock",
+          "cost": 100000000,
+          "income_per_second": null,
+          "rarity": "secret",
+          "image": "thumbnails/AdminLuckyBlock.png"
+        }
+      },
+      {
+        "name": "FestiveLuckyBlockRealF4Leak",
+        "id": "festiveluckyblockrealf4leak",
+        "missing": [
+          "income_per_second"
+        ],
+        "br": {
+          "id": "festiveluckyblockrealf4leak",
+          "name": "FestiveLuckyBlockRealF4Leak",
+          "cost": 500000000,
+          "income_per_second": null,
+          "rarity": "unknown",
+          "image": "thumbnails/FestiveLuckyBlockRealF4Leak.png"
+        }
+      }
+    ],
+    "suspicious": [
       {
         "type": "name_subset",
         "short_name": "Banana",
@@ -330,6 +380,69 @@
           "income_per_second": 100000,
           "rarity": "brainrot_god",
           "image": "thumbnails/Tukanno_Bananno.png"
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Chachechi",
+        "long_name": "Christmas Chachechi",
+        "short_br": {
+          "id": "chachechi",
+          "name": "Chachechi",
+          "cost": 85000000,
+          "income_per_second": 400000,
+          "rarity": "secret",
+          "image": ""
+        },
+        "long_br": {
+          "id": "christmas-chachechi",
+          "name": "Christmas Chachechi",
+          "cost": 85000000,
+          "income_per_second": 400000,
+          "rarity": "secret",
+          "image": "thumbnails/Christmas_Chachechi.png"
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Cocosini",
+        "long_name": "Cocosini Mama",
+        "short_br": {
+          "id": "cocosini",
+          "name": "Cocosini",
+          "cost": 285000,
+          "income_per_second": 1200,
+          "rarity": "legendary",
+          "image": "thumbnails/Cocosini.png"
+        },
+        "long_br": {
+          "id": "cocosini-mama",
+          "name": "Cocosini Mama",
+          "cost": 285000,
+          "income_per_second": 1200,
+          "rarity": "legendary",
+          "image": "thumbnails/Cocosini_Mama.png"
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Fragrama",
+        "long_name": "Fragrama and Chocrama",
+        "short_br": {
+          "id": "fragrama",
+          "name": "Fragrama",
+          "cost": 40000000000,
+          "income_per_second": 100000000,
+          "rarity": "secret",
+          "image": "thumbnails/Fragrama.png"
+        },
+        "long_br": {
+          "id": "fragrama-and-chocrama",
+          "name": "Fragrama and Chocrama",
+          "cost": 40000000000,
+          "income_per_second": 100000000,
+          "rarity": "secret",
+          "image": ""
         }
       },
       {
@@ -376,90 +489,6 @@
       },
       {
         "type": "name_subset",
-        "short_name": "Pakrahmatmamat",
-        "long_name": "Cuadramat and Pakrahmatmamat",
-        "short_br": {
-          "id": "pakrahmatmamat",
-          "name": "Pakrahmatmamat",
-          "cost": 37500000,
-          "income_per_second": 215000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/pakrahmatmamat.png"
-        },
-        "long_br": {
-          "id": "cuadramat-and-pakrahmatmamat",
-          "name": "Cuadramat and Pakrahmatmamat",
-          "cost": 400000000,
-          "income_per_second": 1400000,
-          "rarity": "secret",
-          "image": "thumbnails/Cuadramat_And_Pakrahmatmamat.png"
-        }
-      },
-      {
-        "type": "name_subset",
-        "short_name": "Tralalita",
-        "long_name": "Tralalita Tralala",
-        "short_br": {
-          "id": "tralalita",
-          "name": "Tralalita",
-          "cost": 20000000,
-          "income_per_second": 100000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/Tralalita.png"
-        },
-        "long_br": {
-          "id": "tralalita-tralala",
-          "name": "Tralalita Tralala",
-          "cost": 20000000,
-          "income_per_second": 100000,
-          "rarity": "brainrot_god",
-          "image": "thumbnails/TralaleroTralala.png"
-        }
-      },
-      {
-        "type": "name_subset",
-        "short_name": "Chachechi",
-        "long_name": "Christmas Chachechi",
-        "short_br": {
-          "id": "chachechi",
-          "name": "Chachechi",
-          "cost": 85000000,
-          "income_per_second": 400000,
-          "rarity": "secret",
-          "image": "thumbnails/chachechi.png"
-        },
-        "long_br": {
-          "id": "christmas-chachechi",
-          "name": "Christmas Chachechi",
-          "cost": 85000000,
-          "income_per_second": 400000,
-          "rarity": "secret",
-          "image": "thumbnails/Christmas_Chachechi.png"
-        }
-      },
-      {
-        "type": "name_subset",
-        "short_name": "Fragrama",
-        "long_name": "Fragrama and Chocrama",
-        "short_br": {
-          "id": "fragrama",
-          "name": "Fragrama",
-          "cost": 40000000000,
-          "income_per_second": 100000000,
-          "rarity": "secret",
-          "image": "thumbnails/Fragrama.png"
-        },
-        "long_br": {
-          "id": "fragrama-and-chocrama",
-          "name": "Fragrama and Chocrama",
-          "cost": 40000000000,
-          "income_per_second": 100000000,
-          "rarity": "secret",
-          "image": "thumbnails/fragrama-and-chocrama.png"
-        }
-      },
-      {
-        "type": "name_subset",
         "short_name": "Graipuss",
         "long_name": "Graipuss Medussi",
         "short_br": {
@@ -476,7 +505,7 @@
           "cost": 250000000,
           "income_per_second": 1000000,
           "rarity": "secret",
-          "image": "thumbnails/graipuss-medussi.png"
+          "image": ""
         }
       },
       {
@@ -497,7 +526,7 @@
           "cost": 150000000000,
           "income_per_second": 175000000,
           "rarity": "secret",
-          "image": "thumbnails/headless-horseman.png"
+          "image": ""
         }
       },
       {
@@ -539,7 +568,7 @@
           "cost": 125000000000,
           "income_per_second": 160000000,
           "rarity": "secret",
-          "image": "thumbnails/capitano-moby.png"
+          "image": ""
         }
       },
       {
@@ -565,6 +594,90 @@
       },
       {
         "type": "name_subset",
+        "short_name": "Pakrah",
+        "long_name": "Cuadramat and Pakrahmatmamat",
+        "short_br": {
+          "id": "pakrah",
+          "name": "Pakrah",
+          "cost": 37500000,
+          "income_per_second": 215000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Pakrah.png"
+        },
+        "long_br": {
+          "id": "cuadramat-and-pakrahmatmamat",
+          "name": "Cuadramat and Pakrahmatmamat",
+          "cost": 400000000,
+          "income_per_second": 1400000,
+          "rarity": "secret",
+          "image": "thumbnails/Cuadramat_And_Pakrahmatmamat.png"
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Pakrah",
+        "long_name": "Pakrahmatmamat",
+        "short_br": {
+          "id": "pakrah",
+          "name": "Pakrah",
+          "cost": 37500000,
+          "income_per_second": 215000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Pakrah.png"
+        },
+        "long_br": {
+          "id": "pakrahmatmamat",
+          "name": "Pakrahmatmamat",
+          "cost": 37500000,
+          "income_per_second": 215000,
+          "rarity": "brainrot_god",
+          "image": ""
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Pakrah",
+        "long_name": "Pakrahmatmatina",
+        "short_br": {
+          "id": "pakrah",
+          "name": "Pakrah",
+          "cost": 37500000,
+          "income_per_second": 215000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Pakrah.png"
+        },
+        "long_br": {
+          "id": "pakrahmatmatina",
+          "name": "Pakrahmatmatina",
+          "cost": 40500000,
+          "income_per_second": 225000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Pakrematina.png"
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Pakrahmatmamat",
+        "long_name": "Cuadramat and Pakrahmatmamat",
+        "short_br": {
+          "id": "pakrahmatmamat",
+          "name": "Pakrahmatmamat",
+          "cost": 37500000,
+          "income_per_second": 215000,
+          "rarity": "brainrot_god",
+          "image": ""
+        },
+        "long_br": {
+          "id": "cuadramat-and-pakrahmatmamat",
+          "name": "Cuadramat and Pakrahmatmamat",
+          "cost": 400000000,
+          "income_per_second": 1400000,
+          "rarity": "secret",
+          "image": "thumbnails/Cuadramat_And_Pakrahmatmamat.png"
+        }
+      },
+      {
+        "type": "name_subset",
         "short_name": "Pot Hotspot",
         "long_name": "Pot Hotspot(Lucky Block)",
         "short_br": {
@@ -586,6 +699,90 @@
       },
       {
         "type": "name_subset",
+        "short_name": "Raccooni",
+        "long_name": "Raccooni Jandelini",
+        "short_br": {
+          "id": "raccooni",
+          "name": "Raccooni",
+          "cost": 1300,
+          "income_per_second": 12,
+          "rarity": "common",
+          "image": "thumbnails/Raccooni.png"
+        },
+        "long_br": {
+          "id": "raccooni-jandelini",
+          "name": "Raccooni Jandelini",
+          "cost": 1300,
+          "income_per_second": 12,
+          "rarity": "common",
+          "image": ""
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Toiletto",
+        "long_name": "Toiletto Focaccino",
+        "short_br": {
+          "id": "toiletto",
+          "name": "Toiletto",
+          "cost": 4800000,
+          "income_per_second": 16000,
+          "rarity": "mythic",
+          "image": "thumbnails/Toiletto.png"
+        },
+        "long_br": {
+          "id": "toiletto-focaccino",
+          "name": "Toiletto Focaccino",
+          "cost": 4800000,
+          "income_per_second": 16000,
+          "rarity": "mythic",
+          "image": ""
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Tralalita",
+        "long_name": "Tralalita Tralala",
+        "short_br": {
+          "id": "tralalita",
+          "name": "Tralalita",
+          "cost": 20000000,
+          "income_per_second": 100000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/Tralalita.png"
+        },
+        "long_br": {
+          "id": "tralalita-tralala",
+          "name": "Tralalita Tralala",
+          "cost": 20000000,
+          "income_per_second": 100000,
+          "rarity": "brainrot_god",
+          "image": "thumbnails/TralaleroTralala.png"
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Trippi Troppi",
+        "long_name": "Trippi Troppi Troppa Trippa",
+        "short_br": {
+          "id": "trippi-troppi",
+          "name": "Trippi Troppi",
+          "cost": 2000,
+          "income_per_second": 15,
+          "rarity": "rare",
+          "image": "thumbnails/Trippi_Troppi.png"
+        },
+        "long_br": {
+          "id": "trippi-troppi-troppa-trippa",
+          "name": "Trippi Troppi Troppa Trippa",
+          "cost": 30000000,
+          "income_per_second": 175000,
+          "rarity": "brainrot_god",
+          "image": ""
+        }
+      },
+      {
+        "type": "name_subset",
         "short_name": "Vulturino",
         "long_name": "Vulturino Skeletono",
         "short_br": {
@@ -602,7 +799,28 @@
           "cost": 110000000,
           "income_per_second": 500000,
           "rarity": "secret",
-          "image": "thumbnails/vulturino-skeletono.png"
+          "image": ""
+        }
+      },
+      {
+        "type": "name_subset",
+        "short_name": "Wombo",
+        "long_name": "Wombo Rollo",
+        "short_br": {
+          "id": "wombo",
+          "name": "Wombo",
+          "cost": 42500,
+          "income_per_second": 275,
+          "rarity": "epic",
+          "image": "thumbnails/Wombo.png"
+        },
+        "long_br": {
+          "id": "wombo-rollo",
+          "name": "Wombo Rollo",
+          "cost": 42500,
+          "income_per_second": 275,
+          "rarity": "epic",
+          "image": ""
         }
       },
       {

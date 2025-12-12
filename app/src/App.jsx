@@ -388,9 +388,11 @@ function App() {
                 account={accounts.find(a => a.id === selectedAccount)}
                 brainrots={brainrots}
                 collection={collections[selectedAccount] || []}
+                accounts={accounts}
                 onBack={backToDashboard}
                 onUpdateCollection={(newCollection) => updateCollection(selectedAccount, newCollection)}
                 onUpdateAccount={(updates) => updateAccount(selectedAccount, updates)}
+                onTransfer={handleTransferBrainrot}
               />
             )}
 

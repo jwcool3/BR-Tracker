@@ -7,8 +7,10 @@ export default function BrainrotGrid({
   brainrots,
   collection,
   account,
+  accounts = [], // All accounts for transfer
   onToggleOwned,
-  onUpdateBrainrot
+  onUpdateBrainrot,
+  onTransfer // Transfer function
 }) {
   // Create array of cards to display
   // For owned brainrots: show one card per collection entry
@@ -57,8 +59,10 @@ export default function BrainrotGrid({
           copyNumber={copyNumber}
           totalCopies={totalCopies}
           account={account}
+          accounts={accounts}
           onToggleOwned={(qty) => onToggleOwned(brainrot.id, qty)}
           onUpdate={(updates) => onUpdateBrainrot(brainrot.id, updates, collectionIndex)}
+          onTransfer={onTransfer}
         />
       ))}
     </div>

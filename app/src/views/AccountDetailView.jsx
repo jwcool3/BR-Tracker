@@ -15,9 +15,11 @@ export default function AccountDetailView({
   account,
   brainrots = [],
   collection,
+  accounts = [], // All accounts for transfer
   onBack,
   onUpdateCollection,
-  onUpdateAccount
+  onUpdateAccount,
+  onTransfer // Transfer function
 }) {
   const [searchTerm, setSearchTerm] = useState('')
   const [rarityFilter, setRarityFilter] = useState('all')
@@ -117,17 +119,21 @@ export default function AccountDetailView({
   })
 
   // Toggle ownership (now handles quantities)
+  // Accepts negative quantity to remove
   const toggleOwned = (brainrotId, quantity = 1) => {
-    if (ownedCounts[brainrotId]) {
-      // Remove one copy (or all if only 1)
-      const firstIndex = collection.findIndex(c => c.brainrotId === brainrotId)
-      if (firstIndex !== -1) {
-        const newCollection = [...collection]
-        newCollection.splice(firstIndex, 1)
-        onUpdateCollection(newCollection)
+    if (quantity < 0) {
+      // Remove copies
+      const removeCount = Math.abs(quantity)
+      const newCollection = [...collection]
+      for (let i = 0; i < removeCount; i++) {
+        const index = newCollection.findIndex(c => c.brainrotId === brainrotId)
+        if (index !== -1) {
+          newCollection.splice(index, 1)
+        }
       }
+      onUpdateCollection(newCollection)
     } else {
-      // Add new copies
+      // Add new copies (works for both owned and not-owned)
       const newEntries = Array(quantity).fill(null).map(() => ({
         brainrotId,
         mutation: null,
@@ -290,8 +296,10 @@ export default function AccountDetailView({
         brainrots={filteredBrainrots}
         collection={collection}
         account={account}
+        accounts={accounts}
         onToggleOwned={toggleOwned}
         onUpdateBrainrot={updateBrainrot}
+        onTransfer={onTransfer}
       />
     </div>
   )

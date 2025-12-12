@@ -15,6 +15,7 @@ export default function GroupedDashboard({
   onUpdateAccount
 }) {
   const [expandedSections, setExpandedSections] = useState({
+    fusing: true,
     favorites: true,
     all: true
   })
@@ -35,6 +36,11 @@ export default function GroupedDashboard({
     // Skip hidden accounts
     if (account.hidden) return groups
 
+    // Add to fusing
+    if (account.isFusing) {
+      groups.fusing.push({ account, collectionSize, percentFull })
+    }
+
     // Add to favorites
     if (account.favorite) {
       groups.favorites.push({ account, collectionSize, percentFull })
@@ -45,6 +51,7 @@ export default function GroupedDashboard({
 
     return groups
   }, {
+    fusing: [],
     favorites: [],
     all: []
   })
@@ -90,6 +97,17 @@ export default function GroupedDashboard({
 
   return (
     <div className="space-y-6">
+      {/* Fusing Accounts */}
+      {groupedAccounts.fusing.length > 0 && (
+        <Section
+          title="Fusing"
+          count={groupedAccounts.fusing.length}
+          emoji="🔥"
+          items={groupedAccounts.fusing}
+          sectionKey="fusing"
+        />
+      )}
+
       {/* Favorites */}
       {groupedAccounts.favorites.length > 0 && (
         <Section

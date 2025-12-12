@@ -1,205 +1,13 @@
 {
-  "total_brainrots": 320,
-  "has_image": 217,
-  "missing_image": 103,
+  "total_brainrots": 328,
+  "has_image": 233,
+  "missing_image": 95,
   "image_not_found": 0,
   "missing_list": [
     {
-      "name": "Lirili Larila",
-      "rarity": "common",
-      "id": "lirili-larila",
-      "source": null
-    },
-    {
-      "name": "Noobini Santanini",
-      "rarity": "common",
-      "id": "noobini-santanini",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "Raccooni Jandelini",
-      "rarity": "common",
-      "id": "raccooni-jandelini",
-      "source": null
-    },
-    {
-      "name": "Svinina Bombardino",
-      "rarity": "common",
-      "id": "svinina-bombardino",
-      "source": null
-    },
-    {
-      "name": "Gangster Footera",
-      "rarity": "rare",
-      "id": "gangster-footera",
-      "source": null
-    },
-    {
-      "name": "Ta Ta Ta Ta Sahur",
-      "rarity": "rare",
-      "id": "ta-ta-ta-ta-sahur",
-      "source": null
-    },
-    {
-      "name": "Bambini Crostini",
-      "rarity": "epic",
-      "id": "bambini-crostini",
-      "source": null
-    },
-    {
-      "name": "Bananita Dolphinita",
-      "rarity": "epic",
-      "id": "bananita-dolphinita",
-      "source": null
-    },
-    {
-      "name": "Frogato Pirato",
-      "rarity": "epic",
-      "id": "frogato-pirato",
-      "source": null
-    },
-    {
-      "name": "Penguin Tree",
-      "rarity": "epic",
-      "id": "penguin-tree",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "Perochello Lemonchello",
-      "rarity": "epic",
-      "id": "perochello-lemonchello",
-      "source": null
-    },
-    {
-      "name": "Ti Ti Ti Sahur",
-      "rarity": "epic",
-      "id": "ti-ti-ti-sahur",
-      "source": null
-    },
-    {
-      "name": "Trulimero Trulicina",
-      "rarity": "epic",
-      "id": "trulimero-trulicina",
-      "source": null
-    },
-    {
-      "name": "Wombo Rollo",
-      "rarity": "epic",
-      "id": "wombo-rollo",
-      "source": null
-    },
-    {
-      "name": "Blueberrinni Octopusini",
-      "rarity": "legendary",
-      "id": "blueberrinni-octopusini",
-      "source": null
-    },
-    {
-      "name": "Burbaloni Loliloli",
-      "rarity": "legendary",
-      "id": "burbaloni-loliloli",
-      "source": null
-    },
-    {
-      "name": "Caramello Filtrello",
-      "rarity": "legendary",
-      "id": "caramello-filtrello",
-      "source": null
-    },
-    {
-      "name": "Chef Crabracadabra",
-      "rarity": "legendary",
-      "id": "chef-crabracadabra",
-      "source": null
-    },
-    {
-      "name": "Chocco Bunny",
-      "rarity": "legendary",
-      "id": "chocco-bunny",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "Signore Carapace",
-      "rarity": "legendary",
-      "id": "signore-carapace",
-      "source": null
-    },
-    {
-      "name": "Bananito Bandito",
-      "rarity": "mythic",
-      "id": "bananito-bandito",
-      "source": null
-    },
-    {
-      "name": "Bombombini Gusini",
-      "rarity": "mythic",
-      "id": "bombombini-gusini",
-      "source": null
-    },
-    {
-      "name": "Cachorrito Melonito",
-      "rarity": "mythic",
-      "id": "cachorrito-melonito",
-      "source": null
-    },
-    {
-      "name": "Carrotini Brainini (Lucky Block)",
-      "rarity": "mythic",
-      "id": "carrotini-brainini-lucky-block",
-      "source": null
-    },
-    {
-      "name": "Gorillo Subwoofero",
-      "rarity": "mythic",
-      "id": "gorillo-subwoofero",
-      "source": null
-    },
-    {
-      "name": "Jingle Jingle Sahur",
-      "rarity": "mythic",
-      "id": "jingle-jingle-sahur",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "Lerulerulerule",
-      "rarity": "mythic",
-      "id": "lerulerulerule",
-      "source": null
-    },
-    {
-      "name": "Rhino Helicopterino",
-      "rarity": "mythic",
-      "id": "rhino-helicopterino",
-      "source": null
-    },
-    {
-      "name": "Rhino Toasterino",
-      "rarity": "mythic",
-      "id": "rhino-toasterino",
-      "source": null
-    },
-    {
-      "name": "Spioniro Golubiro(Lucky Block)",
-      "rarity": "mythic",
-      "id": "spioniro-golubirolucky-block",
-      "source": null
-    },
-    {
-      "name": "Toiletto Focaccino",
-      "rarity": "mythic",
-      "id": "toiletto-focaccino",
-      "source": null
-    },
-    {
-      "name": "Tree Tree Tree Sahur",
-      "rarity": "mythic",
-      "id": "tree-tree-tree-sahur",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "Zibra Zubra Zibralini(Lucky Block)",
-      "rarity": "mythic",
-      "id": "zibra-zubra-zibralinilucky-block",
+      "name": "67",
+      "rarity": "secret",
+      "id": "67",
       "source": null
     },
     {
@@ -221,9 +29,27 @@
       "source": null
     },
     {
+      "name": "Bambini Crostini",
+      "rarity": "epic",
+      "id": "bambini-crostini",
+      "source": null
+    },
+    {
       "name": "Bambu Bambu Sahur",
       "rarity": "brainrot_god",
       "id": "bambu-bambu-sahur",
+      "source": null
+    },
+    {
+      "name": "Bananita Dolphinita",
+      "rarity": "epic",
+      "id": "bananita-dolphinita",
+      "source": null
+    },
+    {
+      "name": "Bananito Bandito",
+      "rarity": "mythic",
+      "id": "bananito-bandito",
       "source": null
     },
     {
@@ -233,171 +59,27 @@
       "source": null
     },
     {
+      "name": "Blueberrinni Octopusini",
+      "rarity": "legendary",
+      "id": "blueberrinni-octopusini",
+      "source": null
+    },
+    {
+      "name": "Bombombini Gusini",
+      "rarity": "mythic",
+      "id": "bombombini-gusini",
+      "source": null
+    },
+    {
       "name": "Bulbito Bandito Traktorito(Lucky Block)",
       "rarity": "brainrot_god",
       "id": "bulbito-bandito-traktoritolucky-block",
       "source": null
     },
     {
-      "name": "Cacasito Satalito",
-      "rarity": "brainrot_god",
-      "id": "cacasito-satalito",
-      "source": null
-    },
-    {
-      "name": "Chihuanini Taconini",
-      "rarity": "brainrot_god",
-      "id": "chihuanini-taconini",
-      "source": null
-    },
-    {
-      "name": "Corn Corn Corn Sahur",
-      "rarity": "brainrot_god",
-      "id": "corn-corn-corn-sahur",
-      "source": null
-    },
-    {
-      "name": "Crabbo Limonetta",
-      "rarity": "brainrot_god",
-      "id": "crabbo-limonetta",
-      "source": null
-    },
-    {
-      "name": "Extinct Ballerina",
-      "rarity": "brainrot_god",
-      "id": "extinct-ballerina",
-      "source": null
-    },
-    {
-      "name": "Gattito Tacoto",
-      "rarity": "brainrot_god",
-      "id": "gattito-tacoto",
-      "source": null
-    },
-    {
-      "name": "Ginger Cisterna",
-      "rarity": "brainrot_god",
-      "id": "ginger-cisterna",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "Ginger Globo",
-      "rarity": "brainrot_god",
-      "id": "ginger-globo",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "Girafa Celestre",
-      "rarity": "brainrot_god",
-      "id": "girafa-celestre",
-      "source": null
-    },
-    {
-      "name": "Granchiello Spiritell",
-      "rarity": "brainrot_god",
-      "id": "granchiello-spiritell",
-      "source": null
-    },
-    {
-      "name": "Krupuk Pagi Pagi",
-      "rarity": "brainrot_god",
-      "id": "krupuk-pagi-pagi",
-      "source": null
-    },
-    {
-      "name": "Los Bombinitos",
-      "rarity": "brainrot_god",
-      "id": "los-bombinitos",
-      "source": null
-    },
-    {
-      "name": "Los Crocodillitos",
-      "rarity": "brainrot_god",
-      "id": "los-crocodillitos",
-      "source": null
-    },
-    {
-      "name": "Los Tungtungtungcitos",
-      "rarity": "brainrot_god",
-      "id": "los-tungtungtungcitos",
-      "source": null
-    },
-    {
-      "name": "Mastodontico Telepiedone (Lucky Block)",
-      "rarity": "brainrot_god",
-      "id": "mastodontico-telepiedone-lucky-block",
-      "source": null
-    },
-    {
-      "name": "Odin Din Din Dun",
-      "rarity": "brainrot_god",
-      "id": "odin-din-din-dun",
-      "source": null
-    },
-    {
-      "name": "Orcalero Orcala(Lucky Block)",
-      "rarity": "brainrot_god",
-      "id": "orcalero-orcalalucky-block",
-      "source": null
-    },
-    {
-      "name": "Pakrahmatmamat",
-      "rarity": "brainrot_god",
-      "id": "pakrahmatmamat",
-      "source": null
-    },
-    {
-      "name": "Piccione Macchina",
-      "rarity": "brainrot_god",
-      "id": "piccione-macchina",
-      "source": null
-    },
-    {
-      "name": "Piccionetta Macchina",
-      "rarity": "brainrot_god",
-      "id": "piccionetta-macchina",
-      "source": null
-    },
-    {
-      "name": "Skull Skull Skull",
-      "rarity": "brainrot_god",
-      "id": "skull-skull-skull",
-      "source": null
-    },
-    {
-      "name": "Tentacolo Tecnico",
-      "rarity": "brainrot_god",
-      "id": "tentacolo-tecnico",
-      "source": null
-    },
-    {
-      "name": "Trippi Troppi Troppa Trippa",
-      "rarity": "brainrot_god",
-      "id": "trippi-troppi-troppa-trippa",
-      "source": null
-    },
-    {
-      "name": "Unclito Samito",
-      "rarity": "brainrot_god",
-      "id": "unclito-samito",
-      "source": null
-    },
-    {
-      "name": "Urubini Flamenguini",
-      "rarity": "brainrot_god",
-      "id": "urubini-flamenguini",
-      "source": null
-    },
-    {
-      "name": "Yeti Claus",
-      "rarity": "brainrot_god",
-      "id": "yeti-claus",
-      "source": "Santa's Fuse"
-    },
-    {
-      "name": "67",
-      "rarity": "secret",
-      "id": "67",
+      "name": "Burbaloni Loliloli",
+      "rarity": "legendary",
+      "id": "burbaloni-loliloli",
       "source": null
     },
     {
@@ -407,9 +89,33 @@
       "source": null
     },
     {
+      "name": "Cacasito Satalito",
+      "rarity": "brainrot_god",
+      "id": "cacasito-satalito",
+      "source": null
+    },
+    {
+      "name": "Cachorrito Melonito",
+      "rarity": "mythic",
+      "id": "cachorrito-melonito",
+      "source": null
+    },
+    {
       "name": "Capitano Moby",
       "rarity": "secret",
       "id": "capitano-moby",
+      "source": null
+    },
+    {
+      "name": "Caramello Filtrello",
+      "rarity": "legendary",
+      "id": "caramello-filtrello",
+      "source": null
+    },
+    {
+      "name": "Carrotini Brainini (Lucky Block)",
+      "rarity": "mythic",
+      "id": "carrotini-brainini-lucky-block",
       "source": null
     },
     {
@@ -425,6 +131,18 @@
       "source": null
     },
     {
+      "name": "Chef Crabracadabra",
+      "rarity": "legendary",
+      "id": "chef-crabracadabra",
+      "source": null
+    },
+    {
+      "name": "Chihuanini Taconini",
+      "rarity": "brainrot_god",
+      "id": "chihuanini-taconini",
+      "source": null
+    },
+    {
       "name": "Chillin Chili",
       "rarity": "secret",
       "id": "chillin-chili",
@@ -437,9 +155,27 @@
       "source": null
     },
     {
+      "name": "Corn Corn Corn Sahur",
+      "rarity": "brainrot_god",
+      "id": "corn-corn-corn-sahur",
+      "source": null
+    },
+    {
+      "name": "Crabbo Limonetta",
+      "rarity": "brainrot_god",
+      "id": "crabbo-limonetta",
+      "source": null
+    },
+    {
       "name": "Esok Sekolah (Lucky Block)",
       "rarity": "secret",
       "id": "esok-sekolah-lucky-block",
+      "source": null
+    },
+    {
+      "name": "Extinct Ballerina",
+      "rarity": "brainrot_god",
+      "id": "extinct-ballerina",
       "source": null
     },
     {
@@ -473,9 +209,45 @@
       "source": null
     },
     {
+      "name": "Frogato Pirato",
+      "rarity": "epic",
+      "id": "frogato-pirato",
+      "source": null
+    },
+    {
+      "name": "Gangster Footera",
+      "rarity": "rare",
+      "id": "gangster-footera",
+      "source": null
+    },
+    {
+      "name": "Gattito Tacoto",
+      "rarity": "brainrot_god",
+      "id": "gattito-tacoto",
+      "source": null
+    },
+    {
+      "name": "Girafa Celestre",
+      "rarity": "brainrot_god",
+      "id": "girafa-celestre",
+      "source": null
+    },
+    {
+      "name": "Gorillo Subwoofero",
+      "rarity": "mythic",
+      "id": "gorillo-subwoofero",
+      "source": null
+    },
+    {
       "name": "Graipuss Medussi",
       "rarity": "secret",
       "id": "graipuss-medussi",
+      "source": null
+    },
+    {
+      "name": "Granchiello Spiritell",
+      "rarity": "brainrot_god",
+      "id": "granchiello-spiritell",
       "source": null
     },
     {
@@ -483,12 +255,6 @@
       "rarity": "secret",
       "id": "headless-horseman",
       "source": null
-    },
-    {
-      "name": "Ho Ho Ho Sahur",
-      "rarity": "secret",
-      "id": "ho-ho-ho-sahur",
-      "source": "Santa's Fuse"
     },
     {
       "name": "Horegini Boom",
@@ -506,6 +272,12 @@
       "name": "Ketchuru and Masturu",
       "rarity": "secret",
       "id": "ketchuru-and-masturu",
+      "source": null
+    },
+    {
+      "name": "Krupuk Pagi Pagi",
+      "rarity": "brainrot_god",
+      "id": "krupuk-pagi-pagi",
       "source": null
     },
     {
@@ -533,15 +305,93 @@
       "source": null
     },
     {
+      "name": "Lerulerulerule",
+      "rarity": "mythic",
+      "id": "lerulerulerule",
+      "source": null
+    },
+    {
+      "name": "Lirili Larila",
+      "rarity": "common",
+      "id": "lirili-larila",
+      "source": null
+    },
+    {
+      "name": "Los Bombinitos",
+      "rarity": "brainrot_god",
+      "id": "los-bombinitos",
+      "source": null
+    },
+    {
+      "name": "Los Crocodillitos",
+      "rarity": "brainrot_god",
+      "id": "los-crocodillitos",
+      "source": null
+    },
+    {
+      "name": "Los Tungtungtungcitos",
+      "rarity": "brainrot_god",
+      "id": "los-tungtungtungcitos",
+      "source": null
+    },
+    {
+      "name": "Mastodontico Telepiedone (Lucky Block)",
+      "rarity": "brainrot_god",
+      "id": "mastodontico-telepiedone-lucky-block",
+      "source": null
+    },
+    {
       "name": "Nuclearo Dinosauro",
       "rarity": "secret",
       "id": "nuclearo-dinosauro",
       "source": null
     },
     {
+      "name": "Odin Din Din Dun",
+      "rarity": "brainrot_god",
+      "id": "odin-din-din-dun",
+      "source": null
+    },
+    {
+      "name": "Orangutini Ananassini",
+      "rarity": "mythic",
+      "id": "orangutini-ananassini",
+      "source": null
+    },
+    {
+      "name": "Orcalero Orcala(Lucky Block)",
+      "rarity": "brainrot_god",
+      "id": "orcalero-orcalalucky-block",
+      "source": null
+    },
+    {
+      "name": "Pakrahmatmamat",
+      "rarity": "brainrot_god",
+      "id": "pakrahmatmamat",
+      "source": null
+    },
+    {
+      "name": "Perochello Lemonchello",
+      "rarity": "epic",
+      "id": "perochello-lemonchello",
+      "source": null
+    },
+    {
       "name": "Perrito Burrito",
       "rarity": "secret",
       "id": "perrito-burrito",
+      "source": null
+    },
+    {
+      "name": "Piccione Macchina",
+      "rarity": "brainrot_god",
+      "id": "piccione-macchina",
+      "source": null
+    },
+    {
+      "name": "Piccionetta Macchina",
+      "rarity": "brainrot_god",
+      "id": "piccionetta-macchina",
       "source": null
     },
     {
@@ -563,21 +413,63 @@
       "source": null
     },
     {
+      "name": "Raccooni Jandelini",
+      "rarity": "common",
+      "id": "raccooni-jandelini",
+      "source": null
+    },
+    {
       "name": "Rang Ring Bus",
       "rarity": "secret",
       "id": "rang-ring-bus",
       "source": null
     },
     {
-      "name": "Reindeer Tralala",
-      "rarity": "secret",
-      "id": "reindeer-tralala",
-      "source": "Winter Hour"
+      "name": "Rhino Helicopterino",
+      "rarity": "mythic",
+      "id": "rhino-helicopterino",
+      "source": null
+    },
+    {
+      "name": "Rhino Toasterino",
+      "rarity": "mythic",
+      "id": "rhino-toasterino",
+      "source": null
+    },
+    {
+      "name": "Signore Carapace",
+      "rarity": "legendary",
+      "id": "signore-carapace",
+      "source": null
+    },
+    {
+      "name": "Skull Skull Skull",
+      "rarity": "brainrot_god",
+      "id": "skull-skull-skull",
+      "source": null
     },
     {
       "name": "Spaghetti Tualetti (Lucky Block)",
       "rarity": "secret",
       "id": "spaghetti-tualetti-lucky-block",
+      "source": null
+    },
+    {
+      "name": "Spioniro Golubiro(Lucky Block)",
+      "rarity": "mythic",
+      "id": "spioniro-golubirolucky-block",
+      "source": null
+    },
+    {
+      "name": "Svinina Bombardino",
+      "rarity": "common",
+      "id": "svinina-bombardino",
+      "source": null
+    },
+    {
+      "name": "Ta Ta Ta Ta Sahur",
+      "rarity": "rare",
+      "id": "ta-ta-ta-ta-sahur",
       "source": null
     },
     {
@@ -593,9 +485,33 @@
       "source": null
     },
     {
+      "name": "Tentacolo Tecnico",
+      "rarity": "brainrot_god",
+      "id": "tentacolo-tecnico",
+      "source": null
+    },
+    {
+      "name": "Ti Ti Ti Sahur",
+      "rarity": "epic",
+      "id": "ti-ti-ti-sahur",
+      "source": null
+    },
+    {
+      "name": "Tigrilini Watermelini(Lucky Block)",
+      "rarity": "mythic",
+      "id": "tigrilini-watermelinilucky-block",
+      "source": null
+    },
+    {
       "name": "To To To Sahur",
       "rarity": "secret",
       "id": "to-to-to-sahur",
+      "source": null
+    },
+    {
+      "name": "Toiletto Focaccino",
+      "rarity": "mythic",
+      "id": "toiletto-focaccino",
       "source": null
     },
     {
@@ -617,9 +533,45 @@
       "source": null
     },
     {
+      "name": "Trippi Troppi Troppa Trippa",
+      "rarity": "brainrot_god",
+      "id": "trippi-troppi-troppa-trippa",
+      "source": null
+    },
+    {
+      "name": "Trulimero Trulicina",
+      "rarity": "epic",
+      "id": "trulimero-trulicina",
+      "source": null
+    },
+    {
+      "name": "Unclito Samito",
+      "rarity": "brainrot_god",
+      "id": "unclito-samito",
+      "source": null
+    },
+    {
+      "name": "Urubini Flamenguini",
+      "rarity": "brainrot_god",
+      "id": "urubini-flamenguini",
+      "source": null
+    },
+    {
       "name": "Vulturino Skeletono",
       "rarity": "secret",
       "id": "vulturino-skeletono",
+      "source": null
+    },
+    {
+      "name": "Wombo Rollo",
+      "rarity": "epic",
+      "id": "wombo-rollo",
+      "source": null
+    },
+    {
+      "name": "Zibra Zubra Zibralini(Lucky Block)",
+      "rarity": "mythic",
+      "id": "zibra-zubra-zibralinilucky-block",
       "source": null
     }
   ],

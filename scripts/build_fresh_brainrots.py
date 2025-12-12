@@ -88,6 +88,17 @@ def load_thumbnail_data():
             lookup[normalized] = thumb.get('local_path', thumb.get('image_url', ''))
         return lookup
 
+def load_incomplete_data():
+    """Load incomplete brainrots that have been manually fixed"""
+    incomplete_path = 'data/brainrots_incomplete_MANUAL_FIX.json'
+    
+    if not os.path.exists(incomplete_path):
+        return []
+    
+    with open(incomplete_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        return data.get('brainrots', [])
+
 def build_fresh_brainrots():
     """Build fresh brainrots.json from scraped data"""
     
@@ -107,13 +118,22 @@ def build_fresh_brainrots():
     thumbnails = load_thumbnail_data()
     print(f"✅ Loaded {len(thumbnails)} thumbnail mappings")
     
+    # Load incomplete/manually fixed data
+    print("\n📝 Loading incomplete (manually fixed) data...")
+    incomplete_data = load_incomplete_data()
+    print(f"✅ Loaded {len(incomplete_data)} incomplete brainrots")
+    
+    # Merge incomplete into scraped (incomplete takes priority as it's manually fixed)
+    all_data = scraped_data + incomplete_data
+    print(f"\n📊 Total brainrots to process: {len(all_data)}")
+    
     # Build fresh list
     print("\n🏗️  Building fresh brainrot list...")
     fresh_brainrots = []
     valid_count = 0
     warning_count = 0
     
-    for scraped in scraped_data:
+    for scraped in all_data:
         name = scraped.get('name', '')
         
         # Generate ID
@@ -202,6 +222,9 @@ def build_fresh_brainrots():
     # Backup existing if it exists
     if os.path.exists(output_path):
         backup_path = 'data/brainrots_old_merged_backup.json'
+        # Remove old backup if it exists
+        if os.path.exists(backup_path):
+            os.remove(backup_path)
         os.rename(output_path, backup_path)
         print(f"   Backed up old file to: {backup_path}")
     
@@ -217,6 +240,9 @@ def build_fresh_brainrots():
     # Backup app version
     if os.path.exists(app_output_path):
         app_backup_path = 'app/public/brainrots_old_backup.json'
+        # Remove old backup if it exists
+        if os.path.exists(app_backup_path):
+            os.remove(app_backup_path)
         os.rename(app_output_path, app_backup_path)
         print(f"   Backed up app version to: {app_backup_path}")
     

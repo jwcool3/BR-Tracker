@@ -168,6 +168,25 @@ export default function CompactAccountRow({ account, collectionSize, collection,
         </div>
       )}
 
+      {/* Fuse Checkbox */}
+      <label 
+        className="flex items-center gap-1.5 cursor-pointer hover:bg-slate-600/30 px-2 py-1.5 rounded transition-colors"
+        onClick={(e) => e.stopPropagation()}
+        title={account.isFusing ? "Fusing active" : "Not fusing"}
+      >
+        <input
+          type="checkbox"
+          checked={account.isFusing || false}
+          onChange={(e) => {
+            e.stopPropagation();
+            onEdit?.({ isFusing: e.target.checked });
+          }}
+          className="w-3.5 h-3.5 rounded cursor-pointer"
+        />
+        <span className="text-xs text-gray-300 hidden md:inline">🔥 Fusing</span>
+        <span className="text-xs md:hidden">🔥</span>
+      </label>
+
       {/* Action Buttons */}
       <div className="flex items-center gap-2">
         <button

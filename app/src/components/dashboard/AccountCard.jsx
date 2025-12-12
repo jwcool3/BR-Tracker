@@ -111,8 +111,26 @@ export default function AccountCard({ account, collectionSize, collection, brain
       </div>
 
       {/* Rebirth Info */}
-      <div className="text-sm text-gray-400 mb-3">
-        Rebirth {account.rebirthLevel} | {totalSlots} total slots
+      <div className="flex items-center justify-between mb-3">
+        <div className="text-sm text-gray-400">
+          Rebirth {account.rebirthLevel} | {totalSlots} total slots
+        </div>
+        {/* Fuse Checkbox */}
+        <label 
+          className="flex items-center gap-1.5 cursor-pointer hover:bg-slate-600/30 px-2 py-1 rounded transition-colors"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <input
+            type="checkbox"
+            checked={account.isFusing || false}
+            onChange={(e) => {
+              e.stopPropagation();
+              onEdit({ isFusing: e.target.checked });
+            }}
+            className="w-3.5 h-3.5 rounded cursor-pointer"
+          />
+          <span className="text-xs text-gray-300">🔥 Fusing</span>
+        </label>
       </div>
 
       {/* Slot Usage Bar */}

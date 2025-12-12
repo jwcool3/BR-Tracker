@@ -11,6 +11,7 @@ export default function EditAccountModal({ account, onSave, onClose }) {
   const [tags, setTags] = useState(account.tags?.join(', ') || '')
   const [favorite, setFavorite] = useState(account.favorite || false)
   const [color, setColor] = useState(account.color || '#3b82f6')
+  const [isFusing, setIsFusing] = useState(account.isFusing || false)
 
   // Update state if account changes
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function EditAccountModal({ account, onSave, onClose }) {
     setTags(account.tags?.join(', ') || '')
     setFavorite(account.favorite || false)
     setColor(account.color || '#3b82f6')
+    setIsFusing(account.isFusing || false)
   }, [account])
 
   const handleSubmit = (e) => {
@@ -32,7 +34,8 @@ export default function EditAccountModal({ account, onSave, onClose }) {
       rebirthLevel: parseInt(rebirthLevel) || 0,
       tags: tags.trim() ? tags.split(',').map(t => t.trim()) : [],
       favorite,
-      color
+      color,
+      isFusing
     })
     
     onClose()
@@ -118,7 +121,7 @@ export default function EditAccountModal({ account, onSave, onClose }) {
             />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-6 space-y-3">
             <label className="flex items-center gap-2 cursor-pointer">
               <input
                 type="checkbox"
@@ -127,6 +130,15 @@ export default function EditAccountModal({ account, onSave, onClose }) {
                 className="w-4 h-4"
               />
               <span className="text-sm">⭐ Mark as favorite</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={isFusing}
+                onChange={(e) => setIsFusing(e.target.checked)}
+                className="w-4 h-4"
+              />
+              <span className="text-sm">🔥 Currently fusing</span>
             </label>
           </div>
 
