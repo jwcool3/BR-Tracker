@@ -19,28 +19,50 @@ export const MUTATIONS = {
   halloween: { name: 'Halloween', multiplier: 1.0, color: '#FF6600' }
 }
 
-// All traits with multipliers
+// All traits with multipliers (Updated from wiki: https://stealabrainrot.fandom.com/wiki/Traits)
 export const TRAITS = {
-  sleepy: { name: 'Sleepy', multiplier: -0.5, icon: '💤' },
-  galactic: { name: 'Galactic', multiplier: 4.0, icon: '☄️' },
-  bombardiro: { name: 'Bombardiro', multiplier: 4.0, icon: '💣' },
-  shark_fin: { name: 'Shark Fin', multiplier: 4.0, icon: '🦈' },
+  // OG Event Traits (Rarest)
+  strawberry: { name: 'Strawberry', multiplier: 8.0, icon: '🍓' },
+  meowl: { name: 'Meowl', multiplier: 7.0, icon: '🦉' },
+  
+  // Seasonal Event Traits
+  jack_o_lantern: { name: "Jack O'Lantern", multiplier: 6.0, icon: '🎃' },
+  santa_hat: { name: 'Santa Hat', multiplier: 5.0, icon: '🎅' },
+  rip_tombstone: { name: 'RIP Tombstone', multiplier: 5.0, icon: '🪦' },
+  witching_hour: { name: 'Witching Hour', multiplier: 4.5, icon: '🧙' },
+  extinct: { name: 'Extinct', multiplier: 4.0, icon: '🦴' },
+  ten_b: { name: '10B', multiplier: 4.0, icon: '🎂' },
+  
+  // Admin Event Traits
   paint: { name: 'Paint', multiplier: 6.0, icon: '🎨' },
-  nyan: { name: 'Nyan', multiplier: 6.0, icon: '🌈' },
+  brazil: { name: 'Brazil', multiplier: 6.0, icon: '🇧🇷' },
   fire: { name: 'Fire', multiplier: 6.0, icon: '🔥' },
+  fireworks: { name: 'Fireworks', multiplier: 6.0, icon: '🎆' },
+  nyan: { name: 'Nyan', multiplier: 6.0, icon: '🌈' },
+  lightning: { name: 'Lightning', multiplier: 6.0, icon: '⚡' },
+  indonesian: { name: 'Indonesian', multiplier: 5.0, icon: '🇮🇩' },
+  sombrero: { name: 'Sombrero', multiplier: 5.0, icon: '🤠' },
+  disco: { name: 'Disco', multiplier: 5.0, icon: '🕺' },
+  glitched: { name: 'Glitched', multiplier: 5.0, icon: '⚠️' },
+  crab_claw: { name: 'Crab Claw', multiplier: 5.0, icon: '🦀' },
   zombie: { name: 'Zombie', multiplier: 5.0, icon: '🧟' },
-  firework: { name: 'Firework', multiplier: 6.0, icon: '🎆' },
-  rain: { name: 'Rain', multiplier: 2.5, icon: '🌧️' },
-  snowy: { name: 'Snowy', multiplier: 3.0, icon: '❄️' },
-  cometstruck: { name: 'Cometstruck', multiplier: 3.5, icon: '⭐' },
-  bloodmoon_trait: { name: 'Bloodmoon', multiplier: 2.0, icon: '🌕' },
+  tie: { name: 'Tie', multiplier: 4.75, icon: '👔' },
+  matteo_hat: { name: 'Matteo Hat', multiplier: 4.5, icon: '🧢' },
+  galactic: { name: 'Galactic', multiplier: 4.0, icon: '☄️' },
+  explosive: { name: 'Explosive', multiplier: 4.0, icon: '💣' },
+  shark_fin: { name: 'Shark Fin', multiplier: 4.0, icon: '🦈' },
+  bubblegum: { name: 'Bubblegum', multiplier: 4.0, icon: '🍬' },
+  spider: { name: 'Spider', multiplier: 3.5, icon: '🕷️' },
+  ufo: { name: 'UFO', multiplier: 3.0, icon: '🛸' },
   taco: { name: 'Taco', multiplier: 3.0, icon: '🌮' },
-  strawberry: { name: 'Strawberry', multiplier: 10.0, icon: '🍓' },
-  hat: { name: 'Hat', multiplier: 1.0, icon: '🎩' },
-  meowl: { name: 'Meowl', multiplier: 5.0, icon: '🦉' },
-  pumpkin: { name: 'Pumpkin', multiplier: 4.0, icon: '🎃' },
-  rip: { name: 'RIP', multiplier: 5.0, icon: '🪦' },
-  crab: { name: 'Crab', multiplier: 3.0, icon: '🦀' }
+  
+  // Natural Event Traits
+  cometstruck: { name: 'Comet-struck', multiplier: 3.5, icon: '💫' },
+  snowy: { name: 'Snowy', multiplier: 3.0, icon: '❄️' },
+  wet: { name: 'Wet', multiplier: 3.0, icon: '🌧️' },
+  
+  // Negative Trait
+  sleepy: { name: 'Sleepy', multiplier: -0.5, icon: '💤' }
 }
 
 /**

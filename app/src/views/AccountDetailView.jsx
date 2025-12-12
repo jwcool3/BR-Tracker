@@ -179,11 +179,8 @@ export default function AccountDetailView({
               {showHighTierOnly && (
                 <span className="ml-2 text-purple-400">• High-tier (Mythic+)</span>
               )}
-              {showOnlyWithThumbnails && (
-                <span className="ml-2 text-cyan-400">• With images</span>
-              )}
-              {!showHighTierOnly && !showOnlyWithThumbnails && (
-                <span className="ml-2 text-blue-400">• All brainrots</span>
+              {!showHighTierOnly && (
+                <span className="ml-2 text-blue-400">• All tiers</span>
               )}
             </>
           )}

@@ -1,0 +1,171 @@
+{
+  "traits": [
+    {
+      "name": "Strawberry",
+      "multiplier": 8.0,
+      "raw_text": "8x"
+    },
+    {
+      "name": "Meowl",
+      "multiplier": 7.0,
+      "raw_text": "7x"
+    },
+    {
+      "name": "Santa Hat",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Jack O'Lantern",
+      "multiplier": 6.0,
+      "raw_text": "6x"
+    },
+    {
+      "name": "RIP Tombstone",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Witching Hour",
+      "multiplier": 4.5,
+      "raw_text": "4.5x"
+    },
+    {
+      "name": "Extinct",
+      "multiplier": 4.0,
+      "raw_text": "4x"
+    },
+    {
+      "name": "10B",
+      "multiplier": 4.0,
+      "raw_text": "4x"
+    },
+    {
+      "name": "Paint",
+      "multiplier": 6.0,
+      "raw_text": "6x"
+    },
+    {
+      "name": "Tie",
+      "multiplier": 4.75,
+      "raw_text": "4.75x"
+    },
+    {
+      "name": "Spider",
+      "multiplier": 3.5,
+      "raw_text": "3.5x"
+    },
+    {
+      "name": "Matteo Hat",
+      "multiplier": 4.5,
+      "raw_text": "4.5x"
+    },
+    {
+      "name": "Galactic",
+      "multiplier": 4.0,
+      "raw_text": "4x"
+    },
+    {
+      "name": "Explosive",
+      "multiplier": 4.0,
+      "raw_text": "4x"
+    },
+    {
+      "name": "Shark Fin",
+      "multiplier": 4.0,
+      "raw_text": "4x"
+    },
+    {
+      "name": "Brazil",
+      "multiplier": 6.0,
+      "raw_text": "6x"
+    },
+    {
+      "name": "Indonesian",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Sombrero",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Fire",
+      "multiplier": 6.0,
+      "raw_text": "6x"
+    },
+    {
+      "name": "Fireworks",
+      "multiplier": 6.0,
+      "raw_text": "6x"
+    },
+    {
+      "name": "Nyan",
+      "multiplier": 6.0,
+      "raw_text": "6x"
+    },
+    {
+      "name": "Lightning",
+      "multiplier": 6.0,
+      "raw_text": "6x"
+    },
+    {
+      "name": "Disco",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Glitched",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Crab Claw",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Zombie",
+      "multiplier": 5.0,
+      "raw_text": "5x"
+    },
+    {
+      "name": "Bubblegum",
+      "multiplier": 4.0,
+      "raw_text": "4x"
+    },
+    {
+      "name": "UFO",
+      "multiplier": 3.0,
+      "raw_text": "3x"
+    },
+    {
+      "name": "Taco",
+      "multiplier": 3.0,
+      "raw_text": "3x"
+    },
+    {
+      "name": "Sleepy",
+      "multiplier": -0.5,
+      "raw_text": "÷2"
+    },
+    {
+      "name": "Comet-struck",
+      "multiplier": 3.5,
+      "raw_text": "3.5x"
+    },
+    {
+      "name": "Snowy",
+      "multiplier": 3.0,
+      "raw_text": "3x"
+    },
+    {
+      "name": "Wet",
+      "multiplier": 3.0,
+      "raw_text": "3x"
+    }
+  ],
+  "count": 33,
+  "source": "https://stealabrainrot.fandom.com/wiki/Traits"
+}
