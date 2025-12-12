@@ -5,6 +5,7 @@ import { useNavigation } from './hooks/useNavigation'
 import DashboardView from './views/DashboardView'
 import AccountDetailView from './views/AccountDetailView'
 import TotalCollectionView from './views/TotalCollectionView'
+import OrganizationView from './views/OrganizationView'
 import Header from './components/common/Header'
 import { BulkSelectionProvider } from './contexts/BulkSelectionContext'
 
@@ -58,7 +59,7 @@ function App() {
   })
   
   // Navigation state
-  const { currentView, selectedAccount, viewAccount, viewTotalCollection, backToDashboard } = useNavigation()
+  const { currentView, selectedAccount, viewAccount, viewTotalCollection, viewOrganization, backToDashboard } = useNavigation()
 
   // Drag and drop state
   const [activeDrag, setActiveDrag] = useState(null)
@@ -100,6 +101,38 @@ function App() {
       ...collections,
       [accountId]: newCollection
     })
+  }
+
+  // Transfer a brainrot from one account to another
+  const handleTransferBrainrot = (collectionEntryId, sourceAccountId, targetAccountId) => {
+    // Find the entry in source collection
+    const sourceCollection = collections[sourceAccountId] || []
+    const entryToTransfer = sourceCollection.find(entry => entry.id === collectionEntryId)
+    
+    if (!entryToTransfer) {
+      console.error('Entry not found in source collection')
+      return
+    }
+
+    // Remove from source
+    const newSourceCollection = sourceCollection.filter(entry => entry.id !== collectionEntryId)
+    
+    // Add to target with new ID
+    const targetCollection = collections[targetAccountId] || []
+    const newEntry = {
+      ...entryToTransfer,
+      id: `entry-${Date.now()}-${Math.random().toString(36).substr(2, 9)}` // Generate new ID
+    }
+    const newTargetCollection = [...targetCollection, newEntry]
+
+    // Update both collections
+    setCollections({
+      ...collections,
+      [sourceAccountId]: newSourceCollection,
+      [targetAccountId]: newTargetCollection
+    })
+
+    console.log(`Transferred ${entryToTransfer.brainrotId} from ${sourceAccountId} to ${targetAccountId}`)
   }
 
   // Data management operations
@@ -215,7 +248,7 @@ function App() {
           <Header 
             currentView={currentView}
             selectedAccount={accounts.find(a => a.id === selectedAccount)}
-            onNavigate={{ viewTotalCollection, backToDashboard }}
+            onNavigate={{ viewTotalCollection, viewOrganization, backToDashboard }}
             accounts={accounts}
             collections={collections}
             onImportData={handleImportData}
@@ -252,6 +285,16 @@ function App() {
                 brainrots={brainrots}
                 onBack={backToDashboard}
                 onViewAccount={viewAccount}
+              />
+            )}
+
+            {currentView === 'organization' && (
+              <OrganizationView
+                accounts={accounts}
+                collections={collections}
+                brainrots={brainrots}
+                onBack={backToDashboard}
+                onTransferBrainrot={handleTransferBrainrot}
               />
             )}
           </main>

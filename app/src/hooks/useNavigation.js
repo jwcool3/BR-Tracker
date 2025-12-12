@@ -1,10 +1,11 @@
 import { useState } from 'react'
 
 /**
- * Hook for managing navigation between three views:
+ * Hook for managing navigation between four views:
  * - dashboard: Overview of all accounts
  * - detail: Manage one account's brainrots
  * - collection: Total collection across all accounts
+ * - organization: Smart organization recommendations
  */
 export function useNavigation() {
   const [currentView, setCurrentView] = useState('dashboard')
@@ -20,6 +21,11 @@ export function useNavigation() {
     setCurrentView('collection')
   }
 
+  const viewOrganization = () => {
+    setSelectedAccount(null)
+    setCurrentView('organization')
+  }
+
   const backToDashboard = () => {
     setSelectedAccount(null)
     setCurrentView('dashboard')
@@ -30,6 +36,7 @@ export function useNavigation() {
     selectedAccount,
     viewAccount,
     viewTotalCollection,
+    viewOrganization,
     backToDashboard,
   }
 }

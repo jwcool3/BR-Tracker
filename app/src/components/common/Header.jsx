@@ -42,6 +42,17 @@ export default function Header({
               >
                 📊 Total Collection
               </button>
+
+              <button
+                onClick={() => onNavigate.viewOrganization()}
+                className={`px-4 py-2 rounded-lg transition-colors ${
+                  currentView === 'organization'
+                    ? 'bg-purple-600 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-slate-700'
+                }`}
+              >
+                ✨ Organize
+              </button>
             </nav>
 
             {currentView === 'detail' && selectedAccount && (
