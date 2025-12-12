@@ -140,9 +140,10 @@ export default function AccountDetailView({
   }
 
   // Update brainrot in collection
-  const updateBrainrot = (brainrotId, updates) => {
-    onUpdateCollection(collection.map(c =>
-      c.brainrotId === brainrotId ? { ...c, ...updates } : c
+  const updateBrainrot = (brainrotId, updates, collectionIndex) => {
+    // Update specific collection entry by index
+    onUpdateCollection(collection.map((c, idx) =>
+      idx === collectionIndex ? { ...c, ...updates } : c
     ))
   }
 

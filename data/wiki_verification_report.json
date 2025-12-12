@@ -1,0 +1,528 @@
+{
+  "total_brainrots": 320,
+  "verified_on_wiki": 255,
+  "not_found_on_wiki": 65,
+  "wiki_list_size": 312,
+  "not_found_list": [
+    {
+      "name": "Liliri Lalira",
+      "id": "liliri-lalira",
+      "rarity": "common",
+      "income_per_second": 3,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Lirili Larila",
+      "id": "lirili-larila",
+      "rarity": "common",
+      "income_per_second": 3,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "NOOB!!!",
+      "id": "noob",
+      "rarity": "common",
+      "income_per_second": 1,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Bigfrog",
+      "id": "bigfrog",
+      "rarity": "rare",
+      "income_per_second": 67,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Frogo Elgo",
+      "id": "frogo-elgo",
+      "rarity": "rare",
+      "income_per_second": 67,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Los ditos",
+      "id": "los-ditos",
+      "rarity": "rare",
+      "income_per_second": 35,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Sahuria",
+      "id": "sahuria",
+      "rarity": "rare",
+      "income_per_second": 55,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "TaTas",
+      "id": "tatas",
+      "rarity": "rare",
+      "income_per_second": 55,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "PeroLemonfulldetial",
+      "id": "perolemonfulldetial",
+      "rarity": "epic",
+      "income_per_second": 160,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Buho de Fuego",
+      "id": "buho-de-fuego",
+      "rarity": "legendary",
+      "income_per_second": 1800,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Messi",
+      "id": "messi",
+      "rarity": "legendary",
+      "income_per_second": 650,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Mr krabs",
+      "id": "mr-krabs",
+      "rarity": "legendary",
+      "income_per_second": 600,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Sammy the strawberry",
+      "id": "sammy-the-strawberry",
+      "rarity": "legendary",
+      "income_per_second": 1100,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Banana",
+      "id": "banana",
+      "rarity": "mythic",
+      "income_per_second": 16500,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Bananito Bandito",
+      "id": "bananito-bandito",
+      "rarity": "mythic",
+      "income_per_second": 16500,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Brutto Gialutto",
+      "id": "brutto-gialutto",
+      "rarity": "mythic",
+      "income_per_second": 3000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Homicidio doloso",
+      "id": "homicidio-doloso",
+      "rarity": "mythic",
+      "income_per_second": 8200,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Lol Fridge",
+      "id": "lol-fridge",
+      "rarity": "mythic",
+      "income_per_second": 14000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "THE ROCK",
+      "id": "the-rock",
+      "rarity": "mythic",
+      "income_per_second": 8000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Watermelon Doggy",
+      "id": "watermelon-doggy",
+      "rarity": "mythic",
+      "income_per_second": 13000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Aquanaut",
+      "id": "aquanaut",
+      "rarity": "brainrot_god",
+      "income_per_second": 245000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Belulaa",
+      "id": "belulaa",
+      "rarity": "brainrot_god",
+      "income_per_second": 290000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "CornSahur",
+      "id": "cornsahur",
+      "rarity": "brainrot_god",
+      "income_per_second": 250000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Granchiello Spiritell",
+      "id": "granchiello-spiritell",
+      "rarity": "brainrot_god",
+      "income_per_second": 260000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Jaws",
+      "id": "jaws",
+      "rarity": "brainrot_god",
+      "income_per_second": 250000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "King von",
+      "id": "king-von",
+      "rarity": "brainrot_god",
+      "income_per_second": 65000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Las Capuchinas",
+      "id": "las-capuchinas",
+      "rarity": "brainrot_god",
+      "income_per_second": 185000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Piccionetta Macchina",
+      "id": "piccionetta-macchina",
+      "rarity": "brainrot_god",
+      "income_per_second": 270000,
+      "source": "Unknown",
+      "has_image": false
+    },
+    {
+      "name": "Skully",
+      "id": "skully",
+      "rarity": "brainrot_god",
+      "income_per_second": 290000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Tameluk",
+      "id": "tameluk",
+      "rarity": "brainrot_god",
+      "income_per_second": 215000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Teenage turtle",
+      "id": "teenage-turtle",
+      "rarity": "brainrot_god",
+      "income_per_second": 250000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Temu whale",
+      "id": "temu-whale",
+      "rarity": "brainrot_god",
+      "income_per_second": 290000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Tukanno Banana",
+      "id": "tukanno-banana",
+      "rarity": "brainrot_god",
+      "income_per_second": 100000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Agarrini Ia Palini",
+      "id": "agarrini-ia-palini",
+      "rarity": "secret",
+      "income_per_second": 425000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Alvin and the chipmunks",
+      "id": "alvin-and-the-chipmunks",
+      "rarity": "secret",
+      "income_per_second": 325000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Chick fil a",
+      "id": "chick-fil-a",
+      "rarity": "secret",
+      "income_per_second": 25000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Chilin",
+      "id": "chilin",
+      "rarity": "secret",
+      "income_per_second": 25000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Cookie",
+      "id": "cookie",
+      "rarity": "secret",
+      "income_per_second": 155000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "EsokSekolah2",
+      "id": "esoksekolah2",
+      "rarity": "secret",
+      "income_per_second": 30000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Fishino Clownino",
+      "id": "fishino-clownino",
+      "rarity": "secret",
+      "income_per_second": 15500000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Hokka horlage scapped",
+      "id": "hokka-horlage-scapped",
+      "rarity": "secret",
+      "income_per_second": 75000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "JackoVacca",
+      "id": "jackovacca",
+      "rarity": "secret",
+      "income_per_second": 850000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Karker Sahur",
+      "id": "karker-sahur",
+      "rarity": "secret",
+      "income_per_second": 725000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Ketchuru and Masturu",
+      "id": "ketchuru-and-masturu",
+      "rarity": "secret",
+      "income_per_second": 42500000,
+      "source": "Unknown",
+      "has_image": false
+    },
+    {
+      "name": "KingsColeslaw65",
+      "id": "kingscoleslaw65",
+      "rarity": "secret",
+      "income_per_second": 2500000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "La Grande Combinassion",
+      "id": "la-grande-combinassion",
+      "rarity": "secret",
+      "income_per_second": 10000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Lavadorito Spinito",
+      "id": "lavadorito-spinito",
+      "rarity": "secret",
+      "income_per_second": 45000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Los Hotspositos",
+      "id": "los-hotspositos",
+      "rarity": "secret",
+      "income_per_second": 20000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Nuclearo Dinosauro",
+      "id": "nuclearo-dinosauro",
+      "rarity": "secret",
+      "income_per_second": 15000000,
+      "source": "Unknown",
+      "has_image": false
+    },
+    {
+      "name": "Piruleta",
+      "id": "piruleta",
+      "rarity": "secret",
+      "income_per_second": 2500000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Pirulitoita Bicicletaire",
+      "id": "pirulitoita-bicicletaire",
+      "rarity": "secret",
+      "income_per_second": 2500000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Playboi carti",
+      "id": "playboi-carti",
+      "rarity": "secret",
+      "income_per_second": 10000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Pumpkin Spyderini",
+      "id": "pumpkin-spyderini",
+      "rarity": "secret",
+      "income_per_second": 650000,
+      "source": "Unknown",
+      "has_image": false
+    },
+    {
+      "name": "RingRangBus2",
+      "id": "ringrangbus2",
+      "rarity": "secret",
+      "income_per_second": 6000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Sammy blud",
+      "id": "sammy-blud",
+      "rarity": "secret",
+      "income_per_second": 325000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Sammypumpkin",
+      "id": "sammypumpkin",
+      "rarity": "secret",
+      "income_per_second": 3000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Spaghettitualetti",
+      "id": "spaghettitualetti",
+      "rarity": "secret",
+      "income_per_second": 60000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Spooky block",
+      "id": "spooky-block",
+      "rarity": "secret",
+      "income_per_second": 80000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Taco TUESDAYYYYYYYY",
+      "id": "taco-tuesdayyyyyyyy",
+      "rarity": "secret",
+      "income_per_second": 32000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Tang Tang Kelentang",
+      "id": "tang-tang-kelentang",
+      "rarity": "secret",
+      "income_per_second": 33500000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "TangTangVfx",
+      "id": "tangtangvfx",
+      "rarity": "secret",
+      "income_per_second": 33500000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Tralalalaledon",
+      "id": "tralalalaledon",
+      "rarity": "secret",
+      "income_per_second": 27500000,
+      "source": "Unknown",
+      "has_image": false
+    },
+    {
+      "name": "Travis scott",
+      "id": "travis-scott",
+      "rarity": "secret",
+      "income_per_second": 13000000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Trickortreat",
+      "id": "trickortreat",
+      "rarity": "secret",
+      "income_per_second": 900000,
+      "source": "Unknown",
+      "has_image": true
+    },
+    {
+      "name": "Yo quiero taco bell",
+      "id": "yo-quiero-taco-bell",
+      "rarity": "secret",
+      "income_per_second": 32000000,
+      "source": "Unknown",
+      "has_image": true
+    }
+  ]
+}

@@ -21,7 +21,7 @@
     "cost": 250,
     "income_per_second": 3,
     "rarity": "common",
-    "image": "thumbnails/lirili-larila.png"
+    "image": ""
   },
   {
     "id": "noob",
@@ -45,7 +45,7 @@
     "cost": null,
     "income_per_second": 11,
     "rarity": "common",
-    "image": "thumbnails/noobini-santanini.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -66,12 +66,20 @@
     "image": "thumbnails/Pipi_Kiwi.png"
   },
   {
+    "id": "raccooni",
+    "name": "Raccooni",
+    "cost": 1300,
+    "income_per_second": 12,
+    "rarity": "common",
+    "image": "thumbnails/Raccooni.png"
+  },
+  {
     "id": "raccooni-jandelini",
     "name": "Raccooni Jandelini",
     "cost": 1300,
     "income_per_second": 12,
     "rarity": "common",
-    "image": "thumbnails/raccooni-jandelini.png"
+    "image": ""
   },
   {
     "id": "svinina-bombardino",
@@ -79,7 +87,7 @@
     "cost": 1200,
     "income_per_second": 10,
     "rarity": "common",
-    "image": "thumbnails/svinina-bombardino.png"
+    "image": ""
   },
   {
     "id": "talpa-di-fero",
@@ -138,6 +146,16 @@
     "image": "thumbnails/Cacto_Hipopotamo1.png"
   },
   {
+    "id": "frogo-elfo",
+    "name": "Frogo Elfo",
+    "cost": null,
+    "income_per_second": 67,
+    "rarity": "rare",
+    "image": null,
+    "event": "Christmas 2024",
+    "source": "Santa's Fuse"
+  },
+  {
     "id": "frogo-elgo",
     "name": "Frogo Elgo",
     "cost": 9200,
@@ -151,7 +169,7 @@
     "cost": 4000,
     "income_per_second": 30,
     "rarity": "rare",
-    "image": "thumbnails/gangster-footera.png"
+    "image": ""
   },
   {
     "id": "los-ditos",
@@ -191,7 +209,7 @@
     "cost": 7500,
     "income_per_second": 55,
     "rarity": "rare",
-    "image": "thumbnails/ta-ta-ta-ta-sahur.png"
+    "image": ""
   },
   {
     "id": "tatas",
@@ -239,7 +257,7 @@
     "cost": 22500,
     "income_per_second": 135,
     "rarity": "epic",
-    "image": "thumbnails/bambini-crostini.png"
+    "image": ""
   },
   {
     "id": "bananita-dolphinita",
@@ -247,7 +265,7 @@
     "cost": 25000,
     "income_per_second": 150,
     "rarity": "epic",
-    "image": "thumbnails/bananita-dolphinita.png"
+    "image": ""
   },
   {
     "id": "bandito-axolito",
@@ -287,7 +305,7 @@
     "cost": 39000,
     "income_per_second": 240,
     "rarity": "epic",
-    "image": "thumbnails/frogato-pirato.png"
+    "image": ""
   },
   {
     "id": "malame-amarele",
@@ -319,7 +337,7 @@
     "cost": null,
     "income_per_second": 270,
     "rarity": "epic",
-    "image": "thumbnails/penguin-tree.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -345,7 +363,7 @@
     "cost": 275000,
     "income_per_second": 160,
     "rarity": "epic",
-    "image": "thumbnails/perochello-lemonchello.png"
+    "image": ""
   },
   {
     "id": "salamino-penguino",
@@ -369,7 +387,7 @@
     "cost": 37500,
     "income_per_second": 225,
     "rarity": "epic",
-    "image": "thumbnails/ti-ti-ti-sahur.png"
+    "image": ""
   },
   {
     "id": "trulimero-trulicina",
@@ -377,7 +395,15 @@
     "cost": 20000,
     "income_per_second": 125,
     "rarity": "epic",
-    "image": "thumbnails/trulimero-trulicina.png"
+    "image": ""
+  },
+  {
+    "id": "wombo",
+    "name": "Wombo",
+    "cost": 42500,
+    "income_per_second": 275,
+    "rarity": "epic",
+    "image": "thumbnails/Wombo.png"
   },
   {
     "id": "wombo-rollo",
@@ -385,7 +411,7 @@
     "cost": 42500,
     "income_per_second": 275,
     "rarity": "epic",
-    "image": "thumbnails/wombo-rollo.png"
+    "image": ""
   },
   {
     "id": "blueberrinni-octopusini",
@@ -393,7 +419,7 @@
     "cost": 250000,
     "income_per_second": 1000,
     "rarity": "legendary",
-    "image": "thumbnails/blueberrinni-octopusini.png"
+    "image": ""
   },
   {
     "id": "buho-de-fuego",
@@ -409,7 +435,7 @@
     "cost": 35000,
     "income_per_second": 200,
     "rarity": "legendary",
-    "image": "thumbnails/burbaloni-loliloli.png"
+    "image": ""
   },
   {
     "id": "caramello-filtrello",
@@ -417,7 +443,7 @@
     "cost": 255000,
     "income_per_second": 1000,
     "rarity": "legendary",
-    "image": "thumbnails/caramello-filtrello.png"
+    "image": ""
   },
   {
     "id": "chef-crabracadabra",
@@ -425,7 +451,7 @@
     "cost": 150000,
     "income_per_second": 600,
     "rarity": "legendary",
-    "image": "thumbnails/chef-crabracadabra.png"
+    "image": ""
   },
   {
     "id": "chocco-bunny",
@@ -433,9 +459,17 @@
     "cost": null,
     "income_per_second": 1400,
     "rarity": "legendary",
-    "image": "thumbnails/chocco-bunny.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
+  },
+  {
+    "id": "cocosini",
+    "name": "Cocosini",
+    "cost": 285000,
+    "income_per_second": 1200,
+    "rarity": "legendary",
+    "image": "thumbnails/Cocosini.png"
   },
   {
     "id": "cocosini-mama",
@@ -555,7 +589,7 @@
     "cost": 320000,
     "income_per_second": 1300,
     "rarity": "legendary",
-    "image": "thumbnails/signore-carapace.png"
+    "image": ""
   },
   {
     "id": "strawberrelli-flamingelli",
@@ -595,7 +629,7 @@
     "cost": 4900000,
     "income_per_second": 16500,
     "rarity": "mythic",
-    "image": "thumbnails/bananito-bandito.png"
+    "image": ""
   },
   {
     "id": "bombombini-gusini",
@@ -603,7 +637,7 @@
     "cost": 1000000,
     "income_per_second": 5000,
     "rarity": "mythic",
-    "image": "thumbnails/bombombini-gusini.png"
+    "image": ""
   },
   {
     "id": "brutto-gialutto",
@@ -619,7 +653,7 @@
     "cost": 4400000,
     "income_per_second": 13000,
     "rarity": "mythic",
-    "image": "thumbnails/cachorrito-melonito.png"
+    "image": ""
   },
   {
     "id": "carloooo-lucky-block",
@@ -691,7 +725,7 @@
     "cost": 2700000,
     "income_per_second": 7700,
     "rarity": "mythic",
-    "image": "thumbnails/gorillo-subwoofero.png"
+    "image": ""
   },
   {
     "id": "gorillo-watermelondrillo",
@@ -723,7 +757,7 @@
     "cost": null,
     "income_per_second": 12250,
     "rarity": "mythic",
-    "image": "thumbnails/jingle-jingle-sahur.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -733,7 +767,7 @@
     "cost": 3500000,
     "income_per_second": 8700,
     "rarity": "mythic",
-    "image": "thumbnails/lerulerulerule.png"
+    "image": ""
   },
   {
     "id": "lol-fridge",
@@ -765,7 +799,7 @@
     "cost": 4099999,
     "income_per_second": 11000,
     "rarity": "mythic",
-    "image": "thumbnails/rhino-helicopterino.png"
+    "image": ""
   },
   {
     "id": "rhino-toasterino",
@@ -773,7 +807,7 @@
     "cost": 450000,
     "income_per_second": 2100,
     "rarity": "mythic",
-    "image": "thumbnails/rhino-toasterino.png"
+    "image": ""
   },
   {
     "id": "spioniro-golubirolucky-block",
@@ -808,12 +842,20 @@
     "image": "thumbnails/Te_te_te_te_te_te_Sahur.png"
   },
   {
+    "id": "toiletto",
+    "name": "Toiletto",
+    "cost": 4800000,
+    "income_per_second": 16000,
+    "rarity": "mythic",
+    "image": "thumbnails/Toiletto.png"
+  },
+  {
     "id": "toiletto-focaccino",
     "name": "Toiletto Focaccino",
     "cost": 4800000,
     "income_per_second": 16000,
     "rarity": "mythic",
-    "image": "thumbnails/toiletto-focaccino.png"
+    "image": ""
   },
   {
     "id": "tracoducotulu-delapeladustuz",
@@ -829,7 +871,7 @@
     "cost": null,
     "income_per_second": 17000,
     "rarity": "mythic",
-    "image": "thumbnails/tree-tree-tree-sahur.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -855,7 +897,7 @@
     "cost": 175000000,
     "income_per_second": 85000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/alessio.png"
+    "image": ""
   },
   {
     "id": "anpali-babel",
@@ -863,7 +905,7 @@
     "cost": 48000000,
     "income_per_second": 280000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/anpali-babel.png"
+    "image": ""
   },
   {
     "id": "antonio",
@@ -879,7 +921,7 @@
     "cost": 45500000,
     "income_per_second": 245000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/aquanaut.png"
+    "image": ""
   },
   {
     "id": "ballerina-peppermintina",
@@ -903,7 +945,7 @@
     "cost": 47500000,
     "income_per_second": 275000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/bambu-bambu-sahur.png"
+    "image": ""
   },
   {
     "id": "belula-beluga",
@@ -911,7 +953,7 @@
     "cost": 60000000,
     "income_per_second": 290000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/belula-beluga.png"
+    "image": ""
   },
   {
     "id": "belulaa",
@@ -959,7 +1001,7 @@
     "cost": 45000000,
     "income_per_second": 240000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/cacasito-satalito.png"
+    "image": ""
   },
   {
     "id": "capi-taco",
@@ -983,7 +1025,7 @@
     "cost": 8500000,
     "income_per_second": 45000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/chihuanini-taconini.png"
+    "image": ""
   },
   {
     "id": "corn-corn-corn-sahur",
@@ -991,7 +1033,7 @@
     "cost": 45000000,
     "income_per_second": 250000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/corn-corn-corn-sahur.png"
+    "image": ""
   },
   {
     "id": "cornsahur",
@@ -1007,7 +1049,7 @@
     "cost": 46000000,
     "income_per_second": 235000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/crabbo-limonetta.png"
+    "image": ""
   },
   {
     "id": "dug-dug-dug-brainrot",
@@ -1039,7 +1081,7 @@
     "cost": 23500000,
     "income_per_second": 125000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/extinct-ballerina.png"
+    "image": ""
   },
   {
     "id": "frio-ninja",
@@ -1079,7 +1121,7 @@
     "cost": 32500000,
     "income_per_second": 165000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/gattito-tacoto.png"
+    "image": ""
   },
   {
     "id": "ginger-cisterna",
@@ -1087,7 +1129,7 @@
     "cost": null,
     "income_per_second": 293500,
     "rarity": "brainrot_god",
-    "image": "thumbnails/ginger-cisterna.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -1097,7 +1139,7 @@
     "cost": null,
     "income_per_second": 257500,
     "rarity": "brainrot_god",
-    "image": "thumbnails/ginger-globo.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -1107,7 +1149,7 @@
     "cost": 7500000,
     "income_per_second": 20000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/girafa-celestre.png"
+    "image": ""
   },
   {
     "id": "granchiello-spiritell",
@@ -1115,7 +1157,7 @@
     "cost": 46000000,
     "income_per_second": 260000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/granchiello-spiritell.png"
+    "image": ""
   },
   {
     "id": "jacko-jack-jack",
@@ -1147,7 +1189,7 @@
     "cost": 60000000,
     "income_per_second": 290000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/krupuk-pagi-pagi.png"
+    "image": ""
   },
   {
     "id": "las-capuchinas",
@@ -1163,7 +1205,7 @@
     "cost": 42500000,
     "income_per_second": 220000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/los-bombinitos.png"
+    "image": ""
   },
   {
     "id": "los-chihuaninis",
@@ -1179,7 +1221,7 @@
     "cost": 12500000,
     "income_per_second": 55000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/los-crocodillitos.png"
+    "image": ""
   },
   {
     "id": "los-gattitos",
@@ -1203,7 +1245,7 @@
     "cost": 37000000,
     "income_per_second": 210000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/los-tungtungtungcitos.png"
+    "image": ""
   },
   {
     "id": "mastodontico-telepiedone-lucky-block",
@@ -1235,7 +1277,7 @@
     "cost": 15000000,
     "income_per_second": 75000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/odin-din-din-dun.png"
+    "image": ""
   },
   {
     "id": "orcalero-orcalalucky-block",
@@ -1254,12 +1296,20 @@
     "image": "thumbnails/Orcalero_Orcala.png"
   },
   {
+    "id": "pakrah",
+    "name": "Pakrah",
+    "cost": 37500000,
+    "income_per_second": 215000,
+    "rarity": "brainrot_god",
+    "image": "thumbnails/Pakrah.png"
+  },
+  {
     "id": "pakrahmatmamat",
     "name": "Pakrahmatmamat",
     "cost": 37500000,
     "income_per_second": 215000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/pakrahmatmamat.png"
+    "image": ""
   },
   {
     "id": "pakrahmatmatina",
@@ -1275,7 +1325,7 @@
     "cost": 40000000,
     "income_per_second": 225000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/piccione-macchina.png"
+    "image": ""
   },
   {
     "id": "piccionetta-macchina",
@@ -1299,7 +1349,7 @@
     "cost": 60000000,
     "income_per_second": 290000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/skull-skull-skull.png"
+    "image": ""
   },
   {
     "id": "skully",
@@ -1371,7 +1421,7 @@
     "cost": 62500000,
     "income_per_second": 292500,
     "rarity": "brainrot_god",
-    "image": "thumbnails/tentacolo-tecnico.png"
+    "image": ""
   },
   {
     "id": "tigroligre-frutonnilucky-block",
@@ -1419,7 +1469,7 @@
     "cost": 30000000,
     "income_per_second": 175000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/trippi-troppi-troppa-trippa.png"
+    "image": ""
   },
   {
     "id": "tukanno-banana",
@@ -1435,7 +1485,7 @@
     "cost": 20000000,
     "income_per_second": 75000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/unclito-samito.png"
+    "image": ""
   },
   {
     "id": "urubini-flamenguini",
@@ -1443,7 +1493,7 @@
     "cost": 30000000,
     "income_per_second": 150000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/urubini-flamenguini.png"
+    "image": ""
   },
   {
     "id": "vampira-cappucina",
@@ -1459,7 +1509,7 @@
     "cost": null,
     "income_per_second": 257500,
     "rarity": "brainrot_god",
-    "image": "thumbnails/yeti-claus.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -1477,7 +1527,7 @@
     "cost": 1200000000,
     "income_per_second": 7500000,
     "rarity": "secret",
-    "image": "thumbnails/67.png"
+    "image": ""
   },
   {
     "id": "agarrini-ia-palini",
@@ -1533,7 +1583,7 @@
     "cost": 850000000,
     "income_per_second": 4000000,
     "rarity": "secret",
-    "image": "thumbnails/burrito-bandito.png"
+    "image": ""
   },
   {
     "id": "capitano-moby",
@@ -1541,7 +1591,7 @@
     "cost": 125000000000,
     "income_per_second": 160000000,
     "rarity": "secret",
-    "image": "thumbnails/capitano-moby.png"
+    "image": ""
   },
   {
     "id": "celularcini-viciosini",
@@ -1549,7 +1599,7 @@
     "cost": 2700000000,
     "income_per_second": 22500000,
     "rarity": "secret",
-    "image": "thumbnails/celularcini-viciosini.png"
+    "image": ""
   },
   {
     "id": "chachechi",
@@ -1557,7 +1607,7 @@
     "cost": 85000000,
     "income_per_second": 400000,
     "rarity": "secret",
-    "image": "thumbnails/chachechi.png"
+    "image": ""
   },
   {
     "id": "chick-fil-a",
@@ -1597,7 +1647,7 @@
     "cost": 2500000000,
     "income_per_second": 25000000,
     "rarity": "secret",
-    "image": "thumbnails/chillin-chili.png"
+    "image": ""
   },
   {
     "id": "chimpanzini-spiderini",
@@ -1613,7 +1663,7 @@
     "cost": 2500000000,
     "income_per_second": 25000000,
     "rarity": "secret",
-    "image": "thumbnails/chipso-and-queso.png"
+    "image": ""
   },
   {
     "id": "christmas-chachechi",
@@ -1701,7 +1751,7 @@
     "cost": 140000000,
     "income_per_second": 625000,
     "rarity": "secret",
-    "image": "thumbnails/extinct-matteo.png"
+    "image": ""
   },
   {
     "id": "extinct-tralalero",
@@ -1709,7 +1759,7 @@
     "cost": 125000000,
     "income_per_second": 450000,
     "rarity": "secret",
-    "image": "thumbnails/extinct-tralalero.png"
+    "image": ""
   },
   {
     "id": "fishino-clownino",
@@ -1717,7 +1767,7 @@
     "cost": 2100000000,
     "income_per_second": 15500000,
     "rarity": "secret",
-    "image": "thumbnails/fishino-clownino.png"
+    "image": ""
   },
   {
     "id": "fragola-la-la-la",
@@ -1725,7 +1775,7 @@
     "cost": 125000000,
     "income_per_second": 450000,
     "rarity": "secret",
-    "image": "thumbnails/fragola-la-la-la.png"
+    "image": ""
   },
   {
     "id": "fragrama",
@@ -1741,7 +1791,7 @@
     "cost": 40000000000,
     "income_per_second": 100000000,
     "rarity": "secret",
-    "image": "thumbnails/fragrama-and-chocrama.png"
+    "image": ""
   },
   {
     "id": "frankentteo",
@@ -1781,7 +1831,7 @@
     "cost": 250000000,
     "income_per_second": 1000000,
     "rarity": "secret",
-    "image": "thumbnails/graipuss-medussi.png"
+    "image": ""
   },
   {
     "id": "guerriro-digitale",
@@ -1800,6 +1850,14 @@
     "image": "thumbnails/Guest_666.png"
   },
   {
+    "id": "guest666t",
+    "name": "Guest666t",
+    "cost": 1100000000,
+    "income_per_second": 6600000,
+    "rarity": "secret",
+    "image": "thumbnails/Guest666t.png"
+  },
+  {
     "id": "headless",
     "name": "Headless",
     "cost": 150000000000,
@@ -1813,7 +1871,7 @@
     "cost": 150000000000,
     "income_per_second": 175000000,
     "rarity": "secret",
-    "image": "thumbnails/headless-horseman.png"
+    "image": ""
   },
   {
     "id": "ho-ho-ho-sahur",
@@ -1821,7 +1879,7 @@
     "cost": null,
     "income_per_second": 3200000,
     "rarity": "secret",
-    "image": "thumbnails/ho-ho-ho-sahur.png",
+    "image": null,
     "event": "Christmas 2024",
     "source": "Santa's Fuse"
   },
@@ -1839,7 +1897,7 @@
     "cost": 650000000,
     "income_per_second": 2750000,
     "rarity": "secret",
-    "image": "thumbnails/horegini-boom.png"
+    "image": ""
   },
   {
     "id": "jackovacca",
@@ -1863,7 +1921,7 @@
     "cost": 185000000,
     "income_per_second": 725000,
     "rarity": "secret",
-    "image": "thumbnails/karker-sahur.png"
+    "image": ""
   },
   {
     "id": "ketchuru",
@@ -1967,7 +2025,7 @@
     "cost": 225000000,
     "income_per_second": 850000,
     "rarity": "secret",
-    "image": "thumbnails/la-vacca-jacko-linterino.png"
+    "image": ""
   },
   {
     "id": "la-vacca-prese-presente",
@@ -1975,7 +2033,7 @@
     "cost": 160000000,
     "income_per_second": 600000,
     "rarity": "secret",
-    "image": "thumbnails/la-vacca-prese-presente.png"
+    "image": ""
   },
   {
     "id": "la-vacca-saturno-saturnita",
@@ -2007,7 +2065,7 @@
     "cost": 200000000,
     "income_per_second": 750000,
     "rarity": "secret",
-    "image": "thumbnails/las-vaquitas-saturnitas.png"
+    "image": ""
   },
   {
     "id": "lavadorito-spinito",
@@ -2015,7 +2073,7 @@
     "cost": 30000000000,
     "income_per_second": 45000000,
     "rarity": "secret",
-    "image": "thumbnails/lavadorito-spinito.png"
+    "image": ""
   },
   {
     "id": "los-67",
@@ -2263,7 +2321,7 @@
     "cost": 250000000,
     "income_per_second": 1000000,
     "rarity": "secret",
-    "image": "thumbnails/perrito-burrito.png"
+    "image": ""
   },
   {
     "id": "piruleta",
@@ -2279,7 +2337,7 @@
     "cost": 600000000,
     "income_per_second": 2500000,
     "rarity": "secret",
-    "image": "thumbnails/pirulitoita-bicicletaire.png"
+    "image": ""
   },
   {
     "id": "playboi-carti",
@@ -2335,17 +2393,7 @@
     "cost": 1100000000,
     "income_per_second": 6000000,
     "rarity": "secret",
-    "image": "thumbnails/rang-ring-bus.png"
-  },
-  {
-    "id": "reindeer-tralala",
-    "name": "Reindeer Tralala",
-    "cost": null,
-    "income_per_second": 600000,
-    "rarity": "secret",
-    "image": "thumbnails/reindeer-tralala.png",
-    "event": "Christmas 2024",
-    "source": "Winter Hour"
+    "image": ""
   },
   {
     "id": "ringrangbus2",
@@ -2433,7 +2481,7 @@
     "cost": 2200000000,
     "income_per_second": 16500000,
     "rarity": "secret",
-    "image": "thumbnails/tacorita-bicicleta.png"
+    "image": ""
   },
   {
     "id": "tang-tang-kelentang",
@@ -2441,7 +2489,7 @@
     "cost": 4500000000,
     "income_per_second": 33500000,
     "rarity": "secret",
-    "image": "thumbnails/tang-tang-kelentang.png"
+    "image": ""
   },
   {
     "id": "tangtangvfx",
@@ -2473,7 +2521,7 @@
     "cost": 575000000,
     "income_per_second": 2250000,
     "rarity": "secret",
-    "image": "thumbnails/to-to-to-sahur.png"
+    "image": ""
   },
   {
     "id": "torrtuginni-dragonfrutinilucky-block",
@@ -2492,6 +2540,14 @@
     "image": ""
   },
   {
+    "id": "tralaledon",
+    "name": "Tralaledon",
+    "cost": 3000000000,
+    "income_per_second": 27500000,
+    "rarity": "secret",
+    "image": "thumbnails/Orcaledon.png"
+  },
+  {
     "id": "travis-scott",
     "name": "Travis scott",
     "cost": 1800000000,
@@ -2508,12 +2564,20 @@
     "image": "thumbnails/Trenostruzzo_Turbo_3000.png"
   },
   {
+    "id": "trenostruzzo4000",
+    "name": "Trenostruzzo4000",
+    "cost": 100000000,
+    "income_per_second": 310000,
+    "rarity": "secret",
+    "image": "thumbnails/Trenostruzzo4000.png"
+  },
+  {
     "id": "trickolino",
     "name": "Trickolino",
     "cost": 235000000,
     "income_per_second": 900000,
     "rarity": "secret",
-    "image": "thumbnails/trickolino.png"
+    "image": ""
   },
   {
     "id": "trickortreat",
@@ -2537,7 +2601,7 @@
     "cost": 110000000,
     "income_per_second": 500000,
     "rarity": "secret",
-    "image": "thumbnails/vulturino-skeletono.png"
+    "image": ""
   },
   {
     "id": "yess",

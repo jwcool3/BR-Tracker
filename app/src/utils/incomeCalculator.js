@@ -67,7 +67,20 @@ export const TRAITS = {
 
 /**
  * Calculate income per second with mutations and traits
- * Formula: base * mutation_multiplier * (1 + sum_of_trait_multipliers)
+ * 
+ * CORRECT FORMULA (from wiki):
+ * - base * mutation_multiplier * trait_total_multiplier
+ * 
+ * TRAIT STACKING (IMPORTANT):
+ * - First trait: Uses full multiplier (e.g., Strawberry 8x = 8x)
+ * - Additional traits: Each adds (multiplier - 1) (e.g., Taco 3x = +2x)
+ * 
+ * Example: Strawberry (8x) + Taco (3x)
+ * - First: 8x from Strawberry
+ * - Second: +2x from Taco (3 - 1)
+ * - Total: 10x
+ * 
+ * Wiki source: https://stealabrainrot.fandom.com/wiki/Traits
  */
 export function calculateIncome(baseIncome, mutation = 'none', traits = []) {
   if (!baseIncome || baseIncome <= 0) return 0
@@ -76,35 +89,50 @@ export function calculateIncome(baseIncome, mutation = 'none', traits = []) {
   const mutationData = MUTATIONS[mutation] || MUTATIONS.none
   const mutationMultiplier = mutationData.multiplier
 
-  // Calculate traits multiplier (traits stack additively, then multiply)
-  let traitsMultiplierSum = 0
+  // Calculate traits multiplier (CORRECT METHOD)
+  let traitsMultiplier = 1 // Start at base 1x (no traits)
   const appliedTraits = []
   
-  for (const traitKey of traits) {
-    const traitData = TRAITS[traitKey]
-    if (traitData) {
-      traitsMultiplierSum += traitData.multiplier
-      appliedTraits.push({ key: traitKey, ...traitData })
+  if (traits && traits.length > 0) {
+    // Sort traits by multiplier (highest first) for best calculation
+    const sortedTraits = [...traits]
+      .map(traitKey => ({ key: traitKey, ...TRAITS[traitKey] }))
+      .filter(t => t.multiplier !== undefined)
+      .sort((a, b) => Math.abs(b.multiplier) - Math.abs(a.multiplier))
+    
+    if (sortedTraits.length > 0) {
+      // First trait: Use FULL multiplier (e.g., Strawberry 8x = 8x)
+      traitsMultiplier = sortedTraits[0].multiplier
+      appliedTraits.push(sortedTraits[0])
+      
+      // Additional traits: Add (multiplier - 1) for each (e.g., Taco 3x = +2x)
+      for (let i = 1; i < sortedTraits.length; i++) {
+        const trait = sortedTraits[i]
+        traitsMultiplier += (trait.multiplier - 1)
+        appliedTraits.push(trait)
+      }
     }
   }
 
-  // Formula: base * mutation_multiplier * (1 + sum_of_trait_multipliers)
-  const traitsMultiplier = 1 + traitsMultiplierSum
+  // Formula: base * mutation * traits
   const totalIncome = Math.floor(baseIncome * mutationMultiplier * traitsMultiplier)
+
+  // Calculate breakdown for display
+  const traitsAdded = appliedTraits.reduce((sum, t) => sum + (t.multiplier - 1), 0)
 
   return {
     baseIncome,
     mutation: { key: mutation, ...mutationData },
     mutationMultiplier,
     traits: appliedTraits,
-    traitsMultiplierSum,
+    traitsMultiplierSum: traitsAdded,
     traitsMultiplier,
     totalIncome,
     breakdown: {
       step1: `Base: $${baseIncome.toLocaleString()}/s`,
       step2: `× Mutation (${mutationData.name}): ${mutationMultiplier}x = $${Math.floor(baseIncome * mutationMultiplier).toLocaleString()}/s`,
       step3: appliedTraits.length > 0
-        ? `× Traits (1 + ${traitsMultiplierSum}): ${traitsMultiplier}x = $${totalIncome.toLocaleString()}/s`
+        ? `× Traits (1 + ${traitsAdded.toFixed(1)}): ${traitsMultiplier.toFixed(1)}x = $${totalIncome.toLocaleString()}/s`
         : 'No traits applied',
       final: `Final: $${totalIncome.toLocaleString()}/s`
     }

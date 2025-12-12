@@ -12,7 +12,9 @@ export default function BrainrotCard({
   brainrot,
   isOwned,
   collectionEntry,
-  quantity: ownedQuantity = 1, // How many copies are owned
+  collectionIndex = -1, // Index in collection array
+  copyNumber = 0, // Which copy (1, 2, 3, etc.)
+  totalCopies = 0, // Total number of copies owned
   account,
   onToggleOwned,
   onUpdate
@@ -201,12 +203,14 @@ export default function BrainrotCard({
         </div>
       )}
 
-      {/* Owned Badge with Quantity */}
+      {/* Owned Badge with Copy Number */}
       {isOwned && (
         <div className="absolute top-2 right-2 z-10">
           <div className="flex items-center gap-1 px-2 py-1 bg-green-600 rounded-full text-xs font-bold">
             <Check size={12} />
-            <span>Owned {ownedQuantity > 1 && `×${ownedQuantity}`}</span>
+            <span>
+              {totalCopies > 1 ? `Copy ${copyNumber} of ${totalCopies}` : 'Owned'}
+            </span>
           </div>
         </div>
       )}
@@ -292,7 +296,7 @@ export default function BrainrotCard({
             className="flex-1 py-2 rounded-lg font-medium transition-all text-sm bg-red-600/20 text-red-400 hover:bg-red-600 hover:text-white border border-red-600/50 flex items-center justify-center gap-2"
           >
             <Minus size={16} />
-            {ownedQuantity > 1 ? `Remove 1 (${ownedQuantity} total)` : 'Remove from Account'}
+            {totalCopies > 1 ? `Remove Copy ${copyNumber}` : 'Remove from Account'}
           </button>
         )}
       </div>

@@ -1,0 +1,16 @@
+{
+  "brainrots": [
+    {
+      "name": "Reindeer Tralala",
+      "rarity": "secret",
+      "income_per_second": 600000,
+      "source": "Winter Hour",
+      "event": "Christmas 2024",
+      "note": "Needed for La Jolly Grande redemption"
+    }
+  ],
+  "count": 1,
+  "source": "Winter Hour event",
+  "note": "Spawns every 2 hours during Christmas event"
+}
+
