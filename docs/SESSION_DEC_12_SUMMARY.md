@@ -6,7 +6,19 @@
 
 ## ✅ What We Accomplished
 
-### 0. **Fuse Checkbox Feature** 🔥
+### 0. **Project Cleanup** 🧹
+- Removed 32 redundant files (old backups, one-time scripts, feature docs)
+- Consolidated documentation: 19 markdown files → 6 essential docs
+- Cleaned data directory: 26 files → 14 essential files
+- Cleaned scripts directory: 13 scripts → 7 essential scripts
+- All old files preserved in _archive/ for reference
+- Clear, maintainable project structure
+
+**Impact:** Easier to navigate, find documentation, and onboard new contributors. Saved ~1-2 MB of redundant files.
+
+---
+
+### 1. **Fuse Checkbox Feature** 🔥
 - Added simple checkbox to track fusing status
 - Visible on all account views (card, row, modal)
 - New Global Stats: "🔥 Fusing X/Y"
@@ -245,9 +257,10 @@
 ## 📊 Statistics
 
 ### Development:
-- **Features Added:** 9 major features
+- **Features Added:** 10 major features (including cleanup)
 - **Bugs Fixed:** 2 (quantity, missing brainrots)
-- **Files Created:** 13 new files
+- **Files Created:** 14 new files
+- **Files Cleaned:** 32 redundant files removed/archived
 - **Files Modified:** 12 existing files
 - **Time Invested:** ~3 hours
 
