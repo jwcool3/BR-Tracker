@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import { useDraggable } from '@dnd-kit/core'
 import { useBulkSelection } from '../contexts/BulkSelectionContext'
-import { CheckSquare, Square, Copy, Trash2 } from 'lucide-react'
+import { CheckSquare, Square, Copy, Trash2, Camera } from 'lucide-react'
+import { useToast } from '../hooks/useToast'
 import DetailHeader from '../components/detail/DetailHeader'
 import AccountControls from '../components/detail/AccountControls'
 import FilterBar from '../components/detail/FilterBar'
 import BrainrotGrid from '../components/detail/BrainrotGrid'
+import FloorScannerUploader from '../components/scanner/FloorScannerUploaderSimple'
+import FloorVerificationScreen from '../components/scanner/FloorVerificationScreen'
 
 /**
  * Account Detail View - Manage one account's brainrots
@@ -29,6 +32,10 @@ export default function AccountDetailView({
   const [showHighTierOnly, setShowHighTierOnly] = useState(true) // Default to high-tier when adding
   const [showOnlyWithThumbnails, setShowOnlyWithThumbnails] = useState(false) // Show all by default (thumbnails re-enabled)
   
+  // Floor Scanner
+  const [showScanner, setShowScanner] = useState(false)
+  const [scanResult, setScanResult] = useState(null)
+  
   // Bulk selection
   const {
     bulkMode,
@@ -37,6 +44,9 @@ export default function AccountDetailView({
     selectAll,
     clearSelection
   } = useBulkSelection()
+  
+  // Toast notifications
+  const { showToast } = useToast()
   
   // Show loading state if brainrots aren't loaded yet
   if (!brainrots || brainrots.length === 0) {
@@ -153,6 +163,44 @@ export default function AccountDetailView({
     ))
   }
 
+  // Floor Scanner Handlers
+  const handleScanComplete = (result) => {
+    console.log('Floor scan complete:', result)
+    setShowScanner(false)
+    setScanResult(result)
+  }
+
+  const handleConfirmScan = (verifiedCards) => {
+    console.log('Confirming scan:', verifiedCards.length, 'cards')
+    
+    // Add all verified cards to account
+    const newEntries = verifiedCards.map(card => ({
+      id: `${account.id}-${card.matchedBrainrot.id}-${Date.now()}-${Math.random()}`,
+      brainrotId: card.matchedBrainrot.id,
+      mutation: card.parsedText.mutation || 'none',
+      traits: card.detectedModifiers?.traits || [],
+      floor: 1,
+      acquired: new Date().toISOString(),
+      calculatedIncome: card.parsedText.income || card.matchedBrainrot.income_per_second || 0
+    }))
+    
+    console.log('Added brainrots with mutations and traits:', newEntries.map(e => ({
+      name: e.brainrotId,
+      mutation: e.mutation,
+      traits: e.traits
+    })))
+    
+    onUpdateCollection([...collection, ...newEntries])
+    setScanResult(null)
+    
+    showToast('success', `✅ Added ${verifiedCards.length} brainrot${verifiedCards.length !== 1 ? 's' : ''} to ${account.name}`)
+  }
+
+  const handleRetryScan = () => {
+    setScanResult(null)
+    setShowScanner(true)
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <DetailHeader account={account} onBack={onBack} onUpdateAccount={onUpdateAccount} />
@@ -207,12 +255,25 @@ export default function AccountDetailView({
                 {bulkMode ? 'Exit Bulk Mode' : 'Bulk Mode'}
               </button>
               {!bulkMode && (
-                <button
-                  onClick={() => setOwnershipFilter('not-owned')}
-                  className="text-sm px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded transition-colors"
-                >
-                  + Add Brainrots
-                </button>
+                <>
+                  <button
+                    onClick={() => {
+                      console.log('📸 Scan Floor button clicked')
+                      setShowScanner(true)
+                    }}
+                    className="text-sm px-3 py-1 bg-purple-600 hover:bg-purple-700 rounded transition-colors flex items-center gap-2"
+                    title="Scan entire floor at once!"
+                  >
+                    <Camera size={16} />
+                    📸 Scan Floor
+                  </button>
+                  <button
+                    onClick={() => setOwnershipFilter('not-owned')}
+                    className="text-sm px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+                  >
+                    + Add Brainrots
+                  </button>
+                </>
               )}
             </>
           )}
@@ -301,6 +362,58 @@ export default function AccountDetailView({
         onUpdateBrainrot={updateBrainrot}
         onTransfer={onTransfer}
       />
+
+      {/* Floor Scanner Modal */}
+      {showScanner && (
+        <div 
+          className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-[9999]"
+          onClick={() => {
+            console.log('Modal backdrop clicked')
+            setShowScanner(false)
+          }}
+        >
+          <div 
+            className="bg-slate-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border-2 border-purple-500"
+            onClick={(e) => {
+              console.log('Modal content clicked, stopping propagation')
+              e.stopPropagation()
+            }}
+          >
+            <div className="p-6">
+              <FloorScannerUploader
+                brainrots={brainrots}
+                onScanComplete={handleScanComplete}
+                onCancel={() => {
+                  console.log('Cancel clicked')
+                  setShowScanner(false)
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Floor Verification Modal */}
+      {scanResult && (
+        <div 
+          className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-[9999]"
+          onClick={() => setScanResult(null)}
+        >
+          <div 
+            className="bg-slate-800 rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-6">
+              <FloorVerificationScreen
+                scanResult={scanResult}
+                account={account}
+                onConfirmAll={handleConfirmScan}
+                onRetry={handleRetryScan}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

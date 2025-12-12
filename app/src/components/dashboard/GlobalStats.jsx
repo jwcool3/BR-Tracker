@@ -1,10 +1,22 @@
 import { calculateSlots } from '../../utils/rebirthCalculator'
+import { quickCalculateIncome } from '../../utils/incomeCalculator'
+
+/**
+ * Format income with K/M/B/T suffixes
+ */
+function formatIncome(income) {
+  if (income >= 1e12) return `$${(income / 1e12).toFixed(2)}T`
+  if (income >= 1e9) return `$${(income / 1e9).toFixed(2)}B`
+  if (income >= 1e6) return `$${(income / 1e6).toFixed(2)}M`
+  if (income >= 1e3) return `$${(income / 1e3).toFixed(2)}K`
+  return `$${income.toFixed(2)}`
+}
 
 /**
  * Global Stats - Shows aggregate stats across all accounts
  * Includes status breakdown and attention alerts
  */
-export default function GlobalStats({ accounts, collections }) {
+export default function GlobalStats({ accounts, collections, brainrotsDatabase }) {
   const totalBrainrots = Object.values(collections).reduce((sum, coll) => sum + coll.length, 0)
   const totalAccounts = accounts.length
   const avgPerAccount = totalAccounts > 0 ? (totalBrainrots / totalAccounts).toFixed(1) : 0
@@ -36,8 +48,26 @@ export default function GlobalStats({ accounts, collections }) {
 
   const needsAttention = statusBreakdown.full + statusBreakdown.critical + statusBreakdown.high
   
-  // TODO: Calculate total income across all accounts
-  const totalIncome = 0
+  // Calculate total income across all accounts
+  const totalIncome = Object.values(collections).reduce((total, accountCollection) => {
+    const accountIncome = accountCollection.reduce((sum, entry) => {
+      // Find brainrot in database
+      const brainrot = brainrotsDatabase?.find(br => br.id === entry.brainrotId)
+      if (!brainrot) return sum
+      
+      // Calculate income with mutation and modifiers
+      const baseIncome = brainrot.base_income || brainrot.income_per_second || 0
+      const income = quickCalculateIncome(
+        baseIncome,
+        entry.mutation,
+        entry.modifiers || []
+      )
+      
+      return sum + income
+    }, 0)
+    
+    return total + accountIncome
+  }, 0)
 
   return (
     <div className="bg-slate-800 rounded-lg p-6 mb-6">
@@ -105,10 +135,12 @@ export default function GlobalStats({ accounts, collections }) {
         </div>
       )}
       
-      {totalIncome > 0 && (
+      {totalAccounts > 0 && (
         <div className="mt-4 pt-4 border-t border-slate-700">
-          <div className="text-gray-400 text-sm">Total Income Across All Accounts</div>
-          <div className="text-2xl font-bold text-green-400">${totalIncome.toLocaleString()}/s</div>
+          <div className="text-gray-400 text-sm mb-1">💰 Total Income Across All Accounts</div>
+          <div className="text-3xl font-bold text-green-400">
+            {formatIncome(totalIncome)}/s
+          </div>
         </div>
       )}
     </div>

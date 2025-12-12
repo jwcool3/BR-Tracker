@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Noobini Santanini",
+    "rarity": "common",
+    "income": "11/s",
+    "income_per_second": 11,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Frogo Elfo",
+    "rarity": "rare",
+    "income": "67/s",
+    "income_per_second": 67,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Penguin Tree",
+    "rarity": "epic",
+    "income": "270/s",
+    "income_per_second": 270,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Chocco Bunny",
+    "rarity": "legendary",
+    "income": "1.4K/s",
+    "income_per_second": 1400,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Sealo Regalo",
+    "rarity": "legendary",
+    "income": "1.8K/s",
+    "income_per_second": 1800,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Jingle Jingle Sahur",
+    "rarity": "mythic",
+    "income": "12.25K/s",
+    "income_per_second": 12250,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Tree Tree Tree Sahur",
+    "rarity": "mythic",
+    "income": "17K/s",
+    "income_per_second": 17000,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Yeti Claus",
+    "rarity": "brainrot_god",
+    "income": "257.5K/s",
+    "income_per_second": 257500,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Ginger Globo",
+    "rarity": "brainrot_god",
+    "income": "257.5K/s",
+    "income_per_second": 257500,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Ginger Cisterna",
+    "rarity": "brainrot_god",
+    "income": "293.5K/s",
+    "income_per_second": 293500,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "La Vacca Prese Presente",
+    "rarity": "secret",
+    "income": "600K/s",
+    "income_per_second": 600000,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Ho Ho Ho Sahur",
+    "rarity": "secret",
+    "income": "3.2M/s",
+    "income_per_second": 3200000,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Chicleteira Noelteira",
+    "rarity": "secret",
+    "income": "15M/s",
+    "income_per_second": 15000000,
+    "source": "Santa's Fuse"
+  },
+  {
+    "name": "Cooki and Milki",
+    "rarity": "secret",
+    "income": "155M/s",
+    "income_per_second": 155000000,
+    "source": "Santa's Fuse"
+  }
+]

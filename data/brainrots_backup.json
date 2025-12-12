@@ -448,14 +448,6 @@
     "image": "thumbnails/Sealo_Regalo.png"
   },
   {
-    "name": "Chimpanzini Bananini",
-    "rarity": "legendary",
-    "cost": 50000,
-    "income_per_second": 300,
-    "image": "thumbnails/Chimpanzini_Bananini.png",
-    "id": "chimpanzini-bananini"
-  },
-  {
     "id": "mummio-rappitto",
     "name": "Mummio Rappitto",
     "cost": 47500,
@@ -470,14 +462,6 @@
     "income_per_second": 450,
     "rarity": "legendary",
     "image": "thumbnails/TirilikalikaTirilikalakoTransparent.png"
-  },
-  {
-    "name": "Ballerina Cappuccina",
-    "rarity": "legendary",
-    "cost": 100000,
-    "income_per_second": 500,
-    "image": "thumbnails/Ballerina_Cappuccina.png",
-    "id": "ballerina-cappuccina"
   },
   {
     "id": "chef-crabracadabra",
@@ -552,6 +536,14 @@
     "image": "thumbnails/Clickerinocrabo.png"
   },
   {
+    "id": "festive-lucky-block",
+    "name": "Festive Lucky Block",
+    "cost": 0,
+    "income_per_second": 1000,
+    "rarity": "epic",
+    "image": "thumbnails/Festive_Lucky_Block.png"
+  },
+  {
     "id": "pipi-potato",
     "name": "Pipi Potato",
     "cost": 265000,
@@ -576,12 +568,20 @@
     "image": "thumbnails/Strawberrelli_Flamingelli.png"
   },
   {
+    "id": "cocosini",
+    "name": "Cocosini",
+    "cost": 285000,
+    "income_per_second": 1200,
+    "rarity": "legendary",
+    "image": "thumbnails/Cocosini.png"
+  },
+  {
     "id": "cocosini-mama",
     "name": "Cocosini Mama",
     "cost": 285000,
     "income_per_second": 1200,
     "rarity": "legendary",
-    "image": "thumbnails/Cocosini.png"
+    "image": "thumbnails/Cocosini_Mama.png"
   },
   {
     "id": "quackula",
@@ -680,20 +680,20 @@
     "image": "thumbnails/rhino-toasterino.png"
   },
   {
-    "id": "bruto-gialutto",
-    "name": "Bruto Gialutto",
+    "id": "brutto-gialutto",
+    "name": "Brutto Gialutto",
     "cost": 600000,
     "income_per_second": 3000,
     "rarity": "mythic",
     "image": "thumbnails/Bruto_gialutto.png"
   },
   {
-    "id": "spioniro-golubiro",
-    "name": "Spioniro Golubiro",
+    "id": "spioniro-golubirolucky-block",
+    "name": "Spioniro Golubiro(Lucky Block)",
     "cost": 750000,
     "income_per_second": 3500,
     "rarity": "mythic",
-    "image": "thumbnails/Spioniro_Golubiro.png"
+    "image": ""
   },
   {
     "id": "bombombini-gusini",
@@ -704,12 +704,12 @@
     "image": "thumbnails/bombombini-gusini.png"
   },
   {
-    "id": "zibra-zubra-zibralini",
-    "name": "Zibra Zubra Zibralini",
+    "id": "zibra-zubra-zibralinilucky-block",
+    "name": "Zibra Zubra Zibralini(Lucky Block)",
     "cost": 1000000,
     "income_per_second": 6000,
     "rarity": "mythic",
-    "image": "thumbnails/Zibra_Zubra_Zibralini.png"
+    "image": ""
   },
   {
     "id": "avocadorilla",
@@ -728,12 +728,12 @@
     "image": "thumbnails/Cavallo_Virtuoso.png"
   },
   {
-    "id": "tigrilini-watermelini",
-    "name": "Tigrilini Watermelini",
+    "id": "tigrilini-watermelinilucky-block",
+    "name": "Tigrilini Watermelini(Lucky Block)",
     "cost": 1700000,
     "income_per_second": 7500,
     "rarity": "mythic",
-    "image": "thumbnails/Tigrilini_Watermelini.png"
+    "image": ""
   },
   {
     "id": "gorillo-subwoofero",
@@ -790,14 +790,6 @@
     "income_per_second": 9000,
     "rarity": "mythic",
     "image": "thumbnails/Ganganzelli_Trulala.png"
-  },
-  {
-    "name": "Bombardiro Crocodilo",
-    "rarity": "mythic",
-    "cost": 2000000,
-    "income_per_second": 9000,
-    "image": "thumbnails/Bombardiro_Crocodilo.png",
-    "id": "bombardiro-crocodilo"
   },
   {
     "id": "te-te-te-sahur",
@@ -872,16 +864,16 @@
     "image": "thumbnails/Watermelon_Doggy.png"
   },
   {
-    "id": "carloooo",
-    "name": "Carloooo",
+    "id": "carloooo-lucky-block",
+    "name": "Carloooo (Lucky Block)",
     "cost": 4500000,
     "income_per_second": 13500,
     "rarity": "mythic",
     "image": "thumbnails/Los_lucky_blockss.png"
   },
   {
-    "id": "carloo",
-    "name": "Carloo",
+    "id": "carlooooo",
+    "name": "Carlooooo",
     "cost": 4500000,
     "income_per_second": 13500,
     "rarity": "mythic",
@@ -904,12 +896,12 @@
     "image": "thumbnails/Lol_Fridge.png"
   },
   {
-    "id": "carrotini-brainini",
-    "name": "Carrotini Brainini",
+    "id": "carrotini-brainini-lucky-block",
+    "name": "Carrotini Brainini (Lucky Block)",
     "cost": 4700000,
     "income_per_second": 15000,
     "rarity": "mythic",
-    "image": "thumbnails/Carrotini_Brainini.png"
+    "image": ""
   },
   {
     "id": "centrucci-nuclucci",
@@ -1016,8 +1008,8 @@
     "image": "thumbnails/los-crocodillitos.png"
   },
   {
-    "id": "tigroligre-frutonni",
-    "name": "Tigroligre Frutonni",
+    "id": "tigroligre-frutonnilucky-block",
+    "name": "Tigroligre Frutonni(Lucky Block)",
     "cost": 14000000,
     "income_per_second": 60000,
     "rarity": "brainrot_god",
@@ -1088,12 +1080,12 @@
     "image": "thumbnails/alessio.png"
   },
   {
-    "id": "orcalero-orcala",
-    "name": "Orcalero Orcala",
+    "id": "orcalero-orcalalucky-block",
+    "name": "Orcalero Orcala(Lucky Block)",
     "cost": 25000000,
     "income_per_second": 100000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/Orcalero_Orcala.png"
+    "image": ""
   },
   {
     "id": "tralalita",
@@ -1208,20 +1200,12 @@
     "image": "thumbnails/Ballerinolololo.png"
   },
   {
-    "name": "Coffin Tung Tung Tung Sahur",
-    "rarity": "secret",
-    "cost": 50000000,
-    "income_per_second": 200000,
-    "image": "thumbnails/Coffin_Tung_Tung_Tung_Sahur.png",
-    "id": "coffin-tung-tung-tung-sahur"
-  },
-  {
-    "id": "bulbito-bandito-traktorito",
-    "name": "Bulbito Bandito Traktorito",
+    "id": "bulbito-bandito-traktoritolucky-block",
+    "name": "Bulbito Bandito Traktorito(Lucky Block)",
     "cost": 35000000,
     "income_per_second": 205000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/Bulbito_Bandito_Traktorito.png"
+    "image": ""
   },
   {
     "id": "los-tungtungtungcitos",
@@ -1272,8 +1256,8 @@
     "image": "thumbnails/los-bombinitos.png"
   },
   {
-    "id": "bombardini-tortini",
-    "name": "Bombardini Tortini",
+    "id": "bombardini-tortinii",
+    "name": "Bombardini Tortinii",
     "cost": 50000000,
     "income_per_second": 225000,
     "rarity": "brainrot_god",
@@ -1424,12 +1408,20 @@
     "image": "thumbnails/La_Gingerbread_Kepat.png"
   },
   {
+    "id": "dug-dug-dug-brainrot",
+    "name": "DUG DUG DUG BRAINROT",
+    "cost": 45500000,
+    "income_per_second": 255000,
+    "rarity": "brainrot_god",
+    "image": "thumbnails/DUG_DUG_DUG_BRAINROT.png"
+  },
+  {
     "id": "dug-dug-dug",
     "name": "Dug Dug Dug",
     "cost": 45500000,
     "income_per_second": 255000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/DUG_DUG_DUG_BRAINROT.png"
+    "image": "thumbnails/Dul_Dul_Dul.png"
   },
   {
     "id": "yeti-claus",
@@ -1496,12 +1488,12 @@
     "image": "thumbnails/Los_Gattitos.png"
   },
   {
-    "id": "mastodontico-telepiedone",
-    "name": "Mastodontico Telepiedone",
+    "id": "mastodontico-telepiedone-lucky-block",
+    "name": "Mastodontico Telepiedone (Lucky Block)",
     "cost": 47500000,
     "income_per_second": 275000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/Mastodontico_Telepiedone.png"
+    "image": ""
   },
   {
     "id": "anpali-babel",
@@ -1665,7 +1657,7 @@
   },
   {
     "id": "alvin-and-the-chipmunks",
-    "name": "Alvin And The Chipmunks",
+    "name": "Alvin and the chipmunks",
     "cost": 100000000,
     "income_per_second": 325000,
     "rarity": "secret",
@@ -1696,12 +1688,12 @@
     "image": "thumbnails/Los_Spyderinis.png"
   },
   {
-    "id": "torrtuginni-dragonfrutini",
-    "name": "Torrtuginni Dragonfrutini",
+    "id": "torrtuginni-dragonfrutinilucky-block",
+    "name": "Torrtuginni Dragonfrutini(Lucky Block)",
     "cost": 125000000,
     "income_per_second": 350000,
     "rarity": "secret",
-    "image": "thumbnails/Torrtuginni_Dragonfrutini.png"
+    "image": ""
   },
   {
     "id": "dul-dul-dul",
@@ -1736,8 +1728,8 @@
     "image": "thumbnails/Christmas_Chachechi.png"
   },
   {
-    "id": "agarrini-la-palini",
-    "name": "Agarrini La Palini",
+    "id": "agarrini-ia-palini",
+    "name": "Agarrini Ia Palini",
     "cost": 80000000,
     "income_per_second": 425000,
     "rarity": "secret",
@@ -1816,6 +1808,14 @@
     "image": "thumbnails/ZombieTralala.png"
   },
   {
+    "id": "25",
+    "name": "25",
+    "cost": 0,
+    "income_per_second": 500000,
+    "rarity": "secret",
+    "image": "thumbnails/25.png"
+  },
+  {
     "id": "boatito-auratito",
     "name": "Boatito Auratito",
     "cost": 115000000,
@@ -1846,14 +1846,6 @@
     "income_per_second": 575000,
     "rarity": "secret",
     "image": "thumbnails/Yessmyexamine.png"
-  },
-  {
-    "name": "Reindeer Tralala",
-    "rarity": "secret",
-    "cost": 160000000,
-    "income_per_second": 600000,
-    "image": "thumbnails/Reindeer_Tralala.png",
-    "id": "reindeer-tralala"
   },
   {
     "id": "la-vacca-prese-presente",
@@ -1992,15 +1984,6 @@
     "image": "thumbnails/La_Cucaracha.png"
   },
   {
-    "id": "please-my-present",
-    "name": "Please my Present",
-    "cost": 350000000,
-    "income_per_second": 1300000,
-    "base_income": 1300000,
-    "rarity": "secret",
-    "image": "thumbnails/Please_my_Present.png"
-  },
-  {
     "id": "cuadramat-and-pakrahmatmamat",
     "name": "Cuadramat and Pakrahmatmamat",
     "cost": 400000000,
@@ -2025,14 +2008,6 @@
     "image": "thumbnails/NoMyHotspot.png"
   },
   {
-    "name": "1x1x1x1",
-    "rarity": "og",
-    "cost": 500000000,
-    "income_per_second": 1500000,
-    "image": "thumbnails/1x1x1x1.png",
-    "id": "1x1x1x1"
-  },
-  {
     "id": "noo-my-examine",
     "name": "Noo My Examine",
     "cost": 525000000,
@@ -2055,15 +2030,6 @@
     "income_per_second": 2000000,
     "rarity": "secret",
     "image": "thumbnails/Telemorte.png"
-  },
-  {
-    "id": "list-list-list-sahur",
-    "name": "List List List Sahur",
-    "cost": 550000000,
-    "income_per_second": 2000000,
-    "base_income": 2000000,
-    "rarity": "secret",
-    "image": "thumbnails/List_List_List_Sahur.png"
   },
   {
     "id": "to-to-to-sahur",
@@ -2096,6 +2062,14 @@
     "income_per_second": 2500000,
     "rarity": "secret",
     "image": "thumbnails/Pot_Hotspot.png"
+  },
+  {
+    "id": "pot-hotspotlucky-block",
+    "name": "Pot Hotspot(Lucky Block)",
+    "cost": 600000000,
+    "income_per_second": 2500000,
+    "rarity": "secret",
+    "image": ""
   },
   {
     "id": "horegini-boom",
@@ -2224,6 +2198,14 @@
     "income_per_second": 7000000,
     "rarity": "secret",
     "image": "thumbnails/Chicleteira.png"
+  },
+  {
+    "id": "67",
+    "name": "67",
+    "cost": 1200000000,
+    "income_per_second": 7500000,
+    "rarity": "secret",
+    "image": "thumbnails/67.png"
   },
   {
     "id": "los-burritos",
@@ -2395,11 +2377,19 @@
   },
   {
     "id": "chick-fil-a",
-    "name": "Chick Fil A",
+    "name": "Chick fil a",
     "cost": 2500000000,
     "income_per_second": 25000000,
     "rarity": "secret",
     "image": "thumbnails/Chick_fil_a.png"
+  },
+  {
+    "id": "chilin",
+    "name": "Chilin",
+    "cost": 2500000000,
+    "income_per_second": 25000000,
+    "rarity": "secret",
+    "image": "thumbnails/Chilin.png"
   },
   {
     "id": "chillin-chili",
@@ -2407,7 +2397,7 @@
     "cost": 2500000000,
     "income_per_second": 25000000,
     "rarity": "secret",
-    "image": "thumbnails/Chilin.png"
+    "image": "thumbnails/chillin-chili.png"
   },
   {
     "id": "chipso-and-queso",
@@ -2450,12 +2440,20 @@
     "image": "thumbnails/Orcaledon.png"
   },
   {
-    "id": "esok-sekolah",
-    "name": "Esok Sekolah",
+    "id": "esok-sekolah-lucky-block",
+    "name": "Esok Sekolah (Lucky Block)",
     "cost": 3500000000,
     "income_per_second": 30000000,
     "rarity": "secret",
-    "image": "thumbnails/Esok_Sekolah.png"
+    "image": ""
+  },
+  {
+    "id": "esoksekolah2",
+    "name": "EsokSekolah2",
+    "cost": 3500000000,
+    "income_per_second": 30000000,
+    "rarity": "secret",
+    "image": "thumbnails/EsokSekolah2.png"
   },
   {
     "id": "los-puggies",
@@ -2468,7 +2466,7 @@
   {
     "id": "la-jolly-grande",
     "name": "La Jolly Grande",
-    "cost": 3500000000,
+    "cost": 30000000,
     "income_per_second": 30000000,
     "rarity": "secret",
     "image": "thumbnails/La_Jolly_Grande.png"
@@ -2594,12 +2592,12 @@
     "image": "thumbnails/Garamadundung.png"
   },
   {
-    "id": "spaghetti-tualetti",
-    "name": "Spaghetti Tualetti",
+    "id": "spaghetti-tualetti-lucky-block",
+    "name": "Spaghetti Tualetti (Lucky Block)",
     "cost": 15000000000,
     "income_per_second": 60000000,
     "rarity": "secret",
-    "image": "thumbnails/Spaghetti_Tualetti.png"
+    "image": ""
   },
   {
     "id": "spaghettitualetti",
@@ -2690,6 +2688,14 @@
     "image": "thumbnails/Cooki_and_milki.png"
   },
   {
+    "id": "cookie",
+    "name": "Cookie",
+    "cost": 100000000000,
+    "income_per_second": 155000000,
+    "rarity": "secret",
+    "image": "thumbnails/Cookie_no_bg.png"
+  },
+  {
     "id": "capitano-moby",
     "name": "Capitano Moby",
     "cost": 125000000000,
@@ -2738,8 +2744,8 @@
     "image": "thumbnails/John_pork_fan.png"
   },
   {
-    "id": "developini-braziliaspidini",
-    "name": "Developini Braziliaspidini",
+    "id": "developini",
+    "name": "Developini",
     "cost": 1000000000000,
     "income_per_second": 2500000000,
     "rarity": "secret",

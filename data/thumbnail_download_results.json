@@ -1,0 +1,67 @@
+{
+  "found": [
+    {
+      "name": "Bulbito Bandito Traktorito(Lucky Block)",
+      "filename": "Bulbito_Bandito_Traktorito.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/e/eb/Five_hotdogs_for_dinner_tonight.png/revision/latest"
+    },
+    {
+      "name": "Carrotini Brainini (Lucky Block)",
+      "filename": "Carrotini_Brainini.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/e/ef/Famine.png/revision/latest"
+    },
+    {
+      "name": "Esok Sekolah (Lucky Block)",
+      "filename": "Esok_Sekolah.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/2/2a/EsokSekolah2.png/revision/latest"
+    },
+    {
+      "name": "Mastodontico Telepiedone (Lucky Block)",
+      "filename": "Mastodontico_Telepiedone.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/a/a5/Clanker.png/revision/latest"
+    },
+    {
+      "name": "Orcalero Orcala(Lucky Block)",
+      "filename": "Orcalero_Orcala.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/d/d4/Orcalero_Orcala.png/revision/latest"
+    },
+    {
+      "name": "Pot Hotspot(Lucky Block)",
+      "filename": "Pot_Hotspot.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/4/4b/Pot_Hotspot.png/revision/latest"
+    },
+    {
+      "name": "Spaghetti Tualetti (Lucky Block)",
+      "filename": "Spaghetti_Tualetti.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/b/b8/Spaghettitualetti.png/revision/latest"
+    },
+    {
+      "name": "Spioniro Golubiro(Lucky Block)",
+      "filename": "Spioniro_Golubiro.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/4/40/Weed.png/revision/latest"
+    },
+    {
+      "name": "Tigrilini Watermelini(Lucky Block)",
+      "filename": "Tigrilini_Watermelini.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/5/59/Tigrilini_Watermelini1.png/revision/latest"
+    },
+    {
+      "name": "Torrtuginni Dragonfrutini(Lucky Block)",
+      "filename": "Torrtuginni_Dragonfrutini.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/8/8c/Crack.png/revision/latest"
+    },
+    {
+      "name": "Zibra Zubra Zibralini(Lucky Block)",
+      "filename": "Zibra_Zubra_Zibralini.png",
+      "url": "https://static.wikia.nocookie.net/stealabr/images/f/fc/Zibra_Zubra_Zibralini.png/revision/latest"
+    }
+  ],
+  "not_found": [
+    "Ketchuru and Masturu",
+    "Nuclearo Dinosauro",
+    "Piccionetta Macchina",
+    "Pumpkin Spyderini",
+    "Tralalalaledon"
+  ],
+  "download_failed": []
+}

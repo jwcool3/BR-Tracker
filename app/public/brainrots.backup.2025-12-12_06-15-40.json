@@ -693,7 +693,7 @@
     "cost": 750000,
     "income_per_second": 3500,
     "rarity": "mythic",
-    "image": "thumbnails/Spioniro_Golubiro.png"
+    "image": ""
   },
   {
     "id": "bombombini-gusini",
@@ -709,7 +709,7 @@
     "cost": 1000000,
     "income_per_second": 6000,
     "rarity": "mythic",
-    "image": "thumbnails/Zibra_Zubra_Zibralini.png"
+    "image": ""
   },
   {
     "id": "avocadorilla",
@@ -733,7 +733,7 @@
     "cost": 1700000,
     "income_per_second": 7500,
     "rarity": "mythic",
-    "image": "thumbnails/Tigrilini_Watermelini.png"
+    "image": ""
   },
   {
     "id": "gorillo-subwoofero",
@@ -909,7 +909,7 @@
     "cost": 4700000,
     "income_per_second": 15000,
     "rarity": "mythic",
-    "image": "thumbnails/Carrotini_Brainini.png"
+    "image": ""
   },
   {
     "id": "centrucci-nuclucci",
@@ -1093,7 +1093,7 @@
     "cost": 25000000,
     "income_per_second": 100000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/Orcalero_Orcala.png"
+    "image": ""
   },
   {
     "id": "tralalita",
@@ -1221,7 +1221,7 @@
     "cost": 35000000,
     "income_per_second": 205000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/Bulbito_Bandito_Traktorito.png"
+    "image": ""
   },
   {
     "id": "los-tungtungtungcitos",
@@ -1501,7 +1501,7 @@
     "cost": 47500000,
     "income_per_second": 275000,
     "rarity": "brainrot_god",
-    "image": "thumbnails/Mastodontico_Telepiedone.png"
+    "image": ""
   },
   {
     "id": "anpali-babel",
@@ -1701,7 +1701,7 @@
     "cost": 125000000,
     "income_per_second": 350000,
     "rarity": "secret",
-    "image": "thumbnails/Torrtuginni_Dragonfrutini.png"
+    "image": ""
   },
   {
     "id": "dul-dul-dul",
@@ -2455,7 +2455,7 @@
     "cost": 3500000000,
     "income_per_second": 30000000,
     "rarity": "secret",
-    "image": "thumbnails/Esok_Sekolah.png"
+    "image": ""
   },
   {
     "id": "los-puggies",
@@ -2599,7 +2599,7 @@
     "cost": 15000000000,
     "income_per_second": 60000000,
     "rarity": "secret",
-    "image": "thumbnails/Spaghetti_Tualetti.png"
+    "image": ""
   },
   {
     "id": "spaghettitualetti",

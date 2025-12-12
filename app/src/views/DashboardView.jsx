@@ -178,7 +178,11 @@ export default function DashboardView({
       </div>
 
       {/* Global Stats */}
-      <GlobalStats accounts={filteredAccounts} collections={collections} />
+      <GlobalStats 
+        accounts={filteredAccounts} 
+        collections={collections} 
+        brainrotsDatabase={brainrots}
+      />
 
       {/* Content based on view mode */}
       <div className="mt-6">
