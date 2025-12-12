@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import { ArrowLeft, TrendingUp, Package, Sparkles, ArrowRight, Check, X } from 'lucide-react';
+import { ArrowLeft, TrendingUp, Package, Sparkles, ArrowRight, Check, X, Zap } from 'lucide-react';
 import { analyzeAllAccounts } from '../utils/accountAnalyzer';
 import { MUTATIONS } from '../utils/incomeCalculator';
+import FuseReadinessPanel from '../components/fuse/FuseReadinessPanel';
 
 export default function OrganizationView({ 
   accounts, 
@@ -11,6 +12,7 @@ export default function OrganizationView({
   onTransferBrainrot 
 }) {
   const [selectedRecommendation, setSelectedRecommendation] = useState(null);
+  const [activeTab, setActiveTab] = useState('organization'); // 'organization' or 'fuse'
 
   // Run analysis
   const analysis = useMemo(() => {
@@ -74,11 +76,43 @@ export default function OrganizationView({
               <h1 className="text-3xl font-bold text-white">Organization Assistant</h1>
               <p className="text-gray-400">Smart recommendations to optimize your collection</p>
             </div>
-          </div>
         </div>
+      </div>
 
-        {/* Summary Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      {/* Tab Navigation */}
+      <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-2 border border-slate-700 mb-6">
+        <div className="flex gap-2">
+          <button
+            onClick={() => setActiveTab('organization')}
+            className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+              activeTab === 'organization'
+                ? 'bg-purple-600 text-white shadow-lg'
+                : 'text-gray-400 hover:text-white hover:bg-slate-700'
+            }`}
+          >
+            <Sparkles size={20} />
+            <span>Account Organization</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('fuse')}
+            className={`flex-1 px-4 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+              activeTab === 'fuse'
+                ? 'bg-yellow-600 text-white shadow-lg'
+                : 'text-gray-400 hover:text-white hover:bg-slate-700'
+            }`}
+          >
+            <Zap size={20} />
+            <span>🎄 Fuse Readiness</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Tab Content - Organization */}
+      {activeTab === 'organization' && (
+        <>
+          {/* Summary Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
             <div className="text-gray-400 text-sm mb-1">Total Accounts</div>
             <div className="text-2xl font-bold text-white">{summary.totalAccounts}</div>
@@ -142,7 +176,24 @@ export default function OrganizationView({
             ))}
           </div>
         </div>
-      </div>
+        </>
+      )}
+
+      {/* Tab Content - Fuse Readiness */}
+      {activeTab === 'fuse' && (
+        <FuseReadinessPanel
+          accounts={accounts}
+          collections={collections}
+          brainrots={brainrots}
+          onTransferBrainrot={onTransferBrainrot}
+          onStartFuse={(accountId, brainrots) => {
+            console.log('Start fuse for', accountId, 'with', brainrots);
+            // TODO: Implement fuse start logic
+            alert('Fuse system coming soon! For now, this shows you what to prepare.');
+          }}
+        />
+      )}
+    </div>
     </div>
   );
 }

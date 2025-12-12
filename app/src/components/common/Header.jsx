@@ -11,7 +11,8 @@ export default function Header({
   accounts,
   collections,
   onImportData,
-  onClearAllData
+  onClearAllData,
+  hasVerificationReport
 }) {
   return (
     <header className="bg-slate-800 border-b border-slate-700">
@@ -53,6 +54,22 @@ export default function Header({
               >
                 ✨ Organize
               </button>
+
+              {hasVerificationReport && (
+                <button
+                  onClick={() => onNavigate.viewVerification()}
+                  className={`px-4 py-2 rounded-lg transition-colors relative ${
+                    currentView === 'verification'
+                      ? 'bg-yellow-600 text-white'
+                      : 'text-gray-400 hover:text-white hover:bg-slate-700'
+                  }`}
+                >
+                  <span className="flex items-center gap-1">
+                    ⚠️ Verify Data
+                    <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
+                  </span>
+                </button>
+              )}
             </nav>
 
             {currentView === 'detail' && selectedAccount && (

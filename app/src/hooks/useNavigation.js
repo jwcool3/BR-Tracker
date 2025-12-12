@@ -1,11 +1,12 @@
 import { useState } from 'react'
 
 /**
- * Hook for managing navigation between four views:
+ * Hook for managing navigation between five views:
  * - dashboard: Overview of all accounts
  * - detail: Manage one account's brainrots
  * - collection: Total collection across all accounts
  * - organization: Smart organization recommendations
+ * - verification: Data verification and cleanup
  */
 export function useNavigation() {
   const [currentView, setCurrentView] = useState('dashboard')
@@ -26,6 +27,11 @@ export function useNavigation() {
     setCurrentView('organization')
   }
 
+  const viewVerification = () => {
+    setSelectedAccount(null)
+    setCurrentView('verification')
+  }
+
   const backToDashboard = () => {
     setSelectedAccount(null)
     setCurrentView('dashboard')
@@ -37,6 +43,7 @@ export function useNavigation() {
     viewAccount,
     viewTotalCollection,
     viewOrganization,
+    viewVerification,
     backToDashboard,
   }
 }

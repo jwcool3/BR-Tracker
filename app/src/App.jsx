@@ -6,6 +6,7 @@ import DashboardView from './views/DashboardView'
 import AccountDetailView from './views/AccountDetailView'
 import TotalCollectionView from './views/TotalCollectionView'
 import OrganizationView from './views/OrganizationView'
+import DataVerificationView from './views/DataVerificationView'
 import Header from './components/common/Header'
 import { BulkSelectionProvider } from './contexts/BulkSelectionContext'
 
@@ -14,6 +15,9 @@ function App() {
   const [brainrots, setBrainrots] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  
+  // Load verification report
+  const [verificationReport, setVerificationReport] = useState(null)
 
   // Load brainrots.json on mount
   useEffect(() => {
@@ -38,6 +42,27 @@ function App() {
       })
   }, [])
   
+  // Load verification report
+  useEffect(() => {
+    fetch('/verification_report.json')
+      .then(response => {
+        if (!response.ok) {
+          console.warn('No verification report found')
+          return null
+        }
+        return response.json()
+      })
+      .then(data => {
+        if (data) {
+          console.log('Verification report loaded:', data.total_issues, 'issues')
+          setVerificationReport(data)
+        }
+      })
+      .catch(err => {
+        console.warn('Could not load verification report:', err)
+      })
+  }, [])
+  
   // Account management
   const [accounts, setAccounts] = useLocalStorage('br-accounts', [
     {
@@ -59,10 +84,40 @@ function App() {
   })
   
   // Navigation state
-  const { currentView, selectedAccount, viewAccount, viewTotalCollection, viewOrganization, backToDashboard } = useNavigation()
+  const { currentView, selectedAccount, viewAccount, viewTotalCollection, viewOrganization, viewVerification, backToDashboard } = useNavigation()
 
   // Drag and drop state
   const [activeDrag, setActiveDrag] = useState(null)
+  
+  // Brainrot management (for verification view)
+  const deleteBrainrot = (brainrotId) => {
+    // Remove from brainrots list
+    const updatedBrainrots = brainrots.filter(br => br.id !== brainrotId)
+    setBrainrots(updatedBrainrots)
+    
+    // Remove from all collections
+    const updatedCollections = {}
+    Object.entries(collections).forEach(([accountId, collection]) => {
+      updatedCollections[accountId] = collection.filter(entry => entry.brainrotId !== brainrotId)
+    })
+    setCollections(updatedCollections)
+    
+    console.log(`Deleted brainrot: ${brainrotId}`)
+  }
+  
+  const updateBrainrotData = (brainrotId, updates) => {
+    const updatedBrainrots = brainrots.map(br => 
+      br.id === brainrotId ? { ...br, ...updates } : br
+    )
+    setBrainrots(updatedBrainrots)
+    console.log(`Updated brainrot: ${brainrotId}`, updates)
+  }
+  
+  const mergeBrainrots = (br1Id, br2Id, keepData) => {
+    // Not implemented yet - would merge two brainrot entries
+    console.log(`Merge brainrots: ${br1Id} + ${br2Id}`)
+    alert('Merge functionality coming soon! For now, just delete one.')
+  }
 
   // Account CRUD operations
   const addAccount = (account) => {
@@ -248,11 +303,12 @@ function App() {
           <Header 
             currentView={currentView}
             selectedAccount={accounts.find(a => a.id === selectedAccount)}
-            onNavigate={{ viewTotalCollection, viewOrganization, backToDashboard }}
+            onNavigate={{ viewTotalCollection, viewOrganization, viewVerification, backToDashboard }}
             accounts={accounts}
             collections={collections}
             onImportData={handleImportData}
             onClearAllData={handleClearAllData}
+            hasVerificationReport={!!verificationReport}
           />
 
           <main>
@@ -295,6 +351,17 @@ function App() {
                 brainrots={brainrots}
                 onBack={backToDashboard}
                 onTransferBrainrot={handleTransferBrainrot}
+              />
+            )}
+
+            {currentView === 'verification' && (
+              <DataVerificationView
+                verificationReport={verificationReport}
+                brainrots={brainrots}
+                onBack={backToDashboard}
+                onDeleteBrainrot={deleteBrainrot}
+                onUpdateBrainrot={updateBrainrotData}
+                onMergeBrainrots={mergeBrainrots}
               />
             )}
           </main>
